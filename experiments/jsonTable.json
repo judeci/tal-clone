@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "email": "hello@world.com",
+    "password": "testpw"
+  },
+  {
+    "id": 3,
+    "email": "test@world.com",
+    "password": "testpw2"
+  },
+  {
+    "id": 4,
+    "email": "test3@world.com",
+    "password": "testpw3"
+  },
+  {
+    "id": 5,
+    "email": "tesdsd@world.com",
+    "password": "dsds"
+  },
+  {
+    "id": 6,
+    "email": "browserTEST@gm.com",
+    "password": "tt"
+  },
+  {
+    "id": 8,
+    "email": "browser2222TEST2@gmail.com",
+    "password": "yyyy2s"
+  },
+  {
+    "id": 9,
+    "email": "test3ONBROW@gmail.com",
+    "password": "test3bw"
+  }
+]

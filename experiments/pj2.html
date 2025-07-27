@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="PJ.css" />
+    <title>Papa John's</title>
+  </head>
+  <body>
+    <nav class="PJ-nav">
+      <button class="cart-btn" onclick="window.location.href='cart.html'">
+        CA
+        <p class="cart-num"></p>
+        RT
+      </button>
+    </nav>
+
+    <div class="PJ-container">
+      <div class="PJ-history">
+        <a href="#">Home</a>
+        <a href="#">Yarmouk</a>
+        <a href="#">Papa John's Pizza</a>
+      </div>
+
+      <div class="PJ-details-with-image">
+        <img src="PJLOGO.webp" />
+        <div class="PJ-details">
+          <p class="PJ-restaurant-title">Papa John's Pizza</p>
+          <p>in Yarmouk, Kuwait</p>
+          <p>Pizza, American, Fast Food</p>
+          <p>Min. order: KD 0.000</p>
+        </div>
+        <p class="OPEN">OPEN</p>
+      </div>
+
+      <div class="PJ-tabs">
+        <a href="#">Menu</a>
+        <a href="#">Reviews</a>
+        <a href="#">Info</a>
+      </div>
+      <div class="PJ-main-menu">
+        <div class="PJ-categories">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#" id="LTO-category">Limited Time Offer</a></li>
+            <li><a href="#" id="pizza-category">Pizza</a></li>
+            <li><a href="#" id="appetizers-category">Appetizers</a></li>
+            <li><a href="#" id="beverages-category">Beverages</a></li>
+          </ul>
+        </div>
+        <div class="PJ-menu PJ-accordion">
+          <button class="PJ-accordion-btn1 PJ-accordion-btn" id="LTO-menu">
+            Limited Time Offer
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="LTO-links grid-panel"
+              onclick="addToCart(`Papa's Diwaniyah Meal`, 16.400, `LTO`)"
+            >
+              <p class="panel-img LTO-img"></p>
+              <p>Papa's Diwaniyah Meal</p>
+              <p class="panel-price">KD 16.400</p>
+              <p>+</p>
+            </a>
+          </div>
+
+          <button class="PJ-accordion-btn2 PJ-accordion-btn" id="pizza-menu">
+            Pizza
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="pizza-links HWI-link grid-panel"
+              onclick="addToCart(`Hawaiian`, 4.750, `HWI`)"
+            >
+              <p class="panel-img HWI-img"></p>
+              <p>Hawaiian</p>
+              <p class="panel-price">KD 4.750</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="pizza-links BBQ-link grid-panel"
+              onclick="addToCart(`Chicken BBQ`, 4.750, `BBQ`)"
+            >
+              <p class="panel-img BBQ-img"></p>
+              <p>Chicken BBQ</p>
+              <p class="panel-price">KD 4.750</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="pizza-links GRD-link grid-panel"
+              onclick="addToCart(`Garden Special`, 5.250, `GRD`)"
+            >
+              <p class="panel-img GRD-img"></p>
+              <p>Garden Special</p>
+              <p class="panel-price">KD 5.250</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="pizza-links MRG-link grid-panel"
+              onclick="addToCart(`Margherita Pizza`, 4.500, `MRG`)"
+            >
+              <p class="panel-img MRG-img"></p>
+              <p>Margherita Pizza</p>
+              <p class="panel-price">KD 4.500</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="pizza-links PPR-link grid-panel"
+              onclick="addToCart(`Pepperoni Pizza`, 4.750, `PPR`)"
+            >
+              <p class="panel-img PPR-img"></p>
+              <p>Pepperoni Pizza</p>
+              <p class="panel-price">KD 4.750</p>
+              <p>+</p>
+            </a>
+          </div>
+
+          <button
+            class="PJ-accordion-btn3 PJ-accordion-btn"
+            id="appetizers-menu"
+          >
+            Appetizers
+          </button>
+          <div class="panel">
+            <a href="#" class="appetizer-links CHS-link grid-panel">
+              <p class="panel-img CHS-img"></p>
+              <p>Cheesesticks</p>
+              <p class="panel-price">Price on Selection</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="appetizer-links WDG-link grid-panel"
+              onclick="addToCart(`Potato Wedges`, 1.250, `WDG`)"
+            >
+              <p class="panel-img WDG-img"></p>
+              <p>Potato Wedges</p>
+              <p class="panel-price">KD 1.250</p>
+              <p>+</p>
+            </a>
+          </div>
+
+          <button
+            class="PJ-accordion-btn4 PJ-accordion-btn"
+            id="beverages-menu"
+          >
+            Beverages
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="beverages-links PEP-link grid-panel"
+              onclick="addToCart(`Pepsi`, 0.650, `PEP`)"
+            >
+              <p class="panel-img PEP-img"></p>
+              <p>Pepsi</p>
+              <p class="panel-price">KD 0.650</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="beverages-links SUP-link grid-panel"
+              onclick="addToCart(`7up`, 0.650, `SUP`)"
+            >
+              <p class="panel-img SUP-img"></p>
+              <p>7up</p>
+              <p class="panel-price">KD 0.650</p>
+              <p>+</p>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="beverages-links WTR-link grid-panel"
+              onclick="addToCart(`Water`, 0.500, `WTR`)"
+            >
+              <p class="panel-img WTR-img"></p>
+              <p>Water</p>
+              <p class="panel-price">KD 0.500</p>
+              <p>+</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="PJ-cart">
+          <div class="cart-hdr">
+            <p>Your Cart</p>
+          </div>
+          <!-- <p><br /></p> -->
+          <!-- <div class="empty-cart">
+            <p>There are no items in your cart.</p>
+          </div> -->
+          <div class="PJ-cart-items"></div>
+          <div class="PJ-subtotal-div">
+            <p class="PJ-subtotal-hdr">Subtotal:</p>
+            <div class="PJ-subtotal-p">
+              <p class="PJ-subtotal-KD">KD&nbsp;</p>
+              <p class="PJ-subtotal"></p>
+            </div>
+          </div>
+          <div class="PJ-delivery"></div>
+          <div class="PJ-total"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiddenx2 CHS-choose">
+      <p class="white">CHEESESTICKS</p>
+      <div class="CHS-choose-btns">
+        <button
+          class="CHS1"
+          onclick="addToCart(`Cheesesticks (8)`, 1.500, `CHS1`)"
+        >
+          8 Pieces<br />KD 1.500
+        </button>
+        <button
+          class="CHS2"
+          onclick="addToCart(`Cheesesticks (10)`, 1.750, `CHS2`)"
+        >
+          10 Pieces<br />KD 1.750
+        </button>
+      </div>
+    </div>
+
+    <footer class="PJ-section-footer">
+      <div class="PJ-footer-accordion-box">
+        <button class="PJ-footer-accordion">Restaurants</button>
+        <div class="PJ-footer-panel">
+          <a
+            href="https://www.talabat.com/kuwait/pizza-hut"
+            class="cuisines-links"
+            >Pizza Hut</a
+          >
+          <a
+            href="https://www.talabat.com/kuwait/domino-pizza-tmp"
+            class="cuisines-links"
+            >Domino's Pizza</a
+          >
+          <a href="#" class="cuisines-links">Burger King</a>
+          <a href="#" class="cuisines-links">Johnny Rockets</a>
+          <a href="#" class="cuisines-links more">More Restaurants...</a>
+        </div>
+
+        <button class="PJ-footer-accordion">Popular cuisines</button>
+        <div class="PJ-footer-panel">
+          <a
+            href="https://www.talabat.com/kuwait/cuisine/japanese"
+            class="cuisines-links"
+            >Japanese</a
+          >
+          <a href="#" class="cuisines-links">Chinese</a>
+          <a href="#" class="cuisines-links">Lebanese</a>
+          <a href="#" class="cuisines-links">Italian</a>
+          <a href="#" class="cuisines-links">Indian</a>
+          <a href="#" class="cuisines-links more">More Cuisines...</a>
+        </div>
+
+        <button class="PJ-footer-accordion">Popular areas</button>
+        <div class="PJ-footer-panel">
+          <a
+            href="https://www.talabat.com/kuwait/restaurants/2/abu-halifa"
+            class="cuisines-links"
+            >Abu Halifa</a
+          >
+          <a href="#" class="cuisines-links">Al-Ahmadi</a>
+          <a href="#" class="cuisines-links">Kuwait City</a>
+          <a href="#" class="cuisines-links">Fahaheel</a>
+          <a href="#" class="cuisines-links">Farwaniya</a>
+          <a href="#" class="cuisines-links more">More Areas...</a>
+        </div>
+      </div>
+
+      <div class="hidden flowers-page"></div>
+
+      <div class="socials"></div>
+      <div class="links"></div>
+      <div class="copyright">
+        <p class="copyright-p">
+          For any support or help you can contact us via our
+          <a href="#" class="live-chat">Live Chat</a>
+        </p>
+        <p class="copyright-p2">&copy;2025 Talabat.com</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      var acc = document.getElementsByClassName("PJ-accordion-btn");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+            console.log("1");
+          } else {
+            panel.style.display = "block";
+            console.log("2");
+          }
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            console.log("3");
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            console.log("4");
+          }
+        });
+      }
+
+      // new inc code (test):
+      function incItem(name, price2) {
+        const cartNum = document.querySelector(`.inc-item-${name}`);
+        cartNum.textContent = (+cartNum.textContent + 1).toString();
+
+        const dPrice2 = document.querySelector(`.${name}-price`);
+        dPrice2.textContent = (+dPrice2.textContent + price2)
+          .toFixed(3)
+          .toString();
+
+        cartTopNum++;
+        cartTop.textContent = cartTopNum.toString();
+      }
+
+      // new dec code test :
+      function decItem(name, price3) {
+        const cartNum = document.querySelector(`.inc-item-${name}`);
+        const value = +cartNum.textContent;
+        const dPrice3 = document.querySelector(`.${name}-price`);
+        if (value === 1) {
+          document.querySelector(`.PJ-cart-${name}-items`).remove();
+
+          const codeTagFixed = `${name}`;
+          const variableSL = {};
+          variableSL[`firstClick${codeTagFixed}`] = true;
+          firstClick[`firstClick${codeTagFixed}`] = true;
+          const firstKey = Object.keys(variableSL)[0];
+          const firstValue = variableSL[firstKey];
+          console.log(firstValue);
+
+          if (cartTopNum === 1) {
+            cartTopNum--;
+            cartTop.textContent = "";
+          } else {
+            cartTopNum--;
+            cartTop.textContent = cartTopNum.toString();
+          }
+        } else {
+          cartNum.textContent = (value - 1).toString();
+          dPrice3.textContent = (+dPrice3.textContent - price3)
+            .toFixed(3)
+            .toString();
+
+          cartTopNum--;
+          cartTop.textContent = cartTopNum.toString();
+        }
+        // });
+      }
+
+      // cart num inc/dec
+
+      const cartBtn = document.querySelector(".cart-btn");
+
+      const cartTop = document.querySelector(".cart-num");
+      let cartTopNum = 0;
+
+      //////////////////////
+
+      const PJCartItems = document.querySelector(".PJ-cart-items");
+
+      const itemLTO = document.querySelector(".LTO-links");
+
+      const itemHWI = document.querySelector(".HWI-link");
+
+      const itemBBQ = document.querySelector(".BBQ-link");
+
+      const itemGRD = document.querySelector(".GRD-link");
+
+      const itemMRG = document.querySelector(".MRG-link");
+
+      const itemPPR = document.querySelector(".PPR-link");
+
+      const itemCHS = document.querySelector(".CHS-link");
+
+      const itemWDG = document.querySelector(".WDG-link");
+
+      const itemPEP = document.querySelector(".PEP-link");
+
+      const itemSUP = document.querySelector(".SUP-link");
+
+      const itemWTR = document.querySelector(".WTR-link");
+
+      const cheeseChoice = document.querySelector(".CHS-choose");
+      const cheese1 = document.querySelector(".CHS1");
+      const cheese2 = document.querySelector(".CHS2");
+
+      // FIX
+      const firstClick = {
+        firstClickLTO: true,
+        firstClickHWI: true,
+        firstClickBBQ: true,
+        firstClickGRD: true,
+        firstClickMRG: true,
+        firstClickPPR: true,
+        firstClickCHS1: true,
+        firstClickCHS2: true,
+        firstClickWDG: true,
+        firstClickPEP: true,
+        firstClickSUP: true,
+        firstClickWTR: true,
+      };
+      // FIX UP
+
+      function addToCart(name, price, codeTag) {
+        // FIX
+        const variableSL = {};
+        console.log(variableSL);
+        variableSL[`firstClick${codeTag}`] = firstClick[`firstClick${codeTag}`];
+
+        console.log(firstClick[`firstClick${codeTag}`]);
+        console.log(variableSL[`firstClick${codeTag}`]);
+        // if (firstClick`${codeTag}`);
+        if (variableSL[`firstClick${codeTag}`]) {
+          // FIX UP
+
+          PJCartItems.innerHTML += `
+                                  <div class="PJ-cart-${codeTag}-items">
+                                    <p class="item-${codeTag}">${name}:</p>
+                                    <div class="${codeTag}-grid">
+                                        <div class="${codeTag}-numbers">
+                                            <p class="inc-item-${codeTag}">1</p>
+                                            <p class="${codeTag}-KD">: KD&nbsp;</p>
+                                            <p class="${codeTag}-price subtotal-price">${price}</p>
+
+                                            </div>
+                                            <button class="dec-${codeTag}" onclick="decItem('${codeTag}', ${price})">-</button>
+                                        <button class="inc-${codeTag}" onclick="incItem('${codeTag}', ${price})">+</button>
+                                        </div>
+                                        </div>
+                                `;
+
+          //   firstClick`${codeTag}` = false;  fixed here: ?
+
+          // remove this block if bad. from here:
+          const dGrid = document.querySelector(`.${codeTag}-grid`);
+          dGrid.style.display = "grid";
+          dGrid.style.gridTemplateColumns = "8fr 1fr 1fr";
+
+          const dFlex = document.querySelector(`.${codeTag}-numbers`);
+          dFlex.style.display = "flex";
+
+          const dInc = document.querySelector(`.inc-${codeTag}`);
+          dInc.style.cursor = "pointer";
+          dInc.style.backgroundColor = "white";
+          // until here.^
+
+          // same with this:
+          const dDec = document.querySelector(`.dec-${codeTag}`);
+          dDec.style.cursor = "pointer";
+          dDec.style.backgroundColor = "white";
+          // ^
+
+          const codeTagFixed = `${codeTag}`;
+          const variableSL = {};
+          variableSL[`firstClick${codeTagFixed}`] = false;
+          firstClick[`firstClick${codeTagFixed}`] = false;
+          const firstKey = Object.keys(variableSL)[0];
+          const firstValue = variableSL[firstKey];
+          console.log(firstValue);
+
+          document.querySelector(
+            `.PJ-cart-${codeTag}-items`
+          ).style.borderBottom = "1px solid #ea5b2f";
+
+          cartTopNum++;
+          cartTop.textContent = cartTopNum.toString();
+        } else {
+          // incItem(`${codeTag}`, `${price}`);
+          const cartNumD = document.querySelector(`.inc-item-${codeTag}`);
+          console.log(cartNumD);
+          const cartNumDValue = +cartNumD.textContent;
+          cartNumD.textContent = (cartNumDValue + 1).toString();
+
+          const dPrice = document.querySelector(`.${codeTag}-price`);
+          dPrice.textContent = (+dPrice.textContent + price)
+            .toFixed(3)
+            .toString();
+
+          cartTopNum++;
+          cartTop.textContent = cartTopNum.toString();
+        }
+      }
+
+      itemCHS.addEventListener("click", function (e) {
+        e.preventDefault();
+        cheeseChoice.classList.toggle("hiddenx2");
+      });
+      cheese1.addEventListener("click", function (e) {
+        e.preventDefault();
+        cheeseChoice.classList.toggle("hiddenx2");
+      });
+      cheese2.addEventListener("click", function (e) {
+        e.preventDefault();
+        cheeseChoice.classList.toggle("hiddenx2");
+      });
+
+      /////////////////////////////////////
+      // inc/dec btns:
+      function waitForElementAlways(selector, callback) {
+        const seen = new Set();
+
+        setInterval(function () {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((el) => {
+            if (!seen.has(el)) {
+              seen.add(el);
+              callback(el);
+            }
+          });
+        }, 200); // checks every 200ms
+      }
+
+      // subtotal:
+      setInterval(() => {
+        const allPrices = document.querySelectorAll(".subtotal-price");
+        const subtotal = document.querySelector(".PJ-subtotal");
+        let temp = 0;
+        allPrices.forEach((el, i) => {
+          temp += +el.textContent;
+        });
+
+        subtotal.textContent = temp.toFixed(3).toString();
+      }, 1000); // 1000 ms = 1 second
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const resName = urlParams.get("restaurantName");
+      // open cart tab:
+      cartBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        // onclick="window.location.href='papajohns.html'" in code
+
+        window.location.href = `cart.html?resName=${encodeURIComponent(
+          resName
+        )}`;
+      });
+
+      // scroll to menu when clicking category:
+
+      $(document).ready(function () {
+        $("#LTO-category").click(function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          $("html, body").animate(
+            {
+              scrollTop: $("#LTO-menu").offset().top,
+            },
+            1000
+          );
+        });
+      });
+
+      $(document).ready(function () {
+        $("#pizza-category").click(function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          $("html, body").animate(
+            {
+              scrollTop: $("#pizza-menu").offset().top,
+            },
+            1000
+          );
+        });
+      });
+
+      $(document).ready(function () {
+        $("#appetizers-category").click(function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          $("html, body").animate(
+            {
+              scrollTop: $("#appetizers-menu").offset().top,
+            },
+            1000
+          );
+        });
+      });
+
+      $(document).ready(function () {
+        $("#beverages-category").click(function (e) {
+          e.preventDefault(); // Prevent default link behavior
+          $("html, body").animate(
+            {
+              scrollTop: $("#beverages-menu").offset().top,
+            },
+            1000
+          );
+        });
+      });
+
+      // footer stuff:
+
+      var accFooter = document.getElementsByClassName("PJ-footer-accordion");
+      var i;
+
+      for (i = 0; i < accFooter.length; i++) {
+        accFooter[i].addEventListener("click", function () {
+          this.classList.toggle("PJ-footer-active");
+
+          var panelFooter = this.nextElementSibling;
+          if (panelFooter.style.display === "block") {
+            panelFooter.style.display = "none";
+          } else {
+            panelFooter.style.display = "block";
+          }
+
+          if (panelFooter.style.maxHeight) {
+            panelFooter.style.maxHeight = null;
+          } else {
+            panelFooter.style.maxHeight = panelFooter.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

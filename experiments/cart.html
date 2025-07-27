@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <button class="back-btn"></button>
+    </nav>
+
+    <div class="main">
+      <h2 class="summary">Order Summary</h2>
+      <p class="res-name"></p>
+    </div>
+  </body>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const resName1 = urlParams.get("resName");
+
+    const resName2 = document.querySelector(".res-name");
+    resName2.textContent = resName1;
+
+    // console.log(resName2, resName1, "cart html pg");
+  </script>
+</html>

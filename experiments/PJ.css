@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* background-color: #fae4d8; */
+  background-color: #fff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* overflow-y: visible;   */
+}
+
+body {
+    font-size: 2rem;
+}
+
+
+.PJ-nav {
+    background-color: #e3dcd7;
+    height: 8rem;
+    
+    display: flex;
+    justify-content: right;
+}
+
+.cart-btn {
+    font-size: 1.8rem;
+    color: #888;
+    border: none;
+    cursor: pointer;
+    background-color: #e3dcd7;
+    /* width: 5rem; */
+    padding: 2rem;
+    height: 5rem;
+
+    display: flex;
+}
+
+.cart-num {
+    font-size: 1.8rem;
+    color: #000;
+    text-decoration: underline;
+}
+
+.PJ-container{
+    max-width: 100rem;
+    margin: 3rem auto;
+}
+
+.PJ-history {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 4.5rem;
+    font-size: 1.5rem;
+    
+}
+.PJ-history a {
+    text-decoration: none;
+    color: #555;
+}
+
+.PJ-details-with-image {
+    display: flex;
+gap: 2.5rem;
+}
+
+.PJ-details-with-image img {
+    height: 13rem;
+    width: 13rem;
+    border: 1px solid #ddd;
+}
+
+.PJ-details {
+    display: flex;
+    flex-direction: column;
+    color: #676777;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    line-height: 3.25rem;
+}
+
+.OPEN {
+    color: rgb(12, 168, 12);
+    margin-left: auto;
+}
+
+.PJ-restaurant-title {
+    font-size: 2.6rem;
+    color: #222;
+}
+
+.PJ-main-menu {
+    display: grid;
+    width: 100rem;
+    grid-template-columns: 1fr 2fr 1.5fr;
+    justify-self: center;
+    gap:2rem;
+}
+
+.PJ-categories {
+    background-color: #fff;
+    /* border: 1px solid #bcbcbc; */
+    border-radius: .2rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    padding: 1.5rem 1.5rem;
+    /* box-shadow: ; */
+    font-size: 1.75rem;
+    color: #222;
+    line-height: 3rem;
+    letter-spacing: .05rem;
+
+    height: fit-content;
+
+    position: sticky;
+      top: 2rem;              /* Stick to the top */
+      z-index: 1000; 
+}
+.PJ-categories li {
+    list-style: none;
+    color: #888;
+    font-size: 1.4rem;
+}
+
+.PJ-categories a {
+    color: #888;
+    text-decoration: none;
+}
+
+.PJ-menu {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.PJ-accordion {
+  margin-bottom: 12rem;
+  
+}
+
+.PJ-accordion-btn1, .PJ-accordion-btn2, .PJ-accordion-btn3, .PJ-accordion-btn4 {
+    cursor: pointer;
+background-color: #efefef;
+font-size: 2.2rem;
+
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: inherit;
+}
+
+.panel {
+  padding: .75rem 0;
+  background-color: #fff;
+  color: #222;
+  display: none;
+
+  font-size: 1.65rem;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+
+}
+
+.PJ-subtotal-div {
+    padding: 1.5rem 1.5rem;
+}
+
+.PJ-subtotal-p {
+    display: flex;
+}
+
+.grid-panel {
+    display: grid;
+    grid-template-columns: 16fr 55fr 20fr 6fr;
+    /* width: 100%; */
+    gap: 1rem;
+
+    /* align-items: center; */
+  text-decoration: none;
+   padding: 1rem 0;
+}
+
+.panel a {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    /* border-top: 1px solid #aaa; */
+}
+
+
+.PEP-img {
+  background-image: url('pepsi.png');
+}
+
+.WTR-img {
+    background-image: url('water.webp');
+}
+
+.SUP-img {
+ background-image: url('7up.png');
+}
+
+.WDG-img {
+    /* background-image: url('wedges.jpg'); */
+    background-image: url("wedges.jpg");
+}
+
+.CHS-img {
+    /* background-image: url('cheese.jpg'); */
+    background-image: url("cheese.jpg");
+}
+
+.HWI-img {
+    background-image: url('/hawaiian.jpg');
+}
+.BBQ-img {
+    background-image: url('chickenBBQ.webp');
+}
+.GRD-img {
+    background-image: url('garden.png');
+}
+.MRG-img {
+    background-image: url('margherita.jpg');
+}
+.PPR-img {
+    background-image: url('pepperoni.webp');
+}
+
+.LTO-img {
+    background-image: url('LTO.jpg');
+}
+
+
+
+.panel-img {
+    
+    background-size: contain;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: .2rem;
+
+    border: 1px solid #dedede;
+    margin-top: 0 !important;
+}
+
+.panel-price {
+    font-size: 1.4rem;
+}
+
+.pizza-links:link,
+.pizza-links:visited, .LTO-links:link,
+.LTO-links:visited, .appetizer-links:link,
+.appetizer-links:visited, .beverages-links:link,
+.beverages-links:visited {
+  color: #222;
+  /* display: flex; */
+  margin-bottom: .3rem;
+  text-decoration: none;
+}
+
+.cart-hdr {
+    /* border-bottom: 1px solid #000; */
+    background-color: #ea5b2f;
+    color: #fff;
+    padding: 1.5rem 1.5rem;
+    font-size: 2.2rem;
+
+}
+
+.PJ-cart {
+    background-color: #fff;
+    border-radius: .2rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    font-size: 1.75rem;
+    color: #222;
+    line-height: 3rem;
+    letter-spacing: .05rem;
+
+    height: fit-content;
+
+    position: sticky;
+      top: 2rem;              /* Stick to the top */
+      z-index: 1000; 
+    
+}
+
+.PJ-cart-items {
+    padding: 1.5rem 1.5rem;
+    background-color: #efefefee;
+}
+
+
+/* ////////////////////////////////////// */
+/* footer: */
+
+.PJ-section-footer {
+  /* margin-top: 10rem; */
+  background-color: #222;
+  color: #f1f1f1;
+  padding: 2rem 0 2rem 0;
+  font-size: 1.6rem;
+}
+
+/* ACCORDION: */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.PJ-footer-accordion-box {
+  margin-bottom: 2rem;
+}
+
+.PJ-footer-accordion {
+  background-color: #222;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active, */
+/* .accordion:hover { */
+/* background-color: #ccc; */
+/* } */
+
+/* Style the accordion panel. Note: hidden by default */
+.PJ-footer-panel {
+  padding: 0 3.6rem;
+  background-color: #222;
+  color: #999;
+  display: none;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.PJ-footer-accordion:after {
+  content: "+"; /*Unicode character for "plus" sign (+)*/
+  font-size: 18px;
+  color: #999;
+  float: right;
+  margin-left: 5px;
+}
+
+.PJ-footer-active:after {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+.cuisines-links:link,
+.cuisines-links:visited {
+  color: #999;
+  display: flex;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+/* .cuisines-links:hover,
+.cuisines-links:active {
+} */
+
+.more {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.PJ-tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ea5b2f;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+
+}
+
+.PJ-tabs a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* COPYRIGHT: */
+
+.copyright {
+  border-top: 0.1px solid #aaa;
+}
+
+.copyright-p {
+  margin-top: 1rem;
+  display: flex;
+  justify-self: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.copyright-p2 {
+  display: flex;
+  justify-self: center;
+  font-size: 1.5rem;
+  /* margin-bottom: 2rem; */
+}
+
+.live-chat:link,
+.live-chat:visited {
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  background-color: #222;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  border-bottom: 1.5px dashed #f1f1f1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.CHS-link {
+    position: relative;
+}
+
+
+.CHS-choose {
+    /* background-color: #fffdfc; */
+    background-color: #222;
+    border: 1px solid #ffffff;
+    width: 64rem;
+    height: 42rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 6px;
+    padding: 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    z-index: 5000000;
+}
+
+.white {
+    color: white;
+
+}
+
+.CHS-choose-btns {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.CHS-choose button {
+    background-color: white;
+    color: #222;
+    font-size: 1.8rem;
+    border: 1px solid #222;
+    padding: 2rem 2rem;
+    border-radius: 6px;
+    height: 10rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.CHS-choose button:hover {
+     /* background-color: #fffcfc; */
+     background-color: #ea5b2f;
+     color: white;
+}
+.CHS-choose button:active {
+     /* background-color: #f9f7f7; */
+     background-color: #e05328;
+}
+
+.hiddenx2 {
+    display: none;
+}
