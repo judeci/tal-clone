@@ -540,9 +540,11 @@ const bigContainer = document.querySelector('.container')
 const searchBtn = document.querySelector('.search-btn')
 // const searchF = document.getElementById('searchForm')
 
-searchBtn.addEventListener('click', function() {
-  const input = document.getElementById("searchInput").value.trim().toLowerCase(); // get input and normalize
+
+const input = document.getElementById("searchInput").value.trim().toLowerCase(); // get input and normalize
 console.log(input)
+searchBtn.addEventListener('click', function(input) {
+  
   if (input === 'pizza') {
 
   if (pastaPage.classList.contains('hiddenx2')) {
