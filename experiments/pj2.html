@@ -432,7 +432,7 @@
         if (variableSL[`firstClick${codeTag}`]) {
           // FIX UP
 
-          console.log("this is the price thats bad:", price);
+          console.log("this is the price thats bad:", price.toFixed(3));
           PJCartItems.innerHTML += `
                                   <div class="PJ-cart-${codeTag}-items">
                                     <p class="item-${codeTag}">${name}:</p>
@@ -440,7 +440,9 @@
                                         <div class="${codeTag}-numbers">
                                             <p class="inc-item-${codeTag}">1</p>
                                             <p class="${codeTag}-KD">: KD&nbsp;</p>
-                                            <p class="${codeTag}-price subtotal-price">${price}</p>
+                                            <p class="${codeTag}-price subtotal-price">${price.toFixed(
+            3
+          )}</p>
 
                                             </div>
                                             <button class="dec-${codeTag}" onclick="decItem('${codeTag}', ${price})">-</button>
