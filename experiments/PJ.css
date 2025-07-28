@@ -196,45 +196,45 @@ font-size: 2.2rem;
 
 
 .PEP-img {
-  background-image: url('pepsi.png');
+  background-image: url('assets/pepsi.png');
 }
 
 .WTR-img {
-    background-image: url('water.webp');
+    background-image: url('assets/water.webp');
 }
 
 .SUP-img {
- background-image: url('7up.png');
+ background-image: url('assets/7up.png');
 }
 
 .WDG-img {
     /* background-image: url('wedges.jpg'); */
-    background-image: url("wedges.jpg");
+    background-image: url("assets/wedges.jpg");
 }
 
 .CHS-img {
     /* background-image: url('cheese.jpg'); */
-    background-image: url("cheese.jpg");
+    background-image: url("assets/cheese.jpg");
 }
 
 .HWI-img {
-    background-image: url('/hawaiian.jpg');
+    background-image: url('assets/hawaiian.jpg');
 }
 .BBQ-img {
-    background-image: url('chickenBBQ.webp');
+    background-image: url('assets/chickenBBQ.webp');
 }
 .GRD-img {
-    background-image: url('garden.png');
+    background-image: url('assets/garden.png');
 }
 .MRG-img {
-    background-image: url('margherita.jpg');
+    background-image: url('assets/margherita.jpg');
 }
 .PPR-img {
-    background-image: url('pepperoni.webp');
+    background-image: url('assets/pepperoni.webp');
 }
 
 .LTO-img {
-    background-image: url('LTO.jpg');
+    background-image: url('assets/LTO.jpg');
 }
 
 

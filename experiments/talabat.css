@@ -244,37 +244,37 @@ nav a:active {
 }
 
 .o1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("foodd.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/foodd.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .o2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("groceries.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/groceries.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .o3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("flowers.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/flowers.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .o4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("meds.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/meds.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .o5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("donate.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/donate.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .o6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("mart.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/mart.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -417,7 +417,7 @@ nav a:active {
   padding-left: 20rem;
   padding-right: 20rem;
   
-  background-image: url('mapkw.png');
+  background-image: url('assets/mapkw.png');
    background-size: cover;     
       background-repeat: no-repeat; 
       background-position: center;
@@ -437,7 +437,7 @@ nav a:active {
   flex-direction: column;
   gap: 4rem;
   padding: 2rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("map1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/map1.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -1124,7 +1124,7 @@ display: none;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("map1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("assets/map1.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 10px;
