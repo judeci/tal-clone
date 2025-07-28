@@ -541,9 +541,10 @@ const searchBtn = document.querySelector('.search-btn')
 // const searchF = document.getElementById('searchForm')
 
 
-const input = document.getElementById("searchInput").value.trim().toLowerCase(); // get input and normalize
+
+searchBtn.addEventListener('click', function() {
+  const input = document.getElementById("searchInput").value.trim().toLowerCase(); // get input and normalize
 console.log(input)
-searchBtn.addEventListener('click', function(input) {
   
   if (input === 'pizza') {
 
