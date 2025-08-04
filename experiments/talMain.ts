@@ -214,7 +214,9 @@ const bigContainer = document.querySelector(".container") as HTMLElement;
 const searchBtn = document.querySelector(".search-btn") as HTMLElement;
 // const searchF = document.getElementById('searchForm')
 
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
   const input = (
     document.getElementById("searchInput") as HTMLInputElement
   ).value

@@ -169,7 +169,8 @@ const pastaPage = document.querySelector(".pasta");
 const bigContainer = document.querySelector(".container");
 const searchBtn = document.querySelector(".search-btn");
 // const searchF = document.getElementById('searchForm')
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", function (e) {
+    e.preventDefault();
     const input = document.getElementById("searchInput").value
         .trim()
         .toLowerCase(); // get input and normalize

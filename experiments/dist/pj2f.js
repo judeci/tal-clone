@@ -33,6 +33,7 @@ function incItem(name, price2) {
     cartTopNum++;
     cartTop.textContent = cartTopNum.toString();
 }
+window.incItem = incItem;
 // new dec code test :
 function decItem(name, price3) {
     const cartNum = document.querySelector(`.inc-item-${name}`);
@@ -66,6 +67,7 @@ function decItem(name, price3) {
     }
     // });
 }
+window.decItem = decItem;
 // cart num inc/dec
 const cartBtn = document.querySelector(".cart-btn");
 const cartTop = document.querySelector(".cart-num");
@@ -169,6 +171,7 @@ function addToCart(name, price, codeTag) {
         cartTop.textContent = cartTopNum.toString();
     }
 }
+window.addToCart = addToCart;
 itemCHS.addEventListener("click", function (e) {
     e.preventDefault();
     cheeseChoice.classList.toggle("hiddenx2");

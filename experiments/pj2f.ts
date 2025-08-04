@@ -42,6 +42,8 @@ function incItem(name: string, price2: number) {
   cartTop.textContent = cartTopNum.toString();
 }
 
+(window as any).incItem = incItem;
+
 // new dec code test :
 function decItem(name: string, price3: number) {
   const cartNum = document.querySelector(`.inc-item-${name}`) as HTMLElement;
@@ -76,6 +78,7 @@ function decItem(name: string, price3: number) {
   }
   // });
 }
+(window as any).decItem = decItem;
 
 // cart num inc/dec
 
@@ -215,6 +218,8 @@ function addToCart(name: string, price: number, codeTag: string) {
     cartTop.textContent = cartTopNum.toString();
   }
 }
+
+(window as any).addToCart = addToCart;
 
 itemCHS.addEventListener("click", function (e) {
   e.preventDefault();
