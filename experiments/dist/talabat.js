@@ -1,10 +1,14 @@
-import fs from "fs";
-import path from "path";
+import * as fs from "fs";
+import * as path from "path";
 import express from "express";
-import mysql from "mysql2";
-import dotenv from "dotenv";
+import * as mysql from "mysql2";
+import * as dotenv from "dotenv";
 import { JSDOM } from "jsdom";
-import bcrypt from "bcrypt";
+import * as bcrypt from "bcrypt";
+import { fileURLToPath } from "url";
+// import path from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // === ENV SETUP ===
 dotenv.config();
 // === READ HTML TEMPLATE ===

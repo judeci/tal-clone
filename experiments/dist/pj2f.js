@@ -1,4 +1,3 @@
-"use strict";
 var acc = document.getElementsByClassName("PJ-accordion-btn");
 var i;
 for (i = 0; i < acc.length; i++) {
@@ -218,33 +217,49 @@ cartBtn.addEventListener("click", function (e) {
 $(document).ready(function () {
     $("#LTO-category").click(function (e) {
         e.preventDefault(); // Prevent default link behavior
-        $("html, body").animate({
-            scrollTop: $("#LTO-menu").offset().top,
-        }, 1000);
+        const $target = $("#LTO-menu");
+        const offset = $target.offset();
+        if (offset) {
+            $("html, body").animate({
+                scrollTop: offset.top,
+            }, 1000);
+        }
     });
 });
 $(document).ready(function () {
     $("#pizza-category").click(function (e) {
         e.preventDefault(); // Prevent default link behavior
-        $("html, body").animate({
-            scrollTop: $("#pizza-menu").offset().top,
-        }, 1000);
+        const $target = $("#pizza-menu");
+        const offset = $target.offset();
+        if (offset) {
+            $("html, body").animate({
+                scrollTop: offset.top,
+            }, 1000);
+        }
     });
 });
 $(document).ready(function () {
     $("#appetizers-category").click(function (e) {
         e.preventDefault(); // Prevent default link behavior
-        $("html, body").animate({
-            scrollTop: $("#appetizers-menu").offset().top,
-        }, 1000);
+        const $target = $("#appetizers-menu");
+        const offset = $target.offset();
+        if (offset) {
+            $("html, body").animate({
+                scrollTop: offset.top,
+            }, 1000);
+        }
     });
 });
 $(document).ready(function () {
     $("#beverages-category").click(function (e) {
         e.preventDefault(); // Prevent default link behavior
-        $("html, body").animate({
-            scrollTop: $("#beverages-menu").offset().top,
-        }, 1000);
+        const $target = $("#beverages-menu");
+        const offset = $target.offset();
+        if (offset) {
+            $("html, body").animate({
+                scrollTop: offset.top,
+            }, 1000);
+        }
     });
 });
 // footer stuff:
@@ -268,3 +283,4 @@ for (i = 0; i < accFooter.length; i++) {
         }
     });
 }
+export {};
