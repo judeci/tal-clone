@@ -28,7 +28,9 @@ const port = 3000;
 // === MIDDLEWARE ===
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// app.use(express.static(path.join(__dirname)));
 app.use(express.static(path.join(__dirname, "..")));
+// app.use(express.static(path.join(__dirname, "experiments")));
 
 // === MYSQL CONNECTION ===
 const db = mysql.createConnection({
