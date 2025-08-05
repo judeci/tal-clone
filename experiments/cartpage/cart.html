@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script defer src="/dist/cartpage/cart.js" type="module"></script>
+    <link rel="stylesheet" href="/cartpage/cart.css" />
 
     <title>Cart</title>
   </head>
@@ -13,8 +14,23 @@
       <button class="back-btn"></button>
     </nav>
 
-    <div class="main">
+    <div class="main order">
       <h2 class="summary">Order Summary</h2>
+      <p class="res-name">${Restaurant Name}</p>
+    </div>
+
+    <div class="main address">
+      <h2 class="summary">Delivery Address</h2>
+      <p class="res-name"></p>
+    </div>
+
+    <div class="main requests">
+      <h2 class="summary">Order Summary</h2>
+      <p class="res-name"></p>
+    </div>
+
+    <div class="main payment">
+      <h2 class="summary">Payment Summary</h2>
       <p class="res-name"></p>
     </div>
   </body>
