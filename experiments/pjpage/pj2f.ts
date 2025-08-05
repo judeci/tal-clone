@@ -274,7 +274,10 @@ cartBtn.addEventListener("click", function (e) {
   e.preventDefault();
   // onclick="window.location.href='papajohns.html'" in code
 
-  window.location.href = `cart.html?resName=${encodeURIComponent(resName)}`;
+  // window.location.href = `cart.html?resName=${encodeURIComponent(resName)}`;
+  window.location.href = `/cartpage/cart.html?resName=${encodeURIComponent(
+    resName
+  )}`;
 });
 
 // scroll to menu when clicking category:

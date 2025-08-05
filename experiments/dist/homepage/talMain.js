@@ -226,8 +226,10 @@ mainPage.addEventListener("click", function () {
 const intervalFile = setInterval(() => {
     if (resNameFile) {
         console.log("Variable has a value:", resNameFile);
-        window.location.href = `${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
-        // window.location.href = `${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
+        // window.location.href = `${resNameFile}.html?restaurantName=${encodeURIComponent(
+        //   restaurantName
+        // )}`;
+        window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
         clearInterval(intervalFile); // Stop checking
     }
 }, 500);
