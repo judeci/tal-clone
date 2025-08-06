@@ -1,288 +1,249 @@
-let restaurantName: string = "";
-const papaJohns = document.querySelector(".pizza1") as HTMLElement;
+// ----- Utility functions -----
+const toggleClass = (el: Element, className: string) =>
+  el.classList.toggle(className);
+const addClass = (el: Element, className: string) =>
+  el.classList.add(className);
+const removeClass = (el: Element, className: string) =>
+  el.classList.remove(className);
+const hasClass = (el: Element, className: string) =>
+  el.classList.contains(className);
 
-let resNameFile: string = "";
+const resetForm = (formId: string) => {
+  const form = document.getElementById(formId) as HTMLFormElement | null;
+  form?.reset();
+};
 
-papaJohns.addEventListener("click", function (e) {
+// ----- Variables -----
+let restaurantName = "";
+let resNameFile = "";
+
+// ----- Restaurant Selection -----
+const papaJohns = document.querySelector(".pizza1") as HTMLElement | null;
+papaJohns?.addEventListener("click", (e) => {
   e.preventDefault();
   restaurantName = "Papa John's Pizza";
   resNameFile = "pj2";
-  // resNameFile = 'papajohns';
-  // window.location.href = `papajohns.html?restaurantName=${encodeURIComponent(restaurantName)}`;
-  // need to put this line out of this fn !!!!!!! want it fully independent
+  // Navigation is triggered outside the event listener (handled below)
 });
 
-var acc = document.getElementsByClassName(
-  "accordion"
-) as HTMLCollectionOf<HTMLElement>;
-var i: number;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
+// ----- Accordion Functionality -----
+const accordions = document.querySelectorAll<HTMLElement>(".accordion");
+accordions.forEach((acc) => {
+  acc.addEventListener("click", function () {
     this.classList.toggle("active");
+    const panel = this.nextElementSibling as HTMLElement | null;
+    if (!panel) return;
 
-    var panel = this.nextElementSibling as HTMLElement;
     if (panel.style.display === "block") {
       panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-
-    if (panel.style.maxHeight) {
       panel.style.maxHeight = "";
     } else {
+      panel.style.display = "block";
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
-}
-
-const flowers = document.querySelector(".o3") as HTMLElement;
-const sectionNav = document.querySelector(".section-nav") as HTMLElement;
-const navLinks = document.querySelector(".nav-links") as HTMLElement;
-const h1H = document.querySelector(".h1-h") as HTMLElement;
-const headerP = document.querySelector(".header-p") as HTMLElement;
-const headerSection = document.querySelector(".section-header") as HTMLElement;
-
-flowers.addEventListener("click", function () {
-  navLinks.classList.toggle("hidden");
-  h1H.classList.toggle("hidden");
-  headerP.classList.toggle("hidden");
 });
 
-const loginIcon = document.querySelector(".login-icon") as HTMLElement;
-const loginDiv = document.querySelector(".login") as HTMLElement;
-const body = document.querySelector("body") as HTMLElement;
-const html = document.querySelector("html") as HTMLElement; // ? if no delete
-const closeBtn = document.querySelector(".x") as HTMLElement;
-const loginBtn = document.querySelector(".login-btn") as HTMLElement;
+// ----- Toggle Navigation and Header -----
+const flowers = document.querySelector(".o3") as HTMLElement | null;
+const navLinks = document.querySelector(".nav-links") as HTMLElement | null;
+const h1H = document.querySelector(".h1-h") as HTMLElement | null;
+const headerP = document.querySelector(".header-p") as HTMLElement | null;
 
-const createAccBtn = document.querySelector(".create-acc-btn") as HTMLElement;
-const createAccDiv = document.querySelector(".create-acc-popup") as HTMLElement;
-const closeBtnCreateAcc = document.querySelector(".x2") as HTMLElement;
-const createAccLink = document.querySelector(".create-acc-link") as HTMLElement;
+flowers?.addEventListener("click", () => {
+  navLinks?.classList.toggle("hidden");
+  h1H?.classList.toggle("hidden");
+  headerP?.classList.toggle("hidden");
+});
 
-const createAccForm = document.querySelector(".create-acc-form") as HTMLElement;
-const createAccHdr = document.querySelector(".hdr2") as HTMLElement;
-const createAccMsg = document.querySelector(".msg2") as HTMLElement;
+// ----- Login and Create Account Elements -----
+const loginIcon = document.querySelector(".login-icon") as HTMLElement | null;
+const loginDiv = document.querySelector(".login") as HTMLElement | null;
+const html = document.documentElement;
+const sectionNav = document.querySelector(".section-nav") as HTMLElement | null;
+const headerSection = document.querySelector(
+  ".section-header"
+) as HTMLElement | null;
+const closeBtn = document.querySelector(".x") as HTMLElement | null;
+const loginBtn = document.querySelector(".login-btn") as HTMLElement | null;
 
-// loginEmail = document.getElementById('email')
-// loginPW = document.getElementById('password')
+const createAccBtn = document.querySelector(
+  ".create-acc-btn"
+) as HTMLElement | null;
+const createAccDiv = document.querySelector(
+  ".create-acc-popup"
+) as HTMLElement | null;
+const closeBtnCreateAcc = document.querySelector(".x2") as HTMLElement | null;
+const createAccLink = document.querySelector(
+  ".create-acc-link"
+) as HTMLElement | null;
 
-loginIcon.addEventListener("click", function (e) {
-  e.preventDefault();
-  loginDiv.classList.toggle("hiddenx2");
-  // body.classList.toggle("opacity-dim");
-  // test:
+const createAccForm = document.querySelector(
+  ".create-acc-form"
+) as HTMLElement | null;
+const createAccHdr = document.querySelector(".hdr2") as HTMLElement | null;
+const createAccMsg = document.querySelector(".msg2") as HTMLElement | null;
+
+// ----- Login Icon Toggle -----
+const toggleLogin = () => {
+  loginDiv?.classList.toggle("hiddenx2");
   html.classList.toggle("opacity-dim");
-  // document.documentElement.classList.toggle("opacity-dim") // test
-  sectionNav.classList.toggle("opacity-dim");
-  headerSection.classList.toggle("opacity-dim");
+  sectionNav?.classList.toggle("opacity-dim");
+  headerSection?.classList.toggle("opacity-dim");
+  resetForm("myForm");
+};
 
-  // clear form input fields (login email pw + create acc email pw ? do that when clicking cr acc link)
-  (document.getElementById("myForm") as HTMLFormElement)?.reset();
+loginIcon?.addEventListener("click", (e) => {
+  e.preventDefault();
+  toggleLogin();
 });
 
-closeBtn.addEventListener("click", function () {
-  loginDiv.classList.toggle("hiddenx2");
-  // body.classList.toggle("opacity-dim");
-  html.classList.toggle("opacity-dim"); // test
-  sectionNav.classList.toggle("opacity-dim");
-  headerSection.classList.toggle("opacity-dim");
+closeBtn?.addEventListener("click", toggleLogin);
+loginBtn?.addEventListener("click", toggleLogin);
+
+// ----- Login Form Submission -----
+const loginForm = document.getElementById("myForm") as HTMLFormElement | null;
+loginForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const email = (document.getElementById("email") as HTMLInputElement)?.value;
+  const password = (document.getElementById("password") as HTMLInputElement)
+    ?.value;
+
+  fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  })
+    .then((res) => res.json())
+    .then((data) => alert(data.message))
+    .catch((err) => alert("Error: " + err.message));
 });
 
-loginBtn.addEventListener("click", function () {
-  loginDiv.classList.toggle("hiddenx2");
-  // body.classList.toggle("opacity-dim");
-  html.classList.toggle("opacity-dim"); // test
-  sectionNav.classList.toggle("opacity-dim");
-  headerSection.classList.toggle("opacity-dim");
-});
+// ----- Generic Form Submit Handler for /submit -----
+loginForm?.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-(document.getElementById("myForm") as HTMLFormElement).addEventListener(
-  "submit",
-  function (e) {
-    e.preventDefault();
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
 
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
-
-    fetch("/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+  fetch("/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then(() => {
+      // Optionally alert success here
     })
-      .then((res) => res.json())
-      .then((data) => {
-        // alert("Form submitted!");
-      })
-      .catch((err) => console.error(err));
-  }
-);
-acc.length;
-
-// create acc hidden stuff:
-
-createAccLink.addEventListener("click", function () {
-  createAccDiv.classList.toggle("hiddenx2");
-  loginDiv.classList.toggle("hiddenx2");
-
-  (document.getElementById("myForm") as HTMLFormElement)?.reset();
+    .catch(console.error);
 });
 
-closeBtnCreateAcc.addEventListener("click", function () {
-  createAccForm.classList.toggle("hiddenx2");
-  createAccHdr.classList.toggle("hiddenx2");
-  createAccMsg.classList.toggle("hiddenx2");
-  createAccDiv.classList.toggle("hiddenx2");
-  loginDiv.classList.toggle("hiddenx2");
+// ----- Create Account Popup Toggle -----
+createAccLink?.addEventListener("click", () => {
+  createAccDiv?.classList.toggle("hiddenx2");
+  loginDiv?.classList.toggle("hiddenx2");
+  resetForm("myForm");
 });
 
+closeBtnCreateAcc?.addEventListener("click", () => {
+  createAccForm?.classList.toggle("hiddenx2");
+  createAccHdr?.classList.toggle("hiddenx2");
+  createAccMsg?.classList.toggle("hiddenx2");
+  createAccDiv?.classList.toggle("hiddenx2");
+  loginDiv?.classList.toggle("hiddenx2");
+});
+
+// ----- Check Email on Account Creation -----
 async function checkEmail() {
   const emailInput = (document.getElementById("email2") as HTMLInputElement)
-    .value;
-  const passwordInput = (
-    document.getElementById("password2") as HTMLInputElement
-  ).value;
-
-  let userEmail = null;
-  let userPW = null;
+    ?.value;
+  const message = document.getElementById("message2") as HTMLElement | null;
+  if (!emailInput || !message) return;
 
   try {
     const response = await fetch("Users_export.json");
     const users = await response.json();
 
-    const foundUser = users.find((user: any) => user.email === emailInput);
-    const exists = !!foundUser;
-
-    if (foundUser) {
-      userEmail = foundUser.email;
-      userPW = foundUser.password;
-    }
-
-    console.log("User found:", foundUser, userEmail, userPW);
-
-    const message = document.getElementById("message2") as HTMLElement; // ? or htmlinputele?
+    const exists = users.some((user: any) => user.email === emailInput);
 
     if (exists) {
       message.textContent = "Email already exists!";
       message.style.color = "black";
     } else {
       message.textContent = "Account created successfully! Please login.";
-      console.log("Acc creatwd");
       message.style.color = "black";
     }
 
-    // Toggle UI components
-    createAccForm.classList.toggle("hiddenx2");
-    createAccHdr.classList.toggle("hiddenx2");
-    createAccMsg.classList.toggle("hiddenx2");
+    createAccForm?.classList.toggle("hiddenx2");
+    createAccHdr?.classList.toggle("hiddenx2");
+    createAccMsg?.classList.toggle("hiddenx2");
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error checking email:", error);
   }
 }
 
-////////
+createAccBtn?.addEventListener("click", checkEmail);
 
-createAccBtn.addEventListener("click", function () {
-  checkEmail();
-});
+// ----- Page Sections & Search -----
+const pizzaPage = document.querySelector(".pizza") as HTMLElement | null;
+const pastaPage = document.querySelector(".pasta") as HTMLElement | null;
+const bigContainer = document.querySelector(".container") as HTMLElement | null;
+const searchBtn = document.querySelector(".search-btn") as HTMLElement | null;
 
-(document.getElementById("myForm") as HTMLFormElement).addEventListener(
-  "submit",
-  function (e) {
-    e.preventDefault();
-
-    const email = (document.getElementById("email") as HTMLInputElement).value;
-    const password = (document.getElementById("password") as HTMLInputElement)
-      .value;
-
-    fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    })
-      .then((res) => res.json())
-      .then((data) => alert(data.message))
-      .catch((err) => alert("Error: " + err.message));
-  }
-);
-
-const pizzaPage = document.querySelector(".pizza") as HTMLElement;
-const pastaPage = document.querySelector(".pasta") as HTMLElement;
-
-const bigContainer = document.querySelector(".container") as HTMLElement;
-const searchBtn = document.querySelector(".search-btn") as HTMLElement;
-// const searchF = document.getElementById('searchForm')
-
-searchBtn.addEventListener("click", function (e) {
+searchBtn?.addEventListener("click", (e) => {
   e.preventDefault();
 
   const input = (
     document.getElementById("searchInput") as HTMLInputElement
-  ).value
+  )?.value
     .trim()
-    .toLowerCase(); // get input and normalize
-  console.log(input);
+    .toLowerCase();
 
   if (input === "pizza") {
-    if (pastaPage.classList.contains("hiddenx2")) {
-    } else {
-      pastaPage.classList.add("hiddenx2");
-    }
-
-    if (bigContainer.classList.contains("hiddenx2")) {
-    } else {
-      bigContainer.classList.add("hiddenx2");
-    }
-
-    pizzaPage.classList.remove("hiddenx2");
-    (document.getElementById("searchForm") as HTMLFormElement)?.reset();
+    pastaPage &&
+      !hasClass(pastaPage, "hiddenx2") &&
+      addClass(pastaPage, "hiddenx2");
+    bigContainer &&
+      !hasClass(bigContainer, "hiddenx2") &&
+      addClass(bigContainer, "hiddenx2");
+    pizzaPage?.classList.remove("hiddenx2");
+    resetForm("searchForm");
   }
+
   if (input === "pasta") {
-    if (pizzaPage.classList.contains("hiddenx2")) {
-    } else {
-      pizzaPage.classList.add("hiddenx2");
-    }
-
-    if (bigContainer.classList.contains("hiddenx2")) {
-    } else {
-      bigContainer.classList.add("hiddenx2");
-    }
-    pastaPage.classList.remove("hiddenx2");
-    (document.getElementById("searchForm") as HTMLFormElement)?.reset();
+    pizzaPage &&
+      !hasClass(pizzaPage, "hiddenx2") &&
+      addClass(pizzaPage, "hiddenx2");
+    bigContainer &&
+      !hasClass(bigContainer, "hiddenx2") &&
+      addClass(bigContainer, "hiddenx2");
+    pastaPage?.classList.remove("hiddenx2");
+    resetForm("searchForm");
   }
 });
 
-const mainPage = document.querySelector(".main") as HTMLElement;
-mainPage.addEventListener("click", function () {
-  if (pizzaPage.classList.contains("hiddenx2")) {
-  } else {
-    pizzaPage.classList.add("hiddenx2");
-  }
-
-  if (pastaPage.classList.contains("hiddenx2")) {
-  } else {
-    pastaPage.classList.add("hiddenx2");
-  }
-
-  if (bigContainer.classList.contains("hiddenx2")) {
-    bigContainer.classList.remove("hiddenx2");
-  } else {
-  }
+// ----- Main Page Click Handler -----
+const mainPage = document.querySelector(".main") as HTMLElement | null;
+mainPage?.addEventListener("click", () => {
+  pizzaPage &&
+    !hasClass(pizzaPage, "hiddenx2") &&
+    addClass(pizzaPage, "hiddenx2");
+  pastaPage &&
+    !hasClass(pastaPage, "hiddenx2") &&
+    addClass(pastaPage, "hiddenx2");
+  bigContainer &&
+    hasClass(bigContainer, "hiddenx2") &&
+    removeClass(bigContainer, "hiddenx2");
 });
 
-// perma check if resNameFile exists or no:
-
-const intervalFile = setInterval(() => {
+// ----- Redirect when resNameFile is set -----
+const redirectInterval = setInterval(() => {
   if (resNameFile) {
-    console.log("Variable has a value:", resNameFile);
-    // window.location.href = `${resNameFile}.html?restaurantName=${encodeURIComponent(
-    //   restaurantName
-    // )}`;
+    console.log("Redirecting to:", resNameFile);
     window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(
       restaurantName
     )}`;
-
-    clearInterval(intervalFile); // Stop checking
+    clearInterval(redirectInterval);
   }
 }, 500);

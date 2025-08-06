@@ -15,23 +15,81 @@
     </nav>
 
     <div class="main order">
-      <h2 class="summary">Order Summary</h2>
-      <p class="res-name">${Restaurant Name}</p>
+      <div class="orderHdr main-padding">
+        <h2 class="summary">Order Summary</h2>
+        <p class="modify">
+          <a href="/pjpage/pj2.html">MODIFY ORDER</a>
+        </p>
+      </div>
+      <div class="btmBrdr"></div>
+      <div class="orderItems main-padding">
+        <p class="res-name">${Restaurant Name}</p>
+        <div class="gridItems">
+          <div class="grItems">
+            <p class="greyBG">Item(s)</p>
+          </div>
+          <div class="grSR">
+            <p class="greyBG">Special Request</p>
+          </div>
+          <div class="grQty">
+            <p class="greyBG">Qty</p>
+          </div>
+          <div class="grPrice">
+            <p class="greyBG">Price</p>
+          </div>
+          <div class="grTotal">
+            <p class="greyBG">Total</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="main address">
-      <h2 class="summary">Delivery Address</h2>
-      <p class="res-name"></p>
+      <div class="addrHdr main-padding">
+        <h2 class="summary">Delivery Address</h2>
+        <div class="addrRight">
+          <p class="edit">
+            <button class="edit-btn">Edit</button>
+          </p>
+          <p class="add">
+            <button class="add-btn">Add</button>
+          </p>
+        </div>
+      </div>
+      <div class="btmBrdr"></div>
+      <div class="addrItems main-padding">
+        <p class="addr-name">Address Name:</p>
+        <p class="addr">Address:</p>
+        <p class="addr-mobile">Mobile:</p>
+      </div>
     </div>
 
-    <div class="main requests">
-      <h2 class="summary">Order Summary</h2>
-      <p class="res-name"></p>
+    <div class="main requests main-padding">
+      <p class="reqs">(icon) Add special requests here.</p>
+      <!-- <p class="res-name"></p> -->
     </div>
 
     <div class="main payment">
-      <h2 class="summary">Payment Summary</h2>
-      <p class="res-name"></p>
+      <div class="payHdr main-padding">
+        <h2 class="summary">Payment Summary</h2>
+      </div>
+      <div class="btmBrdr"></div>
+      <div class="payItems main-padding">
+        <p class="voucher">
+          (ICON) Got a voucher code? Place your order from the talabat app to be
+          able to use it.
+        </p>
+        <div class="payGrid">
+          <div class="payLeft">
+            <p class="payMethod">Select your payment method</p>
+            <p class="payMethod">
+              By ordering through Credit Card you agree to the
+              <a href="#" class="TCLink">Terms and Conditions</a>
+            </p>
+          </div>
+          <div class="payRight"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

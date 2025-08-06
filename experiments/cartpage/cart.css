@@ -1,5 +1,63 @@
 .main {
-    border: 1px solid #999;
-    margin: 2rem 10rem;
-    padding: .85rem .75rem;
+    border: 1px solid #ddd;
+    margin: 2rem 8rem;
+    border-radius: .3rem;
+}
+
+.main-padding {
+    padding: 0 .75rem;
+}
+
+.orderHdr, .addrHdr, .payHdr {
+  display: flex;
+  justify-content: space-between; /* pushes children to edges */
+  align-items: center; /* vertically center if needed */
+}
+
+.btmBrdr {
+    border-bottom: 1px solid #ddd;
+}
+
+.modify a {
+    text-decoration: none;
+    color: #e2721c;
+}
+
+.addrRight {
+    display: flex;
+    gap: .3rem;
+}
+
+.add-btn, .edit-btn {
+    background-color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1.6rem;
+    border-radius: 5rem;
+    border: 1px solid #dededd;
+}
+
+.add-btn:hover, .edit-btn:hover {
+    background-color: #fbd3c4ba;
+    cursor: pointer;
+}
+
+.payGrid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    font-size: .84rem;
+}
+
+.TCLink {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e2721c;
+}
+
+.gridItems {
+    display: grid;
+    grid-template-columns: 3.8fr 1fr 1fr 1fr 1fr;
+}
+
+.greyBG {
+    background-color: #eee;
 }
