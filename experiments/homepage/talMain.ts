@@ -90,11 +90,12 @@ const toggleLogin = () => {
   html.classList.toggle("opacity-dim");
   sectionNav?.classList.toggle("opacity-dim");
   headerSection?.classList.toggle("opacity-dim");
-  resetForm("myForm");
+  // resetForm("myForm");
 };
 
 loginIcon?.addEventListener("click", (e) => {
   e.preventDefault();
+  resetForm("myForm");
   toggleLogin();
 });
 
@@ -143,7 +144,7 @@ loginForm?.addEventListener("submit", function (e) {
 createAccLink?.addEventListener("click", () => {
   createAccDiv?.classList.toggle("hiddenx2");
   loginDiv?.classList.toggle("hiddenx2");
-  resetForm("myForm");
+  resetForm("myFormCreateAcc");
 });
 
 closeBtnCreateAcc?.addEventListener("click", () => {
@@ -152,6 +153,7 @@ closeBtnCreateAcc?.addEventListener("click", () => {
   createAccMsg?.classList.toggle("hiddenx2");
   createAccDiv?.classList.toggle("hiddenx2");
   loginDiv?.classList.toggle("hiddenx2");
+  // resetForm("myForm");
 });
 
 // ----- Check Email on Account Creation -----
@@ -162,7 +164,7 @@ async function checkEmail() {
   if (!emailInput || !message) return;
 
   try {
-    const response = await fetch("Users_export.json");
+    const response = await fetch("./Users_export.json");
     const users = await response.json();
 
     const exists = users.some((user: any) => user.email === emailInput);

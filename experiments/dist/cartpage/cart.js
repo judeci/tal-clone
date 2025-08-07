@@ -1,4 +1,7 @@
 "use strict";
+// import { getLSemail } from "../homepage/talabat.js"; // use .js even if it's .ts when using ES modules
+// const emailIMPORTED = getLSemail();
+// console.log("Logged in as:", emailIMPORTED);
 const params = new URLSearchParams(window.location.search);
 const resName1 = params.get("resName");
 console.log(resName1);

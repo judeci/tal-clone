@@ -59,7 +59,11 @@ app.use("/assets", express.static(path.join(__dirname, "..", "..", "assets")));
 
 // scripts:
 // app.use("/dist", express.static(path.join(__dirname, "..", "dist")));
-app.use("/dist", express.static(path.join(__dirname, "..")));
+// app.use("/dist", express.static(path.join(__dirname, "dist")));
+app.use("/dist", express.static(path.join(__dirname, ".."))); // if code is completely messed up, change it back to this
+
+// json:
+app.use("/", express.static(path.join(__dirname, "..", "..", "/"))); // REMOVE IF MSD EVERYTHING UP
 
 // === MYSQL CONNECTION ===
 const db = mysql.createConnection({
@@ -93,6 +97,10 @@ app.get("/", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "..", "..", "homepage", "talabat.html"));
 });
 
+// LSemail export :
+let LSemail: string | undefined;
+export const getLSemail = () => LSemail;
+
 // Login Route
 app.post("/login", async (req: Request, res: Response) => {
   const { email, password } = req.body;
@@ -116,6 +124,10 @@ app.post("/login", async (req: Request, res: Response) => {
         console.error("❌ DB Error:", err);
         return res.status(500).json({ message: "Database error." });
       }
+
+      LSemail = email;
+      console.log("Current LSemail:", LSemail);
+
       return res.json({ message: "Login successful!" });
     });
   } catch (err) {
@@ -134,9 +146,11 @@ app.post("/register", async (req: Request, res: Response) => {
     db.query(sql, [email, hashedPassword], (err) => {
       if (err) {
         console.error("❌ Error inserting:", err);
-        return res.status(500).json({ message: "DB error" });
+        // return res.status(500).json({ message: "DB error" });
+        // alert("Email already exists!");
       }
-      return res.json({ message: "User registered!" });
+      // return res.json({ message: "User registered!" });
+      // alert("User registered successfully!");
     });
   } catch (err) {
     console.error("❌ Hashing error:", err);

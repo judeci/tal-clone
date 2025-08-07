@@ -218,5 +218,100 @@
     "id": 118,
     "email": "j5@g.com",
     "password": "123"
+  },
+  {
+    "id": 119,
+    "email": "judeAug7@gmail.com",
+    "password": "$2b$10$ub4wwncP18gW1woedFXwJuK/CsKTYG.uX5Whtcs1E3XvNuMiyNEi."
+  },
+  {
+    "id": 121,
+    "email": "judeAug7@gmail.comd",
+    "password": "$2b$10$EjUjuxXppwETNrgPY3CQKu8R4LvYGaeUnZJhQasRJ33VF4BsuhawO"
+  },
+  {
+    "id": 123,
+    "email": "judeAug7@gmail.comt",
+    "password": "$2b$10$FxaazcRjheYrLHeuRjaZ.usGpY6szHcy/1btlDLYC5O5W6I.OJVIe"
+  },
+  {
+    "id": 124,
+    "email": "123@TESTNG.com",
+    "password": "$2b$10$hegXjFjfqgNo0FMwI2y2MebUW2ii1mgam9YcnbszxS.IPw44YWmhm"
+  },
+  {
+    "id": 125,
+    "email": "123testt@gm.com",
+    "password": "$2b$10$uZ7e857YIwNN3iPDTxW1YOFGlVfJjapYuffjsZ5DSaYRcRMAREuIm"
+  },
+  {
+    "id": 126,
+    "email": "dsd@sdsdsd.comc",
+    "password": "$2b$10$g1Jdo1fcicOQr7sXVEdPd.iq1Mt2U7kX8Zd6qfu4iC2myP1W92Tjm"
+  },
+  {
+    "id": 127,
+    "email": "sdh@sd.csjd",
+    "password": "$2b$10$y0mF6dBzXvsR7bZbxEFaJO8rduJ6z1x8vjsYJyk5aH6LFO0KokLg2"
+  },
+  {
+    "id": 128,
+    "email": "dhsjd@sadjsafcasd.com",
+    "password": "$2b$10$nhvnePYG0NHWNPeSdAH9dOOS.TCnKSQ0jZ7ig8NZ41jodMyQdCId."
+  },
+  {
+    "id": 132,
+    "email": "dhsjd@sadjsafcasd.comhbjn",
+    "password": "$2b$10$Z2Bixp9D5rssHY5tVZLeuOw3DZ46ayC13OhkpBmP4dFxOOZc9JuLK"
+  },
+  {
+    "id": 133,
+    "email": "dhsjd@sadjsafcsdsdasd.comhbjn",
+    "password": "$2b$10$87IdSnydfCvZXbepaiXG2.XO0htzkHA1Uta119R4QBw6xPh6yKoGq"
+  },
+  {
+    "id": 135,
+    "email": "dhsjd@sadjsafcsdsdassdsd.comhbjn",
+    "password": "$2b$10$KBeGBIbeRa/dk.dbkIwhZO/hqlBzLqow3EcZAtVDuuydh70oEMiNi"
+  },
+  {
+    "id": 136,
+    "email": "dhsjd@ds.comhbjn",
+    "password": "$2b$10$9oWYnrjNahpv5XCVx6hHEe8W6H5HUVz3R5x7lWfajsywGnKE9dqC."
+  },
+  {
+    "id": 137,
+    "email": "sdsk@NEWWWW.com",
+    "password": "$2b$10$59zM/ro8TmUVrr7rWmDMxevKMjQ0AuWk/xJn2dF1v0VOtc9beD2tO"
+  },
+  {
+    "id": 138,
+    "email": "sdsk@NEWWWWd.com",
+    "password": "$2b$10$bcC9YMzKLQzPt.veOdOyyu/GiCcTUtLrlefSXlozrRSglBAbLggt6"
+  },
+  {
+    "id": 139,
+    "email": "pls@p.ls",
+    "password": "$2b$10$WzN3C.lLy6YByzyxF0VgkOrGCy4V4wYTrU5OIBjd.rKuf51Yx2w12"
+  },
+  {
+    "id": 140,
+    "email": "okFinOne@gm.com",
+    "password": "$2b$10$o21S3Lp7y.CDWEkjqCudgeVUlJJ5sRzUelr3WgmUmNM0YWdscd0I."
+  },
+  {
+    "id": 142,
+    "email": "123TESTING@test.test",
+    "password": "$2b$10$d8CdivBPf9HVaDWJ7nXb2.B.sDyS.zrGZ0f5AiF0dEHahyGb/dHZG"
+  },
+  {
+    "id": 143,
+    "email": "1@1.1",
+    "password": "$2b$10$HnzL5OMVTaPzXmG2KRskb.aikFolm311Bvp647UbLaP53XsEWJ8cG"
+  },
+  {
+    "id": 145,
+    "email": "2@2.2",
+    "password": "$2b$10$tbSEyMdFoIYrlPbbfwckRuskVeyjZI5P2NFW9C/LE9/TTfLmhF4lS"
   }
 ]
