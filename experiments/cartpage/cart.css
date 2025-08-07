@@ -1,3 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+    font-size: 2rem;
+}
+
+
 .main {
     border: 1px solid #ddd;
     margin: 2rem 8rem;
@@ -5,13 +22,15 @@
 }
 
 .main-padding {
-    padding: 0 .75rem;
+    padding: 1rem 2rem;
 }
 
 .orderHdr, .addrHdr, .payHdr {
   display: flex;
   justify-content: space-between; /* pushes children to edges */
   align-items: center; /* vertically center if needed */
+  font-size: 1.5rem;
+  /* font-style: normal; */
 }
 
 .btmBrdr {
@@ -30,8 +49,8 @@
 
 .add-btn, .edit-btn {
     background-color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1.6rem;
+    font-size: 1.6rem;
+    padding: .8rem 2.8rem;
     border-radius: 5rem;
     border: 1px solid #dededd;
 }
@@ -53,11 +72,148 @@
     color: #e2721c;
 }
 
+.res-name {
+    margin-top: 1.6rem;
+}
+
 .gridItems {
     display: grid;
-    grid-template-columns: 3.8fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3.6fr 1.2fr 1fr 1fr 1fr;
+    /* align-items: center; */
+    /* justify-items: center; */
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+}
+
+/* .gridItems > * {
+    background-color: #eee;
+    padding: 1rem;
+    box-sizing: border-box;  
+} */
+
+.grItems {
+    text-align: start;
 }
 
 .greyBG {
-    background-color: #eee;
+    background-color: #efefef;
+    padding: 1rem;
+    /* box-sizing: border-box;   */
+}
+
+.addrItems, .orderItems {
+    font-size: 1.65rem;
+}
+
+
+/* ///////////////////////////////////// */
+/* FOOTER */
+/* ////////////////////////////////////// */
+/* footer: */
+
+.PJ-section-footer {
+  /* margin-top: 10rem; */
+  background-color: #222;
+  color: #f1f1f1;
+  padding: 2rem 0 2rem 0;
+  font-size: 1.6rem;
+}
+
+/* ACCORDION: */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.PJ-footer-accordion-box {
+  margin-bottom: 2rem;
+}
+
+.PJ-footer-accordion {
+  background-color: #222;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active, */
+/* .accordion:hover { */
+/* background-color: #ccc; */
+/* } */
+
+/* Style the accordion panel. Note: hidden by default */
+.PJ-footer-panel {
+  padding: 0 3.6rem;
+  background-color: #222;
+  color: #999;
+  display: none;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.PJ-footer-accordion:after {
+  content: "+"; /*Unicode character for "plus" sign (+)*/
+  font-size: 18px;
+  color: #999;
+  float: right;
+  margin-left: 5px;
+}
+
+.PJ-footer-active:after {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+.cuisines-links:link,
+.cuisines-links:visited {
+  color: #999;
+  display: flex;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+
+
+/* ////////////////// */
+
+/* COPYRIGHT: */
+
+.copyright {
+  border-top: 0.1px solid #aaa;
+}
+
+.copyright-p {
+  margin-top: 1rem;
+  display: flex;
+  justify-self: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.copyright-p2 {
+  display: flex;
+  justify-self: center;
+  font-size: 1.5rem;
+  /* margin-bottom: 2rem; */
+}
+
+.live-chat:link,
+.live-chat:visited {
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  background-color: #222;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  border-bottom: 1.5px dashed #f1f1f1;
 }
