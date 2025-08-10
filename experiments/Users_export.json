@@ -313,5 +313,15 @@
     "id": 145,
     "email": "2@2.2",
     "password": "$2b$10$tbSEyMdFoIYrlPbbfwckRuskVeyjZI5P2NFW9C/LE9/TTfLmhF4lS"
+  },
+  {
+    "id": 155,
+    "email": "aug10@test.com",
+    "password": "$2b$10$TaP7wFCiRPmoe/BI5Ah4d.WQq3dSkjvvSKSLqmfhu59F8MDx/QgT6"
+  },
+  {
+    "id": 167,
+    "email": "aug10@test2.com",
+    "password": "$2b$10$tUh46jaAv0Z2zHWVzNuJc.Imsb53k7MEvZidjuV7OW1uf85tgTl/S"
   }
 ]

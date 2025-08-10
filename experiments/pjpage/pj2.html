@@ -12,12 +12,65 @@
     <title>Papa John's</title>
   </head>
   <body>
+    
     <nav class="PJ-nav">
+      <!-- add nav main page stuff -->
+      <nav class="section-nav">
+
+      <div class="nav-btns">
+        <button class="nav-btn">AR<ion-icon class="icon" name="earth-outline"></ion-icon></button>
+        <button class="nav-btn"><ion-icon class="icon" name="flag-outline"></ion-icon></button>
+        <button class="nav-btn login-icon"><ion-icon class="icon" name="person-circle-outline"></ion-icon></button>
+      </div>
+
+
       <button class="cart-btn" onclick="window.location.href='cart.html'">
-        CA
-        <p class="cart-num"></p>
-        RT
+        CART
+        (
+          <p class="cart-num"></p>
+          )
       </button>
+    </nav>
+    
+    <div class="login hiddenx2">
+      <button class="x">x</button>
+      <h3>Login</h3>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button class="login-facebook">Continue with Facebook</button>
+      <p>OR</p>
+
+      <form class="login-form" id="myForm">
+        <input type="email" name="email" class="email" placeholder="Email" id="email" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button class="login-btn" type="submit">Login</button>
+      </form>
+
+      <p class="create-acc">Don't have an account? <p class="create-acc-link">Create an account</p></p>
+    </div>
+
+    <!-- logout -->
+     <div class="logout hiddenx2">
+      <button class="x">x</button>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <div class="hiddenx2 create-acc-popup">
+      <button class="x2">x</button>
+      <h3 class="hdr2">Create an Account:</h3>
+
+      <form action="/register" method="POST" class="create-acc-form" id="myFormCreateAcc">
+        <input type="email" name="email" class="email" placeholder="Email" id="email2" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password2" required>
+        <button class="create-acc-btn" type="submit">Create</button>
+      </form>
+      <p id="message2" class="hiddenx2 msg2"></p>
+    </div>
+     <!-- to here -->
+
+      
     </nav>
 
     <div class="PJ-container">

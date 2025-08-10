@@ -15,6 +15,241 @@ body {
 }
 
 
+
+/* login / nav stuff */
+
+.section-nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  /* grid-template-columns: 1fr 1fr; */
+  padding: 4rem 6rem;
+  margin: 1.4rem 2rem;
+}
+
+.nav-btns {
+  justify-self: end;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-btn,
+.nav-btn:link,
+.nav-btn:visited{
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 1rem 1rem;
+
+  border: none;
+  /* only necessary for .btn */
+  box-shadow: 0.5px 2px 15px 0 #0000000e;
+  cursor: pointer;
+  font-family: inherit;
+
+  background-color: #fff;
+  color: #666;
+}
+
+
+.nav-btn {
+  transition: all 0.2s;
+}
+
+.nav-btn:hover,
+.nav-btn:active {
+  transform: translateY(-0.3rem);
+}
+
+
+  .nav-btn,
+  .nav-btn:link,
+  .nav-btn:visited {
+    text-decoration: none;
+    border-radius: 50%;
+
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    background-color: #fff;
+    color: #666;
+  }
+
+  
+.icon {
+  font-size: 2.4rem;
+}
+
+/* login stuff */
+
+.login, .create-acc-popup {
+  height: 77vh;
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 3;
+  top: 7rem;
+  left: 50%;
+ transform: translate(-50%, 0);
+  border-radius: .5rem;
+  opacity: 1 !important;
+  pointer-events: all !important;
+
+
+  /* box-shadow: 30px 30px 5px rgba(0, 0, 0, 0.303); */
+  -webkit-box-shadow: 500 500 5px #000000b7;
+        box-shadow: 500 500 5px #00000075;
+}
+
+.logout {
+   height: 36vh;
+  width: 26vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 3;
+  top: 27rem;
+  left: 50%;
+ transform: translate(-50%, 0);
+  border-radius: .5rem;
+  opacity: 1 !important;
+  pointer-events: all !important;
+
+  -webkit-box-shadow: 500 500 5px #000000b7;
+        box-shadow: 500 500 5px #00000075;
+}
+
+.x, .x2 {
+  width: 3rem;
+font-size: 2.2rem;
+border: none;
+background-color: white;
+font-weight: 500;
+align-self: flex-end;
+padding-right: 4.5rem;
+}
+
+.x:hover, .x2:hover {
+  cursor: pointer;
+}
+
+.login h3, .create-acc-popup h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.msg2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.login p {
+  font-size: 1.6rem;
+  color: #444;
+  letter-spacing: .05rem;
+}
+
+  
+
+.login-google {
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 1.35rem;
+  color: #444;
+  font-weight: 300;
+  width: 77%;
+  height: 3.2rem;
+}
+.login-facebook {
+  border: 1px solid #6d7fb9;
+  background-color: #6d7fb9;
+  font-size: 1.35rem;
+  color: #fff;
+  font-weight: 300;
+  width: 77%;
+   height: 3.2rem;
+}
+
+.login-form, .create-acc-form {
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  width: 77%;
+  font-size: 1.3rem;
+}
+
+.login-form input, .create-acc-form input {
+  height: 3.2rem;
+}
+
+.forgot-password {
+  color: #888;
+  text-decoration: none;
+}
+
+.login-btn, .create-acc-btn {
+  border: none;
+  background-color: #fd6721;
+  color:white;
+  height: 3.8rem;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+}
+
+
+.logout-btn {
+   border: none;
+  background-color: #fd6721;
+  color:white;
+  height: 6rem;
+  width: 10rem;
+  font-size: 2.2rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+}
+
+/* .login-btn:hover */
+
+.create-acc-link {
+  color: #e65c1d !important;
+  /* background-color: #000; */
+  margin-top: -2rem !important;
+  cursor: pointer;
+}
+
+.main:hover {
+  cursor: pointer;
+}
+/* to here */
+
+
+.PJ-nav {
+    background-color: #e3dcd7;
+    height: 11rem;
+    
+    display: flex;
+    justify-content: right;
+
+    margin-bottom: 6rem;
+}
+
+/* to here */
+
+
 .main {
     border: 1px solid #ddd;
     margin: 2rem 8rem;
@@ -113,7 +348,7 @@ body {
 /* footer: */
 
 .PJ-section-footer {
-  /* margin-top: 10rem; */
+  margin-top: 6rem;
   background-color: #222;
   color: #f1f1f1;
   padding: 2rem 0 2rem 0;
@@ -216,4 +451,8 @@ body {
   margin-left: 0.5rem;
   text-decoration: none;
   border-bottom: 1.5px dashed #f1f1f1;
+}
+
+.hiddenx2 {
+    display: none;
 }

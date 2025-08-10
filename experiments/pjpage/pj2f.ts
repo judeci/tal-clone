@@ -1,3 +1,11 @@
+let emailFetchedPJ: string;
+fetch("/api/email")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Logged in as:", data.email);
+    emailFetchedPJ = data.email;
+  });
+
 // Utility: Toggle accordion panel open/close
 function toggleAccordion(accordionBtn: HTMLElement, activeClass = "active") {
   accordionBtn.classList.toggle(activeClass);

@@ -1,3 +1,11 @@
+let emailFetchedTM: string;
+fetch("/api/email")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Logged in as:", data.email);
+    emailFetchedTM = data.email;
+  });
+
 // ----- Utility functions -----
 const toggleClass = (el: Element, className: string) =>
   el.classList.toggle(className);
@@ -59,6 +67,7 @@ flowers?.addEventListener("click", () => {
 // ----- Login and Create Account Elements -----
 const loginIcon = document.querySelector(".login-icon") as HTMLElement | null;
 const loginDiv = document.querySelector(".login") as HTMLElement | null;
+const logoutDiv = document.querySelector(".logout") as HTMLElement | null;
 const html = document.documentElement;
 const sectionNav = document.querySelector(".section-nav") as HTMLElement | null;
 const headerSection = document.querySelector(
@@ -66,6 +75,7 @@ const headerSection = document.querySelector(
 ) as HTMLElement | null;
 const closeBtn = document.querySelector(".x") as HTMLElement | null;
 const loginBtn = document.querySelector(".login-btn") as HTMLElement | null;
+const logoutBtn = document.querySelector(".logout-btn") as HTMLElement | null;
 
 const createAccBtn = document.querySelector(
   ".create-acc-btn"
@@ -84,8 +94,15 @@ const createAccForm = document.querySelector(
 const createAccHdr = document.querySelector(".hdr2") as HTMLElement | null;
 const createAccMsg = document.querySelector(".msg2") as HTMLElement | null;
 
-// ----- Login Icon Toggle -----
+// ----- Login and logout Icon Toggle -----
 const toggleLogin = () => {
+  fetch("/api/email")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Logged in as:", data.email);
+      emailFetchedTM = data.email;
+    });
+
   loginDiv?.classList.toggle("hiddenx2");
   html.classList.toggle("opacity-dim");
   sectionNav?.classList.toggle("opacity-dim");
@@ -93,14 +110,64 @@ const toggleLogin = () => {
   // resetForm("myForm");
 };
 
+const toggleLogout = () => {
+  emailFetchedTM = "";
+  console.log('emailFetchedTM shud be "" here.');
+  logoutDiv?.classList.toggle("hiddenx2");
+  html.classList.toggle("opacity-dim");
+  sectionNav?.classList.toggle("opacity-dim");
+  headerSection?.classList.toggle("opacity-dim");
+};
+
 loginIcon?.addEventListener("click", (e) => {
   e.preventDefault();
   resetForm("myForm");
-  toggleLogin();
+  console.log(emailFetchedTM, "ERROR HERE");
+
+  if (emailFetchedTM !== "" && emailFetchedTM !== null) {
+    toggleLogout();
+  } else {
+    toggleLogin();
+  }
 });
 
 closeBtn?.addEventListener("click", toggleLogin);
 loginBtn?.addEventListener("click", toggleLogin);
+// fetch("/api/email")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log("Logged in as:", data.email);
+//     emailFetchedTM = data.email;
+//   });
+
+logoutBtn?.addEventListener("click", toggleLogout);
+
+// logout :
+// const toggleLogout = () => {
+//   logoutDiv?.classList.toggle("hiddenx2");
+//   html.classList.toggle("opacity-dim");
+//   sectionNav?.classList.toggle("opacity-dim");
+//   headerSection?.classList.toggle("opacity-dim");
+// resetForm("myForm");
+// };
+
+// loginIcon?.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   resetForm("myForm");
+//   toggleLogin();
+// });
+
+// closeBtn?.addEventListener("click", toggleLogin);
+// loginBtn?.addEventListener("click", toggleLogin);
+
+// remove logout stuff, and fix login stuff to be like this:
+// if (LSemail exists) {
+//   then:
+//   when pressing loginIcon, open logout page,
+
+// } else {
+//   open login page
+// }
 
 // ----- Login Form Submission -----
 const loginForm = document.getElementById("myForm") as HTMLFormElement | null;

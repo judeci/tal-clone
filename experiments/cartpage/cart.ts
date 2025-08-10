@@ -1,7 +1,16 @@
-// import { getLSemail } from "../homepage/talabat.js"; // use .js even if it's .ts when using ES modules
+// @ts-ignore
+// import getLSemail from "../homepage/talabat.js"; // use .js even if it's .ts when using ES modules
 
 // const emailIMPORTED = getLSemail();
 // console.log("Logged in as:", emailIMPORTED);
+
+let emailFetched: string;
+fetch("/api/email")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Logged in as:", data.email);
+    emailFetched = data.email;
+  });
 
 const params = new URLSearchParams(window.location.search);
 const resName1 = params.get("resName");
@@ -68,6 +77,7 @@ xArr?.forEach((element) => {
     }
 
     console.log(noQuotes);
+    // console.log("Logged in as:", emailIMPORTED);
 
     grItems.append(noQuotes.split(",")[0].replace("name:", ""));
     grItems.append(document.createElement("br"));

@@ -99,7 +99,7 @@ app.get("/", (req: Request, res: Response) => {
 
 // LSemail export :
 let LSemail: string | undefined;
-export const getLSemail = () => LSemail;
+// export const getLSemail = () => LSemail;
 
 // Login Route
 app.post("/login", async (req: Request, res: Response) => {
@@ -117,6 +117,7 @@ app.post("/login", async (req: Request, res: Response) => {
     }
 
     console.log("✅ Login success");
+    // console.log("Current LSemail:", LSemail);
 
     const sql = "INSERT IGNORE INTO users (email, password) VALUES (?, ?)";
     db.query(sql, [email, user.password], (err) => {
@@ -125,8 +126,8 @@ app.post("/login", async (req: Request, res: Response) => {
         return res.status(500).json({ message: "Database error." });
       }
 
-      LSemail = email;
-      console.log("Current LSemail:", LSemail);
+      // LSemail = email;
+      // console.log("Current LSemail:", LSemail);
 
       return res.json({ message: "Login successful!" });
     });
@@ -134,6 +135,7 @@ app.post("/login", async (req: Request, res: Response) => {
     console.error("❌ Error reading JSON:", err);
     return res.status(500).json({ message: "Internal server error." });
   }
+  LSemail = email;
 });
 
 // Register Route
@@ -196,6 +198,10 @@ function checkForChanges(): void {
     }
   );
 }
+
+app.get("/api/email", (req, res) => {
+  res.json({ email: LSemail ?? null });
+});
 
 // Poll every 5 seconds
 setInterval(checkForChanges, 5000);
