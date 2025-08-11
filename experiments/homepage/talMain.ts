@@ -1,10 +1,10 @@
 let emailFetchedTM: string;
-fetch("/api/email")
-  .then((res) => res.json())
-  .then((data) => {
-    console.log("Logged in as:", data.email);
-    emailFetchedTM = data.email;
-  });
+// fetch("/api/email")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log("Logged in as:", data.email);
+//     emailFetchedTM = data.email;
+//   });
 
 // ----- Utility functions -----
 const toggleClass = (el: Element, className: string) =>
@@ -96,12 +96,12 @@ const createAccMsg = document.querySelector(".msg2") as HTMLElement | null;
 
 // ----- Login and logout Icon Toggle -----
 const toggleLogin = () => {
-  fetch("/api/email")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("Logged in as:", data.email);
-      emailFetchedTM = data.email;
-    });
+  // fetch("/api/email")
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     console.log("Logged in as:", data.email);
+  //     emailFetchedTM = data.email;
+  //   });
 
   loginDiv?.classList.toggle("hiddenx2");
   html.classList.toggle("opacity-dim");
@@ -110,9 +110,37 @@ const toggleLogin = () => {
   // resetForm("myForm");
 };
 
+const toggleLoginFetch = () => {
+  // if (email&pw r correct) {
+  fetch("/api/email")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Logged in as:", data.email);
+      emailFetchedTM = data.email;
+    });
+  // } else {
+  // }
+  loginDiv?.classList.toggle("hiddenx2");
+  html.classList.toggle("opacity-dim");
+  sectionNav?.classList.toggle("opacity-dim");
+  headerSection?.classList.toggle("opacity-dim");
+};
+
 const toggleLogout = () => {
+  // emailFetchedTM = "";
+  // localStorage.clear();
+  // console.log('emailFetchedTM shud be "" here.');
+  logoutDiv?.classList.toggle("hiddenx2");
+  html.classList.toggle("opacity-dim");
+  sectionNav?.classList.toggle("opacity-dim");
+  headerSection?.classList.toggle("opacity-dim");
+};
+
+const toggleLogoutFr = () => {
   emailFetchedTM = "";
+  localStorage.clear();
   console.log('emailFetchedTM shud be "" here.');
+
   logoutDiv?.classList.toggle("hiddenx2");
   html.classList.toggle("opacity-dim");
   sectionNav?.classList.toggle("opacity-dim");
@@ -132,7 +160,7 @@ loginIcon?.addEventListener("click", (e) => {
 });
 
 closeBtn?.addEventListener("click", toggleLogin);
-loginBtn?.addEventListener("click", toggleLogin);
+loginBtn?.addEventListener("click", toggleLoginFetch);
 // fetch("/api/email")
 //   .then((res) => res.json())
 //   .then((data) => {
@@ -140,7 +168,7 @@ loginBtn?.addEventListener("click", toggleLogin);
 //     emailFetchedTM = data.email;
 //   });
 
-logoutBtn?.addEventListener("click", toggleLogout);
+logoutBtn?.addEventListener("click", toggleLogoutFr);
 
 // logout :
 // const toggleLogout = () => {
