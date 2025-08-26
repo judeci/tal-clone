@@ -5,18 +5,19 @@
 }
 
 html {
-  /* background-color: #fae4d8; */
-  background-color: #fff;
+  /* background-color: #f4ede3; */
+  background-color: white;
   font-size: 62.5%;
   overflow-x: hidden;
 }
 
 body {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Cabin", sans-serif;
   line-height: 1;
   font-weight: 400;
   z-index: 1;
   position: relative;
+  background-color: white;
 }
 
 .container {
@@ -26,18 +27,24 @@ body {
 }
 
 .section-header {
-  background-color: #fae4d8;
+  background-color: #f4ede3;
   padding: .2rem;
 }
 /* 
 .empty {
-  color: #fae4d8;
+  color: #f4ede3;
   font-size: 4rem;
 } */
 
-.h1-h {
-  color: #fae4d8;
-  background-color: #fd6721;
+.talabat-title {
+  display: flex;
+  justify-self: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+/* .h1-h {
+  color: #f4ede3;
+  background-color: #f55905;
   padding: 2rem;
   font-size: 6.4rem;
   letter-spacing: .2rem;
@@ -47,19 +54,19 @@ body {
   margin-bottom: 2rem;
   margin-top: 1rem;
   border-radius: 10px;
-}
+} */
 
 .header-p {
-  color: #fd6721;
+  color: #f55905;
   font-size: 2.8rem;
-  font-weight: 500;
+  font-weight: 700;
   display: flex;
   justify-self: center;
   margin-bottom: 2rem;
 }
 
 nav {
-  background-color: #fae4d8;
+  background-color: #f4ede3;
 }
 
 .section-nav {
@@ -73,7 +80,7 @@ nav a:link,
 nav a:visited {
   display: inline-block;
   font-size: 2.4rem;
-  color: #fd6721;
+  color: #f55905;
   text-decoration: none;
 }
 
@@ -160,14 +167,14 @@ nav a:active {
   font-family: inherit;
 
   background-color: #fff;
-  color: #fd6721;
+  color: #f55905;
 }
 
 .search-btn:hover,
 .search-btn:active {
-  /* background-color: #fd6721; */
+  /* background-color: #f55905; */
   color: #fff;
-  background-color: #fd6721;
+  background-color: #f55905;
   /* border: 1px solid #e65c1d; */
   /* box-shadow: inset 0 0 1.25px 1.25px #e65d1dd7; */
 }
@@ -219,7 +226,7 @@ nav a:active {
   font-weight: 400;
   color: #fff;
   padding: 2rem 0.5rem 0.5rem 2rem;
-  background-color: #fd6721;
+  background-color: #f55905;
 }
 
 .order-link,
@@ -230,7 +237,7 @@ nav a:active {
   /* align-self: stretch; */
 
   color: #fff;
-  background-color: #fd6721;
+  background-color: #f55905;
   text-transform: uppercase;
   text-decoration: underline solid white 2px;
   font-size: 2rem;
@@ -282,34 +289,83 @@ nav a:active {
 /* ///////////////////////////// */
 /* app */
 
-.app {
-  background-color: #fae4d8;
+.appAndImg {
+  display: flex;
+  gap: 8rem;
+  background-color: #f4ede3;
   /* width: 100vw !important; */
-  margin-top: 5rem;
-  padding: 6.4rem 20rem;
-  border-radius: 3rem;
+  
+  padding: 5.4rem 0;
+  align-items: center;
+  justify-content: center;
+  /* text-align: left; */
+  /* line-height: 0; */
+
+  
+ 
+}
+
+.app-img {
+  height: 22rem;
+}
+
+.app {
+  
+  /* border-radius: 3rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items: center;
 }
 
 .app-header {
-  font-size: 6rem;
-  font-weight: 600;
+  font-size: 5.2rem;
+  font-weight: 700;
+  color: #411517;
+  /* letter-spacing: 1px; */
+  word-spacing: 2px;
 }
 
 .app-p {
   font-size: 2.5rem;
-  letter-spacing: 0.15rem;
-  margin-top: 1.25rem;
+  letter-spacing: 0.05rem;
+  margin-top: 1.3rem;
 }
 
 .app-btns {
   display: flex;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 
+.appSquiggly {
+  display: block;
+  background-image: url(/assets/images/squiggly.png);
+  background-color: #f4ede3;
+  width: 100%;
+  height: 4px;
+  transform: scale(-1, -1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: 5rem;
+}
+.appSquiggly2 {
+  display: block;
+  background-image: url(/assets/images/squiggly.png);
+    background-color: #f4ede3;
+    width: 100%;
+    height: 4px;
+    transform: scale(1, 1);
+    background-size: cover;
+     background-repeat: no-repeat;
+  background-position: top;
+    /* margin-bottom: 5rem; */
+}
+/* 
 .app-btn {
   margin-top: 3rem;
-  width: 20rem;
-  height: 5.3rem;
+  width: 25rem;
+  height: 4rem;
   color: white;
   background-color: black;
   border-radius: .75rem;
@@ -319,6 +375,16 @@ nav a:active {
 
 .app-btn-BIG {
   font-size: 2.3rem;
+} */
+
+.app-btns button {
+  margin-top: 3rem;
+  cursor: pointer;
+  border: none;
+}
+
+.app-img-2 {
+  height: 5rem;
 }
 
 /* ////////////////////////// */
@@ -345,13 +411,13 @@ nav a:active {
 
 .partnership-1,
 .partnership-2 {
-  padding: 5rem 8rem;
-  background-color: #fae4d8;
+  padding: 3rem 5rem;
+  background-color: #f4ede3;
   border-radius: 6.4rem;
 }
 
 .partnership-btn {
-  background-color: #fd6721;
+  background-color: #f55905;
   color: white;
   font-size: 1.7rem;
   justify-content: center;
@@ -459,7 +525,7 @@ nav a:active {
 }
 
 .city-block:active {
-  color: #fd6721;
+  color: #f55905;
 }
 
 .city-h {
@@ -728,7 +794,7 @@ padding-right: 4.5rem;
 
 .login-btn, .create-acc-btn {
   border: none;
-  background-color: #fd6721;
+  background-color: #f55905;
   color:white;
   height: 3.8rem;
   font-size: 1.5rem;
@@ -739,7 +805,7 @@ padding-right: 4.5rem;
 
 .logout-btn {
    border: none;
-  background-color: #fd6721;
+  background-color: #f55905;
   color:white;
   height: 6rem;
   width: 10rem;
@@ -1122,7 +1188,7 @@ display: none;
     font-weight: 400;
     color: #fff;
     padding: 1rem 0.5rem 0 1rem;
-    background-color: #fd6721;
+    background-color: #f55905;
   }
 
   .order-link,
@@ -1133,7 +1199,7 @@ display: none;
     /* align-self: stretch; */
 
     color: #fff;
-    background-color: #fd6721;
+    background-color: #f55905;
     text-transform: uppercase;
     text-decoration: underline solid white 1.8px;
     font-size: 1.8rem;

@@ -124,6 +124,11 @@ const toggleLoginFetch = () => {
   html.classList.toggle("opacity-dim");
   sectionNav?.classList.toggle("opacity-dim");
   headerSection?.classList.toggle("opacity-dim");
+
+  console.log(
+    emailFetchedTM,
+    "does this input the prev one? the same as logged in as?"
+  );
 };
 
 const toggleLogout = () => {
