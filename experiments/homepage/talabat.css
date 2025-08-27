@@ -39,8 +39,8 @@ body {
 .talabat-title {
   display: flex;
   justify-self: center;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
+  margin-bottom: 4.4rem;
+  margin-top: .4rem;
 }
 /* .h1-h {
   color: #f4ede3;
@@ -73,13 +73,13 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* margin: 5rem 3rem; */
-  padding: 4rem 22rem;
+  padding: 3rem 22rem;
 }
 
 nav a:link,
 nav a:visited {
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #f55905;
   text-decoration: none;
 }
@@ -106,12 +106,12 @@ nav a:active {
 .nav-btn:link,
 .nav-btn:visited {
   text-decoration: none;
-  border-radius: 50%;
-  padding: 1rem 1rem;
+  border-radius: 20rem;
+  padding: 0 1.1rem;
 
   border: none;
   /* only necessary for .btn */
-  box-shadow: 0.5px 2px 15px 0 #0000000e;
+  /* box-shadow: 0.5px 2px 15px 0 #0000000e; */
   cursor: pointer;
   font-family: inherit;
 
@@ -119,22 +119,36 @@ nav a:active {
   color: #666;
 }
 
+.login-logo, .flag-logo {
+  width: 1.8rem;
+}
+
+.flag-logo {
+  width: 2.2rem;
+}
+
+.n1 {
+  border-radius: 5rem !important;
+  padding: 0;
+}
+
 .icon {
   font-size: 2.4rem;
 }
-
+/* 
 .nav-btn {
   transition: all 0.2s;
-}
+} */
 
 .nav-btn:hover,
 .nav-btn:active {
-  transform: translateY(-0.3rem);
+  /* transform: translateY(-0.3rem); */
 }
+
 
 .search {
   margin-top: 1.5rem;
-  margin-bottom: 5.5rem;
+  margin-bottom: 4.8rem;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -145,10 +159,13 @@ nav a:active {
   padding: 6px;
   margin-right: 20px;
   border: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   font-family: inherit;
-  border-radius: 10px;
+  /* border-radius: 3rem; */
+
 }
+
 
 .search-btn {
   transition: all 0.15s;
@@ -158,7 +175,7 @@ nav a:active {
 .search-btn:link,
 .search-btn:visited {
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 20rem;
   padding: 1rem 1rem;
 
   /* only necessary for .btn */
@@ -166,34 +183,77 @@ nav a:active {
   cursor: pointer;
   font-family: inherit;
 
-  background-color: #fff;
-  color: #f55905;
+  background-color: #f55905;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 11.5rem;
 }
 
 .search-btn:hover,
 .search-btn:active {
   /* background-color: #f55905; */
-  color: #fff;
-  background-color: #f55905;
+  color: #fffffe;
+  background-color: rgb(169, 60, 1);
   /* border: 1px solid #e65c1d; */
   /* box-shadow: inset 0 0 1.25px 1.25px #e65d1dd7; */
+}
+
+#searchForm {
+  width: 62rem;
+  height: 4.8rem;
+  display: flex; 
+}
+
+#searchInput {
+  flex: 1; 
+  padding: 1rem;
+  /* font-size: 1rem; */
+}
+
+.searchInputFlex {
+  display: flex;
+  /* gap: 3rem; */
+  align-items: center;
+  background-color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  width: 50rem;
+  height: 4.8rem;
+
+  /* padding: 6px; */
+  margin-right: 1.8rem;
+
+}
+
+.search-icon {
+  height: 2.4rem;
+}
+.search-logo {
+  cursor: pointer;
+  height: 2.4rem;
 }
 
 /* /////////////////////////////////// */
 /* order section */
 
 .section-order-top {
-  margin-top: 10rem;
+  margin-top: 3rem;
   display: grid;
-  grid-template-columns: 42fr 29fr 29fr;
-  gap: 2rem;
-  margin-bottom: 5rem;
+  grid-template-columns: 44fr 27fr 27fr;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 2.6rem;
+  margin-right: 3.6rem;
 }
 
 .section-order-bot {
   display: grid;
-  grid-template-columns: 29fr 29fr 42fr;
-  gap: 2rem;
+  grid-template-columns: 27fr 27fr 44fr;
+  gap: 2.5rem;
+  margin-left: 2.6rem;
+  margin-right: 3.6rem;
 }
 
 .og {
@@ -202,47 +262,60 @@ nav a:active {
   grid-template-rows: 5.5fr 1.5fr 0.7fr;
   gap: 0;
 
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
+  /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
+  border-radius: 1.6rem;
   overflow: hidden;
-  transition: all 0.4s;
+
+  height: 47.8rem;
+  /* transition: all 0.4s; */
 }
 
 .og:hover {
-  transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+  /* transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06); */
   cursor: pointer;
 }
 
 .order-heading {
   font-size: 3rem;
   padding: 2rem 0 0 2rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
 }
 
 .order-text {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #fff;
-  padding: 2rem 0.5rem 0.5rem 2rem;
-  background-color: #f55905;
+  padding: 3rem 2.5rem 0.5rem 2rem;
+  /* line-height: 2rem; */
+  /* background-color: #fff; */
+  background-image: url("/assets/ogORANGE.svg")
 }
 
 .order-link,
 .order-link:link,
 .order-link:visited {
   grid-row: 3;
+  /* grid-column: 1 / -1; */
+
+
   /* justify-self: center; */
   /* align-self: stretch; */
+  /* width: 10.2rem; */
+  height: 7.2rem;
 
-  color: #fff;
+  /* color: #fff; */
   background-color: #f55905;
-  text-transform: uppercase;
-  text-decoration: underline solid white 2px;
-  font-size: 2rem;
+  /* text-transform: uppercase; */
+  /* text-decoration: underline solid white 2px; */
+  /* font-size: 2rem; */
   padding: 2rem 0 2.5rem 2rem;
   /* border-radius: 10px; */
+}
+
+.order-link-div {
+    background-color: #f55905;
 }
 
 .order-link:hover,
@@ -251,37 +324,39 @@ nav a:active {
 }
 
 .o1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/foodd.jpg");
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%), url("/assets/ogFOOD.webp");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/ogFOOD.webp"); */
+  /* linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%); */
   background-size: cover;
   background-position: center;
 }
 
 .o2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/groceries.jpg");
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%), url("/assets/ogGROC.webp");
   background-size: cover;
   background-position: center;
 }
 
 .o3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/flowers.jpg");
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%), url("/assets/ogFLOWERS.webp");
   background-size: cover;
   background-position: center;
 }
 
 .o4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/meds.jpg");
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%), url("/assets/ogPHARMA.webp");
   background-size: cover;
   background-position: center;
 }
 
 .o5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/donate.jpg");
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%), url("/assets/ogDONATIONS.webp");
   background-size: cover;
   background-position: center;
 }
 
 .o6 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.411)), url("/assets/mart.jpg");
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0) 56.18%, rgba(0, 0, 0, 0.5) 91.65%), url("/assets/ogTMART.webp");
   background-size: cover;
   background-position: center;
 }
