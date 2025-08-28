@@ -526,12 +526,6 @@ nav a:active {
 /* ////////////////////////// */
 /* cities */
 
-.section-cities {
-  /* margin-top: 4rem; */
-  /* margin-bottom: 10rem; */
-
-}
-
 .cities-btn-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -672,6 +666,11 @@ nav a:active {
   color: #f1f1f1;
   /* padding: 2rem 0 2rem 0; */
   font-size: 1.6rem;
+
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+
+  
 }
 
 .footer-container {
@@ -680,6 +679,8 @@ nav a:active {
   margin: 0 auto;
   margin-right: 26rem;
   margin-left: 24rem;
+
+  position: relative;
   
 }
 
@@ -732,6 +733,7 @@ nav a:active {
 .r2-hdr {
   color: #999;
 font-size: 1.5rem !important;
+margin-top: -2rem;
 margin-bottom: 1rem;
 }
 
@@ -745,6 +747,55 @@ margin-bottom: 1rem;
   font-size: 1.33rem;
   justify-content: space-between;
   margin-top: -.8rem;
+}
+
+.r2-col4-r1-flex {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #00000075; */
+}
+
+.r2-col4-r2 {
+  margin-top: 4.4rem;
+  border-top: 1px solid #cccccc2b;
+}
+
+.r2-col4-r1-flex button {
+ border: none;
+ background-color: none;
+ background: none;
+
+ cursor: pointer;
+}
+
+.r2-col4-r1-flex img {
+  height: 2.5rem;
+}
+
+.contact-us {
+  display: flex;
+  background-color: #f55905;
+  color: white;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: start;
+  /* justify-self: right; */
+  gap: 2rem;
+  width: 16rem;
+  border-radius: .6rem .6rem 0 0;
+  height: 3rem;
+  padding: 1.2rem 1rem 1.4rem 1.1rem;
+
+  position: absolute;
+  top: 98.92%;
+  right: .2%;
+
+  cursor: pointer;
+}
+
+.contact-us img {
+  height: 1.8rem;
 }
 
 /* ACCORDION: */
