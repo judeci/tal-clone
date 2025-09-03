@@ -11,6 +11,13 @@ html {
   overflow-x: hidden;
 }
 
+input:focus,
+a:focus,
+button:focus {
+  outline: none;
+}
+
+
 body {
   font-family: "Cabin", sans-serif;
   line-height: 1;
@@ -554,6 +561,10 @@ nav a:active {
   color: #f55905;
 }
 
+.section-cities button:focus {
+  color: #f55905;
+}
+
 .cities-small {
   font-size: 1.45rem;
 }
@@ -677,8 +688,8 @@ nav a:active {
   max-width: 104rem;
   padding: 3.4rem 3.2rem;
   margin: 0 auto;
-  margin-right: 26rem;
-  margin-left: 24rem;
+  /* margin-right: 26rem; */
+  /* margin-left: 24rem; */
 
   position: relative;
   
@@ -908,7 +919,8 @@ margin-bottom: 1rem;
 
 .opacity-dim {
   /* opacity:0.5; */
-  background: rgba(0,0,0,0.6);
+  /* background: rgba(0, 0, 0, 0.6); *  PUT THIS BACK IF NO WORK /   
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.579); */
   overflow: hidden;
   /* color: #000 !important; */
   pointer-events: none;
@@ -940,6 +952,10 @@ margin-bottom: 1rem;
   /* box-shadow: 30px 30px 5px rgba(0, 0, 0, 0.303); */
   -webkit-box-shadow: 500 500 5px #000000b7;
         box-shadow: 500 500 5px #00000075;
+
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.579); 
+          /* idk if keep this or no.. FIX */
+
 }
 
 .logout {

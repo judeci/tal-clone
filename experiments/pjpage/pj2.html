@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="PJ.css" />
 
     <script defer src="/dist/pjpage/pj2f.js" type="module"></script>
@@ -17,19 +19,33 @@
       <!-- add nav main page stuff -->
       <nav class="section-nav">
 
-      <div class="nav-btns">
+        <div class="tal-logo">
+          <img class="talabat-title main" src="/assets/remix-logo.svg" />
+        </div>
+
+      <!-- <div class="nav-btns">
         <button class="nav-btn">AR<ion-icon class="icon" name="earth-outline"></ion-icon></button>
         <button class="nav-btn"><ion-icon class="icon" name="flag-outline"></ion-icon></button>
         <button class="nav-btn login-icon"><ion-icon class="icon" name="person-circle-outline"></ion-icon></button>
+      </div> -->
+      <div class="nav-btns">
+        <button class="nav-btn n1">
+          <img class="ar-logo" src="/assets/arLogo.svg" />
+        </button>
+        <button class="nav-btn">
+          <img class="flag-logo" src="/assets/kwtFlag.png" />
+        </button>
+        <button class="nav-btn login-icon">
+          <img class="login-logo" src="/assets/userLogo.svg" />
+        </button>
+
+        <button class="cart-btn nav-btn" onclick="window.location.href='cart.html'">
+        <img class="login-logo cart-logo" src="/assets/new_cart_icon.webp" />
+          <p class="cart-num"></p>
+      </button>
+      <!-- put this cart btn at the cart ? or NO! make it hidden and then when stuff is added it appears -->
       </div>
 
-
-      <button class="cart-btn" onclick="window.location.href='cart.html'">
-        CART
-        (
-          <p class="cart-num"></p>
-          )
-      </button>
     </nav>
     
     <div class="login hiddenx2">
@@ -75,9 +91,11 @@
 
     <div class="PJ-container">
       <div class="PJ-history">
-        <a href="#">Home</a>
+        <a href="/homepage/talabat.html">Home</a>
+        <p class="history-gr">></p>
         <a href="#">Yarmouk</a>
-        <a href="#">Papa John's Pizza</a>
+        <p class="history-gr">></p>
+        <p class="history-res">Papa John's Pizza</p>
       </div>
 
       <div class="PJ-details-with-image">
@@ -85,28 +103,84 @@
         <div class="PJ-details">
           <p class="PJ-restaurant-title">Papa John's Pizza</p>
           <p>in Yarmouk, Kuwait</p>
-          <p>Pizza, American, Fast Food</p>
-          <p>Min. order: KD 0.000</p>
-        </div>
-        <p class="OPEN">OPEN</p>
-      </div>
 
-      <div class="PJ-tabs">
-        <a href="#">Menu</a>
-        <a href="#">Reviews</a>
-        <a href="#">Info</a>
+          <div class="flex-good">
+            <p>Pizza, American, Fast Food</p>
+            <p class="justify-right">
+              <img src="/assets/rating_very_good.svg" />
+              Very good</p>
+          </div>
+
+<div class="flex-money">
+  <p>Min. order: KD 0.000</p>
+<p class="justify-right">
+  <img src="/assets/visa_blue.webp" />
+  <img src="/assets/logo-mastercard.svg" />
+  <img src="/assets/logo-knet.webp" />
+  <img src="/assets/logo-cash.svg" />
+</p>
+</div>
+        </div>
+        <!-- <p class="OPEN">OPEN</p> -->
       </div>
+<div class="PJ-tabs-border">
+
+  <div class="PJ-tabs">
+    <div class="PJ-tabs-inner t1" tabindex="0" onclick="PJtabClick(1)">
+      <img class="PJ-tabs-img" src="/assets/menu-ico.svg" />
+      <p>Menu</p>
+    </div>
+    <div class="PJ-tabs-inner t2" tabindex="0" onclick="PJtabClick(2)">
+      <img class="PJ-tabs-img" src="/assets/icon_reviews.svg" />
+      <p>Reviews</p>
+    </div>
+    <div class="PJ-tabs-inner t3" tabindex="0" onclick="PJtabClick(3)">
+      <img class="PJ-tabs-img" src="/assets/icon_info_menu.svg" />
+      <p>Info</p>
+    </div>
+  </div>
+</div>
       <div class="PJ-main-menu">
         <div class="PJ-categories">
           <h4>Categories</h4>
           <ul>
+            <li><a href="#" id="picks-category">Picks for you 🔥</a></li>
             <li><a href="#" id="LTO-category">Limited Time Offer</a></li>
+            <li><a href="#" id="value-category">Value Meals</a></li>
+            <li><a href="#" id="newCrusts-category">New Crusts</a></li>
+            <li><a href="#" id="HHPizza-category">Half and Half Pizza</a></li>
             <li><a href="#" id="pizza-category">Pizza</a></li>
+            <li><a href="#" id="wings-category">Papa's Chicken Wings And Strips</a></li>
             <li><a href="#" id="appetizers-category">Appetizers</a></li>
+            <li><a href="#" id="sauces-category">Dipping Sauces</a></li>
             <li><a href="#" id="beverages-category">Beverages</a></li>
           </ul>
         </div>
         <div class="PJ-menu PJ-accordion">
+
+          <form class="form-food-search" action="/search" method="get">
+  <input type="search" id="searchInput" name="query" placeholder="Search menu item">
+  <button type="submit">
+    <img src="/assets/search-893.png" />
+  </button>
+</form>
+
+           <button class=" PJ-accordion-btn" id="picks-menu">
+            Picks for you 🔥
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="picks-links grid-panel"
+              onclick="addToCart(`Papa's Diwaniyah Meal`, 16.400, `LTO`)"
+            >
+              <p class="panel-img picks-img"></p>
+              <p>Papa's Diwaniyah Meal</p>
+              <p class="panel-price">KD 16.400</p>
+              <p>+</p>
+            </a>
+          </div>
+
           <button class="PJ-accordion-btn1 PJ-accordion-btn" id="LTO-menu">
             Limited Time Offer
           </button>
@@ -119,6 +193,54 @@
               <p class="panel-img LTO-img"></p>
               <p>Papa's Diwaniyah Meal</p>
               <p class="panel-price">KD 16.400</p>
+              <p>+</p>
+            </a>
+          </div>
+
+           <button class="PJ-accordion-btn" id="value-menu">
+            Value Meals
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="value-links grid-panel"
+            >
+            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
+              <p class="panel-img value-img"></p>
+              <p>Meal 1</p>
+              <p class="panel-price">KD 2.600</p>
+              <p>+</p>
+            </a>
+          </div>
+
+           <button class="PJ-accordion-btn" id="crusts-menu">
+            New Crusts
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="crusts-links grid-panel"
+            >
+            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
+              <p class="panel-img crusts-img"></p>
+              <p>Name</p>
+              <p class="panel-price">KD 0.000</p>
+              <p>+</p>
+            </a>
+          </div>
+
+          <button class="PJ-accordion-btn" id="HHPizza-menu">
+            Half and Half Pizza
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="HHPizza-links grid-panel"
+            >
+            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
+              <p class="panel-img HHPizza-img"></p>
+              <p>Name</p>
+              <p class="panel-price">KD 0.000</p>
               <p>+</p>
             </a>
           </div>
@@ -179,6 +301,22 @@
             </a>
           </div>
 
+          <button class="PJ-accordion-btn" id="wings-menu">
+            Papa's Chicken Wings And Strips
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="wings-links grid-panel"
+            >
+            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
+              <p class="panel-img wings-img"></p>
+              <p>Name</p>
+              <p class="panel-price">KD 0.000</p>
+              <p>+</p>
+            </a>
+          </div>
+
           <button
             class="PJ-accordion-btn3 PJ-accordion-btn"
             id="appetizers-menu"
@@ -200,6 +338,22 @@
               <p class="panel-img WDG-img"></p>
               <p>Potato Wedges</p>
               <p class="panel-price">KD 1.250</p>
+              <p>+</p>
+            </a>
+          </div>
+
+          <button class="PJ-accordion-btn" id="sauces-menu">
+            Dipping Sauces
+          </button>
+          <div class="panel">
+            <a
+              href="javascript:void(0)"
+              class="sauces-links grid-panel"
+            >
+            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
+              <p class="panel-img sauces-img"></p>
+              <p>Name</p>
+              <p class="panel-price">KD 0.000</p>
               <p>+</p>
             </a>
           </div>
@@ -249,11 +403,12 @@
             <p>Your Cart</p>
           </div>
           <!-- <p><br /></p> -->
-          <!-- <div class="empty-cart">
-            <p>There are no items in your cart.</p>
-          </div> -->
+          <div class="empty-cart">
+            <img src="/assets/empty-cart.svg" />
+            <p>There are no items in your cart</p>
+          </div>
           <div class="PJ-cart-items"></div>
-          <div class="PJ-subtotal-div">
+          <div class="PJ-subtotal-div hiddenx2">
             <p class="PJ-subtotal-hdr">Subtotal:</p>
             <div class="PJ-subtotal-p">
               <p class="PJ-subtotal-KD">KD&nbsp;</p>
@@ -284,66 +439,82 @@
       </div>
     </div>
 
-    <footer class="PJ-section-footer">
-      <div class="PJ-footer-accordion-box">
-        <button class="PJ-footer-accordion">Restaurants</button>
-        <div class="PJ-footer-panel">
-          <a
-            href="https://www.talabat.com/kuwait/pizza-hut"
-            class="cuisines-links"
-            >Pizza Hut</a
-          >
-          <a
-            href="https://www.talabat.com/kuwait/domino-pizza-tmp"
-            class="cuisines-links"
-            >Domino's Pizza</a
-          >
-          <a href="#" class="cuisines-links">Burger King</a>
-          <a href="#" class="cuisines-links">Johnny Rockets</a>
-          <a href="#" class="cuisines-links more">More Restaurants...</a>
+    <footer class="section-footer">
+<div class="footer-container">
+  <div class="footer-grid">
+    <div class="footer-grid-r1">
+      <p class="footer-r1-link" onclick="window.open('https://corporate.talabat.com/?_ga=2.67187729.1677677649.1756192575-459236319.1745738476', '_blank')">Corporate</p>
+      <p class="footer-r1-link" onclick="window.open('https://careers.deliveryhero.com/talabat', '_blank')">Careers</p>
+      <p class="footer-r1-link">Terms and Conditions</p>
+      <p class="footer-r1-link">FAQ</p>
+      <p class="footer-r1-link">Privacy Policy</p>
+      <p class="footer-r1-link">Contact Us</p>
+      <p class="footer-r1-link">Sitemap</p>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r2">
+      <div class="footer-r2-new-grid">
+        <div class="r2-col1">
+          <p class="r2-hdr">Restaurants</p>
+          <p>Pizza Hut</p>
+          <p>Domino's Pizza</p>
+          <p>Burger King</p>
+          <p>Johnny Rockets</p>
+          <p class="r2-more-italic">More Restaurants...</p>
         </div>
 
-        <button class="PJ-footer-accordion">Popular cuisines</button>
-        <div class="PJ-footer-panel">
-          <a
-            href="https://www.talabat.com/kuwait/cuisine/japanese"
-            class="cuisines-links"
-            >Japanese</a
-          >
-          <a href="#" class="cuisines-links">Chinese</a>
-          <a href="#" class="cuisines-links">Lebanese</a>
-          <a href="#" class="cuisines-links">Italian</a>
-          <a href="#" class="cuisines-links">Indian</a>
-          <a href="#" class="cuisines-links more">More Cuisines...</a>
+         <div class="r2-col2">
+          <p class="r2-hdr">Popular Cuisines</p>
+          <p>Japanese</p>
+          <p>Chinese</p>
+          <p>Lebanese</p>
+          <p>Italian</p>
+          <p>Indian</p>
+          <p class="r2-more-italic">More Cuisines...</p>
         </div>
 
-        <button class="PJ-footer-accordion">Popular areas</button>
-        <div class="PJ-footer-panel">
-          <a
-            href="https://www.talabat.com/kuwait/restaurants/2/abu-halifa"
-            class="cuisines-links"
-            >Abu Halifa</a
-          >
-          <a href="#" class="cuisines-links">Al-Ahmadi</a>
-          <a href="#" class="cuisines-links">Kuwait City</a>
-          <a href="#" class="cuisines-links">Fahaheel</a>
-          <a href="#" class="cuisines-links">Farwaniya</a>
-          <a href="#" class="cuisines-links more">More Areas...</a>
+         <div class="r2-col3">
+          <p class="r2-hdr">Popular Areas</p>
+          <p>Abu Halifa</p>
+          <p>Al-Ahmadi</p>
+          <p>Kuwait City</p>
+          <p>Fahaheel</p>
+          <p>Farwaniya</p>
+          <p class="r2-more-italic">More Areas...</p>
+        </div>
+
+        <div class="r2-col4">
+          <div class="r2-col4-r1">
+            <p class="r2-hdr">Follow us on</p>
+            <div class="r2-col4-r1-flex">
+              <button onclick="window.open('https://www.facebook.com/talabat/', '_blank')"><img src="/assets/facebook-7-512.png" /></button>
+              <button onclick="window.open('https://x.com/Talabat', '_blank')"><img src="/assets/twitter-512.png" /></button>
+              <button onclick="window.open('https://www.instagram.com/Talabat/', '_blank')"><img src="/assets/instagram-512.png" /></button>
+              <button onclick="window.open('https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F3604171', '_blank')"><img src="/assets/linkedin-512.png" /></button>
+              <button onclick="window.open('https://www.youtube.com/TalabatGTC', '_blank')"><img src="/assets/youtube-app-white-icon.png" /></button>
+            </div>
+          </div>
+          <div class="r2-col4-r2"></div>
         </div>
       </div>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r3">
+      <p>For any support or help you can contact us via our Live Chat</p>
+      <p>©2025 talabat.com</p>
+    </div>
+  </div>
 
-      <div class="hidden flowers-page"></div>
-
-      <div class="socials"></div>
-      <div class="links"></div>
-      <div class="copyright">
-        <p class="copyright-p">
-          For any support or help you can contact us via our
-          <a href="#" class="live-chat">Live Chat</a>
-        </p>
-        <p class="copyright-p2">&copy;2025 Talabat.com</p>
-      </div>
+  <div class="contact-us">
+      <img src="/assets/message-bubble-white-icon.png" />
+      <p>
+        Contact Us
+      </p>
+    </div>
+</div>
     </footer>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

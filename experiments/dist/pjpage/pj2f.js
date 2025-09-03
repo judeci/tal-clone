@@ -6,6 +6,46 @@ fetch("/api/email")
     console.log("Logged in as:", data.email);
     emailFetchedPJ = data.email;
 });
+const PJTab1 = document.querySelector(".t1");
+const PJTab2 = document.querySelector(".t2");
+const PJTab3 = document.querySelector(".t3");
+const PJtab1 = function () {
+    PJTab1.style.fontSize = "1.84rem";
+    PJTab1.style.borderBottom = "3px solid #ea5b2f";
+    PJTab1.style.borderWidth = "100%";
+};
+PJtab1();
+// @ts-ignore
+window.PJtabClick = function (num) {
+    if (num === 1) {
+        PJTab1.style.fontSize = "1.84rem";
+        PJTab1.style.borderBottom = "3px solid #ea5b2f";
+        PJTab1.style.borderWidth = "100%";
+        PJTab2.style.fontSize = "1.8rem";
+        PJTab2.style.borderBottom = "none";
+        PJTab3.style.fontSize = "1.8rem";
+        PJTab3.style.borderBottom = "none";
+        console.log("111111111");
+    }
+    else if (num === 2) {
+        PJTab2.style.fontSize = "1.84rem";
+        PJTab2.style.borderBottom = "3px solid #ea5b2f";
+        PJTab2.style.borderWidth = "100%";
+        PJTab1.style.fontSize = "1.8rem";
+        PJTab1.style.borderBottom = "none";
+        PJTab3.style.fontSize = "1.8rem";
+        PJTab3.style.borderBottom = "none";
+    }
+    else {
+        PJTab3.style.fontSize = "1.84rem";
+        PJTab3.style.borderBottom = "3px solid #ea5b2f";
+        PJTab3.style.borderWidth = "100%";
+        PJTab2.style.fontSize = "1.8rem";
+        PJTab2.style.borderBottom = "none";
+        PJTab1.style.fontSize = "1.8rem";
+        PJTab1.style.borderBottom = "none";
+    }
+};
 // Utility: Toggle accordion panel open/close
 function toggleAccordion(accordionBtn, activeClass = "active") {
     accordionBtn.classList.toggle(activeClass);
@@ -28,6 +68,18 @@ function initAccordions(selector, activeClass = "active") {
         btn.addEventListener("click", () => toggleAccordion(btn, activeClass));
     }
 }
+const PJaccBtn1 = document.querySelector(".PJ-accordion-btn1"); // remove if no work FIX IT
+const PJaccBtn2 = document.querySelector(".PJ-accordion-btn2"); // remove if no work FIX IT
+const PJaccBtn3 = document.querySelector(".PJ-accordion-btn3"); // remove if no work FIX IT
+const PJaccBtn4 = document.querySelector(".PJ-accordion-btn4"); // remove if no work FIX IT
+const PJaccBtn = document.querySelectorAll(".PJ-accordion-btn");
+// toggleAccordion(PJaccBtn1); // remove if no work FIX IT
+// toggleAccordion(PJaccBtn2); // remove if no work FIX IT
+// toggleAccordion(PJaccBtn3); // remove if no work FIX IT
+// toggleAccordion(PJaccBtn4); // remove if no work FIX IT
+PJaccBtn.forEach((item) => {
+    toggleAccordion(item);
+});
 initAccordions("PJ-accordion-btn");
 initAccordions("PJ-footer-accordion", "PJ-footer-active");
 const CART_STORAGE_KEY = "myCart";
@@ -59,10 +111,21 @@ function loadCartFromLocalStorage() {
         cart = JSON.parse(saved);
     }
 }
+const PJsubTotDiv = document.querySelector(".PJ-subtotal-div");
+const PJempty = document.querySelector(".empty-cart");
 function updateCartTopAndDisplay() {
     const totalQuantity = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
     cartTopNum = totalQuantity;
     cartTop.textContent = cartTopNum > 0 ? cartTopNum.toString() : "";
+    if (cartTopNum > 0) {
+        // remove hiddenx2 from subtotal and add it to div-cart thing
+        PJsubTotDiv.classList.remove("hiddenx2");
+        PJempty.classList.add("hiddenx2");
+    }
+    if (cartTopNum === 0) {
+        PJsubTotDiv.classList.add("hiddenx2");
+        PJempty.classList.remove("hiddenx2");
+    }
 }
 function updateCartTop(delta) {
     cartTopNum = Math.max(cartTopNum + delta, 0);
