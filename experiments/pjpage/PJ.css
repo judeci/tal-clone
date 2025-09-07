@@ -438,6 +438,10 @@ max-width: 96rem;
 
     height: fit-content;
 
+    white-space: nowrap; 
+  overflow: hidden;    
+  text-overflow: ellipsis !important;
+
     position: sticky;
       top: 2rem;              /* Stick to the top */
       z-index: 1000; 
@@ -452,6 +456,12 @@ max-width: 96rem;
     color: #777;
     font-size: 1.3rem;
     font-weight: 300 !important;
+
+    white-space: nowrap; 
+  overflow: hidden;    
+  text-overflow: ellipsis !important;
+
+     
 }
 
 .PJ-categories a {
@@ -466,10 +476,12 @@ max-width: 96rem;
     gap: .75rem;
 }
 
+
 .form-food-search {
   display: flex; /* Arranges input and button side-by-side */
   align-items: center;
   margin-bottom: 1.1rem;
+  position: relative;
 }
 
 .form-food-search input[type="search"] {
@@ -482,13 +494,17 @@ max-width: 96rem;
 }
 
 .form-food-search button {
-  /* padding: 10px 15px; */
   background-color: #fff;
-  /* color: white; */
   border: none;
-  /* border-radius: 5px; */
   cursor: pointer;
   margin-left: 5px; /* Adds space between input and button */
+
+   position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0;
 }
 
 .form-food-search input[type="search"]:focus {

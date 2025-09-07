@@ -23,7 +23,8 @@ const papaJohns = document.querySelector(".pizza1");
 papaJohns?.addEventListener("click", (e) => {
     e.preventDefault();
     restaurantName = "Papa John's Pizza";
-    resNameFile = "pj2";
+    resNameFile = "search";
+    // resNameFile = "pj2";
     // Navigation is triggered outside the event listener (handled below)
 });
 // ----- Accordion Functionality -----
@@ -283,7 +284,10 @@ mainPage?.addEventListener("click", () => {
 const redirectInterval = setInterval(() => {
     if (resNameFile) {
         console.log("Redirecting to:", resNameFile);
-        window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
+        window.location.href = `/searchPpage/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
+        // window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(
+        //   restaurantName
+        // )}`;
         clearInterval(redirectInterval);
     }
 }, 500);

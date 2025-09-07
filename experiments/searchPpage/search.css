@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* background-color: #fae4d8; */
+  background-color: #fff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* overflow-y: visible;   */
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+    font-size: 2rem;
+}
+
+input:focus,
+a:focus,
+button:focus {
+  outline: none;
+}
+
+.section-nav {
+  width: 112rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* grid-template-columns: 1fr 1fr; */
+  padding: 2rem 6rem;
+  margin: 0 auto;
+}
+
+.talabat-title {
+  height: 4.4rem;
+}
+
+
+.nav-btns {
+  justify-self: end;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-btn,
+.nav-btn:link,
+.nav-btn:visited {
+  text-decoration: none;
+  border-radius: 20rem;
+  padding: 0 1.1rem;
+
+  border: none;
+  /* only necessary for .btn */
+  /* box-shadow: 0.5px 2px 15px 0 #0000000e; */
+  cursor: pointer;
+  font-family: inherit;
+
+  background-color: #fff;
+  color: #666;
+}
+
+.login-logo, .flag-logo {
+  width: 1.8rem;
+}
+
+.flag-logo {
+  width: 2.2rem;
+}
+
+.n1 {
+  border-radius: 5rem !important;
+  padding: 0;
+}
+  
+.icon {
+  font-size: 2.4rem;
+}
+
+/* login stuff */
+
+.login, .create-acc-popup {
+  height: 77vh;
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 3;
+  top: 7rem;
+  left: 50%;
+ transform: translate(-50%, 0);
+  border-radius: .5rem;
+  opacity: 1 !important;
+  pointer-events: all !important;
+
+
+  /* box-shadow: 30px 30px 5px rgba(0, 0, 0, 0.303); */
+  -webkit-box-shadow: 500 500 5px #000000b7;
+        box-shadow: 500 500 5px #00000075;
+}
+
+.logout {
+   height: 36vh;
+  width: 26vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  position: absolute;
+  z-index: 3;
+  top: 27rem;
+  left: 50%;
+ transform: translate(-50%, 0);
+  border-radius: .5rem;
+  opacity: 1 !important;
+  pointer-events: all !important;
+
+  -webkit-box-shadow: 500 500 5px #000000b7;
+        box-shadow: 500 500 5px #00000075;
+}
+
+.x, .x2 {
+  width: 3rem;
+font-size: 2.2rem;
+border: none;
+background-color: white;
+font-weight: 500;
+align-self: flex-end;
+padding-right: 4.5rem;
+}
+
+.x:hover, .x2:hover {
+  cursor: pointer;
+}
+
+.login h3, .create-acc-popup h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.msg2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.login p {
+  font-size: 1.6rem;
+  color: #444;
+  letter-spacing: .05rem;
+}
+
+  
+
+.login-google {
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 1.35rem;
+  color: #444;
+  font-weight: 300;
+  width: 77%;
+  height: 3.2rem;
+}
+.login-facebook {
+  border: 1px solid #6d7fb9;
+  background-color: #6d7fb9;
+  font-size: 1.35rem;
+  color: #fff;
+  font-weight: 300;
+  width: 77%;
+   height: 3.2rem;
+}
+
+.login-form, .create-acc-form {
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  width: 77%;
+  font-size: 1.3rem;
+}
+
+.login-form input, .create-acc-form input {
+  height: 3.2rem;
+}
+
+.forgot-password {
+  color: #888;
+  text-decoration: none;
+}
+
+.login-btn, .create-acc-btn {
+  border: none;
+  background-color: #fd6721;
+  color:white;
+  height: 3.8rem;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+}
+
+
+.logout-btn {
+   border: none;
+  background-color: #fd6721;
+  color:white;
+  height: 6rem;
+  width: 10rem;
+  font-size: 2.2rem;
+  border-radius: 5rem;
+
+  cursor: pointer;
+}
+
+/* .login-btn:hover */
+
+.create-acc-link {
+  color: #e65c1d !important;
+  /* background-color: #000; */
+  margin-top: -2rem !important;
+  cursor: pointer;
+}
+
+.main:hover {
+  cursor: pointer;
+}
+
+
+
+.PJ-nav {
+    background-color: #f4ede3;
+    height: 8.4rem;
+}
+
+.cart-btn {
+    font-size: 1.8rem;
+    padding: .2rem;
+    width: 4rem;
+}
+
+.cart-logo {
+  height: 2.25rem;
+  width: 2.4rem;
+}
+
+.cart-num {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #f55905;
+}
+
+.search-container{
+    max-width: 96rem;
+    margin: 2.1rem auto;
+}
+
+.PJ-history {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+    font-size: 1.3rem;
+    
+}
+.PJ-history a {
+    text-decoration: none;
+    color: #222;
+}
+
+.PJ-history a:hover {
+  color: #f55905;
+}
+
+.history-gr {
+  color: #f55905;
+  font-weight: 700;
+}
+
+.history-res {
+  color: #999;
+}
+
+.search-header {
+    margin-bottom: 3rem;
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+
+.search-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+flex-wrap: wrap;
+text-wrap: wrap;
+gap: 3rem;
+}
+
+.left-grid p {
+    text-wrap: wrap;
+}
+
+.rg-nav {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #eeddee;
+    gap: 2rem;
+    align-items: center;
+}
+
+.rg-nav p {
+    font-size: 1.2rem;
+    color: rgb(107, 107, 107);
+    cursor: pointer;
+}
+
+.rg-nav p:hover, .rg-nav p:active {
+    color: #111;
+    /* transition: ?; */
+}
+
+.rg-nav-hdr {
+    font-size: 1.6rem;
+}
+
+.PJ-details-with-image {
+    display: flex;
+gap: 2rem;
+max-width: 96rem;
+border-top: 1px solid #eeddee;
+padding-top: 2rem;
+}
+
+.small-text {
+    font-size: 1.25rem;
+}
+
+.PJ-details-with-image img {
+    height: 10.2rem;
+    width: 12.2rem;
+    border: 1px solid #eeddee;
+    border-radius: .3rem;
+}
+
+.PJ-details {
+    display: flex;
+    flex-direction: column;
+    color: #676777;
+    font-size: 1.45rem;
+    margin-bottom: 2.2rem;
+    line-height: 2.6rem;
+    width: 96rem;
+}
+
+.PJ-restaurant-title {
+    font-size: 1.8rem;
+    color: #222;
+    font-weight: 400;
+}
+
+
+.flex-good {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.flex-good img {
+  height: 2rem;
+  width: auto;
+  border: none;
+}
+
+.justify-right {
+  display: flex;
+  gap: .6rem;
+  /* justify-content: right; */
+  align-items: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.hiddenx2 {
+    display: none;
+}

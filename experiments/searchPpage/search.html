@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="search.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+
+     <nav class="PJ-nav">
+      <nav class="section-nav">
+
+        <div class="tal-logo">
+          <img class="talabat-title main" src="/assets/remix-logo.svg" />
+        </div>
+
+      <div class="nav-btns">
+        <button class="nav-btn n1">
+          <img class="ar-logo" src="/assets/arLogo.svg" />
+        </button>
+        <button class="nav-btn">
+          <img class="flag-logo" src="/assets/kwtFlag.png" />
+        </button>
+        <button class="nav-btn login-icon">
+          <img class="login-logo" src="/assets/userLogo.svg" />
+        </button>
+
+        <button class="cart-btn nav-btn" onclick="window.location.href='cart.html'">
+        <img class="login-logo cart-logo" src="/assets/new_cart_icon.webp" />
+          <p class="cart-num"></p>
+      </button>
+      <!-- put this cart btn at the cart ? or NO! make it hidden and then when stuff is added it appears -->
+      </div>
+
+    </nav>
+    
+    <div class="login hiddenx2">
+      <button class="x">x</button>
+      <h3>Login</h3>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button class="login-facebook">Continue with Facebook</button>
+      <p>OR</p>
+
+      <form class="login-form" id="myForm">
+        <input type="email" name="email" class="email" placeholder="Email" id="email" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button class="login-btn" type="submit">Login</button>
+      </form>
+
+      <p class="create-acc">Don't have an account? <p class="create-acc-link">Create an account</p></p>
+    </div>
+
+    <!-- logout -->
+     <div class="logout hiddenx2">
+      <button class="x">x</button>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <div class="hiddenx2 create-acc-popup">
+      <button class="x2">x</button>
+      <h3 class="hdr2">Create an Account:</h3>
+
+      <form action="/register" method="POST" class="create-acc-form" id="myFormCreateAcc">
+        <input type="email" name="email" class="email" placeholder="Email" id="email2" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password2" required>
+        <button class="create-acc-btn" type="submit">Create</button>
+      </form>
+      <p id="message2" class="hiddenx2 msg2"></p>
+    </div>
+    </nav>
+
+
+    <div class="search-container">
+        <div class="PJ-history">
+            <a href="/homepage/talabat.html">Home</a>
+            <p class="history-gr">></p>
+            <p class="history-res">Yarmouk</p>
+        </div>
+
+
+        <h3 class="search-header">Delivery from Local Restaurants Near Me in Yarmouk</h3>
+
+        <div class="search-main-grid">
+            <div class="left-grid">
+                <p>filler text 1111111111111111</p>
+                <p>filler text 1111111111</p>
+                <p>filler text 1111111</p>
+            </div>
+
+            <div class="right-grid">
+                <div class="rg-nav">
+                    <h4 class="rg-nav-hdr">
+                        SORT BY:
+                    </h4>
+                    <p class="rg-nav-p">Recommended</p>
+                    <p class="rg-nav-p">Fastest delivery</p>
+                    <p class="rg-nav-p">Ratings</p>
+                </div>
+                <div class="rg-restaurants">
+                   
+ <div class="PJ-details-with-image">
+        <img src="/assets/PJLOGO.webp" />
+        <div class="PJ-details">
+          <p class="PJ-restaurant-title">Papa John's Pizza</p>
+          <p class="small-text">Pizza, American, Fast Food</p>
+          <div class="flex-good">
+
+              <p class="justify-right">
+                  <img src="/assets/rating_very_good.svg" />
+                  Very good</p>
+                </div>
+          <p class="small-text">25 mins   Delivery: 0.250</p>
+        </div>
+      </div>
+
+       <div class="PJ-details-with-image">
+        <img src="/assets/pizzaHut.jpeg" />
+        <div class="PJ-details">
+          <p class="PJ-restaurant-title">Pizza Hut</p>
+          <p class="small-text">Pizza, Fast Food, Wings</p>
+          <div class="flex-good">
+
+              <p class="justify-right">
+                  <img src="/assets/rating_very_good.svg" />
+                  Very good</p>
+                </div>
+          <p class="small-text">35 mins   Delivery: 0.750</p>
+        </div>
+      </div>
+
+       <div class="PJ-details-with-image">
+        <img src="/assets/pizzaExpress.jpg" />
+        <div class="PJ-details">
+          <p class="PJ-restaurant-title">Pizza Express</p>
+          <p class="small-text">Pizza, Pasta, Italian</p>
+          <div class="flex-good">
+
+              <p class="justify-right">
+                  <img src="/assets/rating_very_good.svg" />
+                  Amazing</p>
+                </div>
+          <p class="small-text">15-30 mins   Delivery: 0.500</p>
+        </div>
+      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  </body>
+</html>

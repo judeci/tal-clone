@@ -76,11 +76,22 @@ nav {
   background-color: #f4ede3;
 }
 
-.section-nav {
+/* .section-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr; */
+  /* margin: 5rem 3rem; */
+  /* padding: 3rem 22rem;
+  width: 120rem;  */
+  /* FIX IT IF BAD REMOVE IT ^ */
+/* } */
+
+.nav-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* margin: 5rem 3rem; */
-  padding: 3rem 22rem;
+  padding: 3rem 6rem;
 }
 
 nav a:link,
@@ -594,7 +605,11 @@ nav a:active {
   padding-left: 20rem;
   padding-right: 20rem;
   /* margin-right: 200rem; */
-  width: 95vw;
+  width: 94vw;
+  /* good for laptop ^ */
+  /* width: 78vw; */
+  /* good for PC, not for laptop ^ .. */
+  margin: 0 auto;
   
   
       /* background-position: center; */
