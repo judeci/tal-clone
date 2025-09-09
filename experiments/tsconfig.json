@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist"]

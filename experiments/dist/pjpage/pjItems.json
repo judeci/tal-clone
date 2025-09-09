@@ -1,0 +1,29 @@
+[
+    {
+        "id": "picks",
+        "category": "Picks for you 🔥",
+        "item": "Margherita Pizza",
+        "description": "Loaded with 100% real cheese and pizza sauce made from fresh tomatoes.",
+        "img": "/assets/margherita.jpg",
+        "price": 2.75,
+        "tag": "PKS"
+    },
+    {
+        "id": "lto",
+        "category": "Limited Time Offer",
+        "item": "Papa's Diwaniyah Meal",
+        "description": "2 large pizza stuffed crust, 12pcs flaming wings, 12...",
+        "img": "/assets/pepperoni.webp",
+        "price": 16.4,
+        "tag": "LTO"
+    },
+    {
+        "id": "pizza",
+        "category": "Pizza",
+        "item": "Hawaiian",
+        "description": "Turkey and pineapple.",
+        "img": "/assets/pepsi.png",
+        "price": 2.6,
+        "tag": "HWI"
+    }
+]

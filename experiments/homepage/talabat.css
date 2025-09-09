@@ -775,6 +775,14 @@ margin-bottom: 1rem;
   margin-top: -.8rem;
 }
 
+.r2-col1 p, .r2-col2 p, .r2-col3 {
+  cursor: pointer;
+}
+
+.r2-hdr {
+  cursor: text !important;
+}
+
 .r2-col4-r1-flex {
   margin-top: 1.8rem;
   display: flex;

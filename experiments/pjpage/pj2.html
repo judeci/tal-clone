@@ -23,11 +23,6 @@
           <img class="talabat-title main" src="/assets/remix-logo.svg" />
         </div>
 
-      <!-- <div class="nav-btns">
-        <button class="nav-btn">AR<ion-icon class="icon" name="earth-outline"></ion-icon></button>
-        <button class="nav-btn"><ion-icon class="icon" name="flag-outline"></ion-icon></button>
-        <button class="nav-btn login-icon"><ion-icon class="icon" name="person-circle-outline"></ion-icon></button>
-      </div> -->
       <div class="nav-btns">
         <button class="nav-btn n1">
           <img class="ar-logo" src="/assets/arLogo.svg" />
@@ -43,7 +38,6 @@
         <img class="login-logo cart-logo" src="/assets/new_cart_icon.webp" />
           <p class="cart-num"></p>
       </button>
-      <!-- put this cart btn at the cart ? or NO! make it hidden and then when stuff is added it appears -->
       </div>
 
     </nav>
@@ -84,8 +78,6 @@
       </form>
       <p id="message2" class="hiddenx2 msg2"></p>
     </div>
-     <!-- to here -->
-
       
     </nav>
 
@@ -165,244 +157,15 @@
   </button>
 </form>
 
-           <button class=" PJ-accordion-btn" id="picks-menu">
-            Picks for you 🔥
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="picks-links grid-panel"
-              onclick="addToCart(`Papa's Diwaniyah Meal`, 16.400, `LTO`)"
-            >
-              <p class="panel-img picks-img"></p>
-              <p>Papa's Diwaniyah Meal</p>
-              <p class="panel-price">KD 16.400</p>
-              <p>+</p>
-            </a>
-          </div>
+<div class="menu-items">
 
-          <button class="PJ-accordion-btn1 PJ-accordion-btn" id="LTO-menu">
-            Limited Time Offer
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="LTO-links grid-panel"
-              onclick="addToCart(`Papa's Diwaniyah Meal`, 16.400, `LTO`)"
-            >
-              <p class="panel-img LTO-img"></p>
-              <p>Papa's Diwaniyah Meal</p>
-              <p class="panel-price">KD 16.400</p>
-              <p>+</p>
-            </a>
-          </div>
-
-           <button class="PJ-accordion-btn" id="value-menu">
-            Value Meals
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="value-links grid-panel"
-            >
-            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
-              <p class="panel-img value-img"></p>
-              <p>Meal 1</p>
-              <p class="panel-price">KD 2.600</p>
-              <p>+</p>
-            </a>
-          </div>
-
-           <button class="PJ-accordion-btn" id="crusts-menu">
-            New Crusts
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="crusts-links grid-panel"
-            >
-            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
-              <p class="panel-img crusts-img"></p>
-              <p>Name</p>
-              <p class="panel-price">KD 0.000</p>
-              <p>+</p>
-            </a>
-          </div>
-
-          <button class="PJ-accordion-btn" id="HHPizza-menu">
-            Half and Half Pizza
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="HHPizza-links grid-panel"
-            >
-            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
-              <p class="panel-img HHPizza-img"></p>
-              <p>Name</p>
-              <p class="panel-price">KD 0.000</p>
-              <p>+</p>
-            </a>
-          </div>
-
-          <button class="PJ-accordion-btn2 PJ-accordion-btn" id="pizza-menu">
-            Pizza
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="pizza-links HWI-link grid-panel"
-              onclick="addToCart(`Hawaiian`, 4.750, `HWI`)"
-            >
-              <p class="panel-img HWI-img"></p>
-              <p>Hawaiian</p>
-              <p class="panel-price">KD 4.750</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="pizza-links BBQ-link grid-panel"
-              onclick="addToCart(`Chicken BBQ`, 4.750, `BBQ`)"
-            >
-              <p class="panel-img BBQ-img"></p>
-              <p>Chicken BBQ</p>
-              <p class="panel-price">KD 4.750</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="pizza-links GRD-link grid-panel"
-              onclick="addToCart(`Garden Special`, 5.250, `GRD`)"
-            >
-              <p class="panel-img GRD-img"></p>
-              <p>Garden Special</p>
-              <p class="panel-price">KD 5.250</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="pizza-links MRG-link grid-panel"
-              onclick="addToCart(`Margherita Pizza`, 4.500, `MRG`)"
-            >
-              <p class="panel-img MRG-img"></p>
-              <p>Margherita Pizza</p>
-              <p class="panel-price">KD 4.500</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="pizza-links PPR-link grid-panel"
-              onclick="addToCart(`Pepperoni Pizza`, 4.750, `PPR`)"
-            >
-              <p class="panel-img PPR-img"></p>
-              <p>Pepperoni Pizza</p>
-              <p class="panel-price">KD 4.750</p>
-              <p>+</p>
-            </a>
-          </div>
-
-          <button class="PJ-accordion-btn" id="wings-menu">
-            Papa's Chicken Wings And Strips
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="wings-links grid-panel"
-            >
-            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
-              <p class="panel-img wings-img"></p>
-              <p>Name</p>
-              <p class="panel-price">KD 0.000</p>
-              <p>+</p>
-            </a>
-          </div>
-
-          <button
-            class="PJ-accordion-btn3 PJ-accordion-btn"
-            id="appetizers-menu"
-          >
-            Appetizers
-          </button>
-          <div class="panel">
-            <a href="#" class="appetizer-links CHS-link grid-panel">
-              <p class="panel-img CHS-img"></p>
-              <p>Cheesesticks</p>
-              <p class="panel-price">Price on Selection</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="appetizer-links WDG-link grid-panel"
-              onclick="addToCart(`Potato Wedges`, 1.250, `WDG`)"
-            >
-              <p class="panel-img WDG-img"></p>
-              <p>Potato Wedges</p>
-              <p class="panel-price">KD 1.250</p>
-              <p>+</p>
-            </a>
-          </div>
-
-          <button class="PJ-accordion-btn" id="sauces-menu">
-            Dipping Sauces
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="sauces-links grid-panel"
-            >
-            <!-- add onclick="addToCart(`Meal 1`, 16.400, `LTO`)" to the top -->
-              <p class="panel-img sauces-img"></p>
-              <p>Name</p>
-              <p class="panel-price">KD 0.000</p>
-              <p>+</p>
-            </a>
-          </div>
-
-          <button
-            class="PJ-accordion-btn4 PJ-accordion-btn"
-            id="beverages-menu"
-          >
-            Beverages
-          </button>
-          <div class="panel">
-            <a
-              href="javascript:void(0)"
-              class="beverages-links PEP-link grid-panel"
-              onclick="addToCart(`Pepsi`, 0.650, `PEP`)"
-            >
-              <p class="panel-img PEP-img"></p>
-              <p>Pepsi</p>
-              <p class="panel-price">KD 0.650</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="beverages-links SUP-link grid-panel"
-              onclick="addToCart(`7up`, 0.650, `SUP`)"
-            >
-              <p class="panel-img SUP-img"></p>
-              <p>7up</p>
-              <p class="panel-price">KD 0.650</p>
-              <p>+</p>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="beverages-links WTR-link grid-panel"
-              onclick="addToCart(`Water`, 0.500, `WTR`)"
-            >
-              <p class="panel-img WTR-img"></p>
-              <p>Water</p>
-              <p class="panel-price">KD 0.500</p>
-              <p>+</p>
-            </a>
-          </div>
+</div>
         </div>
 
         <div class="PJ-cart" id="pageA-contentDELETEORNO?">
           <div class="cart-hdr">
             <p>Your Cart</p>
           </div>
-          <!-- <p><br /></p> -->
           <div class="empty-cart">
             <img src="/assets/empty-cart.svg" />
             <p>There are no items in your cart</p>
@@ -514,7 +277,6 @@
 </div>
     </footer>
 
-    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

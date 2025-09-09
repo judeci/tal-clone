@@ -323,5 +323,10 @@
     "id": 167,
     "email": "aug10@test2.com",
     "password": "$2b$10$tUh46jaAv0Z2zHWVzNuJc.Imsb53k7MEvZidjuV7OW1uf85tgTl/S"
+  },
+  {
+    "id": 215,
+    "email": "sept8@test.com",
+    "password": "$2b$10$WTi8bustbrVmzSf2sU64M.srsunbxltzahLKao9l5YZrLd1iVy5YS"
   }
 ]

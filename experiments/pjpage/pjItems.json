@@ -1,0 +1,65 @@
+[
+  {
+    "id": "picks",
+    "category": "Picks for you 🔥",
+    "item": "Margherita Pizza",
+    "description": "Loaded with 100% real cheese and pizza sauce made from fresh tomatoes.",
+    "img": "/assets/mrg.webp",
+    "price": 2.75,
+    "tag": "PKS"
+  },
+  {
+    "id": "LTO",
+    "category": "Limited Time Offer",
+    "item": "Papas Diwaniyah Meal",
+    "description": "2 large pizza stuffed crust, 12pcs flaming wings, 12 pcs chicken poppers, 15 pcs jalapeno chicken fingers, 2 large potato wedges, 8pcs regular cheesesticks sp and 2 bottles of softdrinks 2.25 l",
+    "img": "/assets/diw.webp",
+    "price": 16.4,
+    "tag": "LTO"
+  },
+  {
+    "id": "pizza",
+    "category": "Pizza",
+    "item": "Cheddar Cheese Feast Pizza",
+    "description": "Cheddar cheese blend melted over fresh never frozen original dough and vine ripe tomato sauce.",
+    "img": "/assets/CCP.webp",
+    "price": 2.85,
+    "tag": "CCP"
+  },
+  {
+    "id": "pizza",
+    "category": "Pizza",
+    "item": "Hawaiian",
+    "description": "Turkey and pineapple.",
+    "img": "/assets/hwi.webp",
+    "price": 3.1,
+    "tag": "HWI"
+  },
+  {
+    "id": "pizza",
+    "category": "Pizza",
+    "item": "Chicken BBQ",
+    "description": "Grilled chicken, white onions, fresh mushrooms, with bbq sauce on top.",
+    "img": "/assets/BBQ.webp",
+    "price": 2.95,
+    "tag": "BBQ"
+  },
+  {
+    "id": "appetizers",
+    "category": "Appetizers",
+    "item": "Potato Wedges",
+    "description": "Seasoned potato wedges baked to a golden crisp.",
+    "img": "/assets/wdg.webp",
+    "price": 1.45,
+    "tag": "WDG"
+  },
+  {
+    "id": "beverages",
+    "category": "Beverages",
+    "item": "Aquafina Water",
+    "description": "mineral water",
+    "img": "/assets/wtr.webp",
+    "price": 0.45,
+    "tag": "WTR"
+  }
+]

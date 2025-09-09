@@ -576,56 +576,22 @@ color: #262626;
   margin-bottom: .3rem;
 }
 
+.item-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-desc {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #777;
+}
+
 .panel a {
     border-bottom: 1px solid #ddd;
     width: 100%;
     /* border-top: 1px solid #aaa; */
 }
-
-
-.PEP-img {
-  background-image: url('/assets/pepsi.png');
-}
-
-.WTR-img {
-    background-image: url('/assets/water.webp');
-}
-
-.SUP-img {
- background-image: url('/assets/7up.png');
-}
-
-.WDG-img {
-    /* background-image: url('wedges.jpg'); */
-    background-image: url("/assets/wedges.jpg");
-}
-
-.CHS-img {
-    /* background-image: url('cheese.jpg'); */
-    background-image: url("/assets/cheese.jpg");
-}
-
-.HWI-img {
-    background-image: url('/assets/hawaiian.jpg');
-}
-.BBQ-img {
-    background-image: url('/assets/chickenBBQ.webp');
-}
-.GRD-img {
-    background-image: url('/assets/garden.png');
-}
-.MRG-img {
-    background-image: url('/assets/margherita.jpg');
-}
-.PPR-img {
-    background-image: url('/assets/pepperoni.webp');
-}
-
-.LTO-img {
-    background-image: url('/assets/LTO.jpg');
-}
-
-
 
 .panel-img {
     
@@ -647,8 +613,8 @@ color: #262626;
 
 .pizza-links:link,
 .pizza-links:visited, .LTO-links:link,
-.LTO-links:visited, .appetizer-links:link,
-.appetizer-links:visited, .beverages-links:link,
+.LTO-links:visited, .appetizers-links:link,
+.appetizers-links:visited, .beverages-links:link,
 .beverages-links:visited {
   color: #222;
   /* display: flex; */

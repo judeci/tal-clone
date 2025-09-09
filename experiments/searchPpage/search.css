@@ -261,6 +261,8 @@ padding-right: 4.5rem;
 .search-container{
     max-width: 96rem;
     margin: 2.1rem auto;
+    /* box-sizing: border-box; */
+    overflow: hidden;
 }
 
 .PJ-history {
@@ -298,10 +300,197 @@ padding-right: 4.5rem;
 
 .search-main-grid {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: .7fr 3fr;
 flex-wrap: wrap;
 text-wrap: wrap;
-gap: 3rem;
+gap: 2rem;
+}
+
+
+.form-food-search {
+  display: flex; /* Arranges input and button side-by-side */
+  align-items: center;
+  margin-bottom: 2.1rem;
+  position: relative;
+}
+
+.form-food-search input[type="search"] {
+  /* padding: 10px; */
+  border: 1px solid #eeddee;
+  color: #111;
+  /* border-radius: 2px; */
+  font-size: 1.2rem;
+  padding: 1.3rem 1rem 1.3rem 4rem;
+  flex-grow: 1; /* Allows the input to take up available space */
+  width: 24rem;
+
+}
+
+.form-food-search input::placeholder {
+  color: #ddd; /* Red color */
+}
+
+.form-food-search button {
+  background-color: #fff;
+  border: none;
+  /* cursor: pointer; */
+  margin-right: 5px; /* Adds space between input and button */
+
+   position: absolute;
+    top: 50%;
+    left: 1rem;
+    /* right: 1rem; */
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0;
+}
+
+.form-food-search input[type="search"]:focus {
+  outline: none;
+  border-color: #222;
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+}
+
+.form-food-search button img {
+  height: 2rem;
+}
+
+/*  */
+
+.form-filter-search {
+  display: flex; /* Arranges input and button side-by-side */
+  align-items: center;
+  margin-bottom: 2.1rem;
+  margin-top: 1.7rem;
+  position: relative;
+  
+}
+
+#searchInput2 {
+  background-color: #f5f5f5;
+}
+
+.form-filter-search input[type="search"] {
+  /* padding: 10px; */
+  border: 1px solid #f5f5f5;
+  color: #000;
+  /* border-radius: 2px; */
+  font-size: 1.2rem;
+  padding: 1.3rem 1rem 1.3rem 4rem;
+  flex-grow: 1; /* Allows the input to take up available space */
+  width: 24rem;
+
+}
+
+.form-filter-search input::placeholder {
+  color: #aaa; /* Red color */
+}
+
+.form-filter-search button {
+  background-color: #fff;
+  border: none;
+  /* cursor: pointer; */
+  margin-right: 5px; /* Adds space between input and button */
+
+   position: absolute;
+    top: 50%;
+    left: 1rem;
+    /* right: 1rem; */
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0;
+}
+
+.form-filter-search input[type="search"]:focus {
+  outline: none;
+  border-color: #111;
+  background-color: #fff;
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+}
+
+#searchInput2:focus {
+  background-color: #fff;
+}
+
+.form-filter-search button img {
+  height: 2rem;
+}
+/*  */
+
+.filter-list {
+  margin-top: -1.1rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 2.7rem;
+  list-style-type:none;
+}
+
+/* li input[type="checkbox"] {
+  accent-color: orange; 
+} */
+
+/* Hide the default checkbox */
+li input[type="checkbox"] {
+  appearance: none; /* Remove default browser styling */
+  -webkit-appearance: none; /* For Safari */
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute; /* Take it out of flow */
+}
+
+/* Style the label to act as the visual checkbox */
+li label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px; /* Space for the custom checkbox */
+  cursor: pointer;
+  line-height: 20px; /* Align text with custom checkbox */
+}
+
+/* Create the custom checkbox square */
+li label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: .4rem;
+  top: .1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* Style the checkmark when checked */
+li input[type="checkbox"]:checked + label::before {
+  background-color: #f55905; /* Example: Blue when checked */
+  border-color: #f55905;
+}
+
+li input[type="checkbox"]:checked + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 3px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.filter-btn {
+  background-color: #f55905;
+  color: white;
+  border: none;
+  width: 100%;
+  height: 3.6rem;
+  font-size: 1.5rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  margin-top: .6rem;
 }
 
 .left-grid p {
@@ -338,6 +527,7 @@ gap: 2rem;
 max-width: 96rem;
 border-top: 1px solid #eeddee;
 padding-top: 2rem;
+cursor: pointer;
 }
 
 .small-text {
@@ -346,7 +536,7 @@ padding-top: 2rem;
 
 .PJ-details-with-image img {
     height: 10.2rem;
-    width: 12.2rem;
+    width: 10.2rem;
     border: 1px solid #eeddee;
     border-radius: .3rem;
 }

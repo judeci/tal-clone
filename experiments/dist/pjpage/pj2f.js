@@ -3,7 +3,7 @@ let emailFetchedPJ;
 fetch("/api/email")
     .then((res) => res.json())
     .then((data) => {
-    console.log("Logged in as:", data.email);
+    // console.log("Logged in as:", data.email);
     emailFetchedPJ = data.email;
 });
 const PJTab1 = document.querySelector(".t1");
@@ -68,19 +68,48 @@ function initAccordions(selector, activeClass = "active") {
         btn.addEventListener("click", () => toggleAccordion(btn, activeClass));
     }
 }
-const PJaccBtn1 = document.querySelector(".PJ-accordion-btn1"); // remove if no work FIX IT
-const PJaccBtn2 = document.querySelector(".PJ-accordion-btn2"); // remove if no work FIX IT
-const PJaccBtn3 = document.querySelector(".PJ-accordion-btn3"); // remove if no work FIX IT
-const PJaccBtn4 = document.querySelector(".PJ-accordion-btn4"); // remove if no work FIX IT
-const PJaccBtn = document.querySelectorAll(".PJ-accordion-btn");
-// toggleAccordion(PJaccBtn1); // remove if no work FIX IT
-// toggleAccordion(PJaccBtn2); // remove if no work FIX IT
-// toggleAccordion(PJaccBtn3); // remove if no work FIX IT
-// toggleAccordion(PJaccBtn4); // remove if no work FIX IT
-PJaccBtn.forEach((item) => {
-    toggleAccordion(item);
-});
-initAccordions("PJ-accordion-btn");
+// document.addEventListener("DOMContentLoaded", () => {
+const menuItemsDiv = document.querySelector(".menu-items");
+function addMenuItems(id, category, item, price, tag, imgSrc, desc) {
+    const categoryPanel = document.querySelector(`.${category}-panel`);
+    const itemHTML = `
+    <a href="javascript:void(0)" class="${id}-links grid-panel" onclick="addToCart('${item}', ${price}, '${tag}')">
+      <img class="panel-img" src="${imgSrc}" />
+      <div class="item-flex">
+      <p>${item}</p>
+      <p class="item-desc">${desc}</p>
+      </div>
+      <p class="panel-price">KD ${price.toFixed(3)}</p>
+      <p>+</p>
+    </a>
+  `;
+    if (categoryPanel) {
+        categoryPanel.insertAdjacentHTML("beforeend", itemHTML);
+    }
+    else {
+        menuItemsDiv.insertAdjacentHTML("beforeend", `
+      <button class="PJ-accordion-btn ${category}-btn" id="${id}-menu">
+        ${category}
+      </button>
+      <div class="panel ${category}-panel">
+        ${itemHTML}
+      </div>
+    `);
+    }
+}
+fetch("./pjItems.json")
+    .then((res) => res.json())
+    .then((menuItemsJson) => {
+    for (const item of menuItemsJson) {
+        addMenuItems(item.id, item.category, item.item, item.price, item.tag, item.img, item.description);
+    }
+})
+    .then(() => {
+    const PJaccBtns = document.querySelectorAll(".PJ-accordion-btn");
+    PJaccBtns.forEach((btn) => toggleAccordion(btn));
+    initAccordions("PJ-accordion-btn");
+})
+    .catch((err) => console.error("Failed to load JSON:", err));
 initAccordions("PJ-footer-accordion", "PJ-footer-active");
 const CART_STORAGE_KEY = "myCart";
 let cart = {};
@@ -141,6 +170,7 @@ function addToCart(name, price, codeTag) {
             cartNum.textContent = cart[codeTag].quantity.toString();
             priceEl.textContent = (cart[codeTag].price * cart[codeTag].quantity).toFixed(3);
         }
+        subT();
     }
     else {
         // New item, add to cart object
@@ -167,10 +197,12 @@ function addToCart(name, price, codeTag) {
         const decBtn = lastItem.querySelector(`.dec-${codeTag}`);
         incBtn?.addEventListener("click", () => incItem(codeTag, price));
         decBtn?.addEventListener("click", () => decItem(codeTag, price));
+        subT();
     }
     firstClick[codeTag] = false;
     updateCartTopAndDisplay();
     saveCartToLocalStorage();
+    subT();
 }
 function incItem(name, price) {
     if (!cart[name])
@@ -184,6 +216,7 @@ function incItem(name, price) {
     }
     updateCartTopAndDisplay();
     saveCartToLocalStorage();
+    subT();
 }
 function decItem(name, price) {
     if (!cart[name])
@@ -205,6 +238,7 @@ function decItem(name, price) {
     }
     updateCartTopAndDisplay();
     saveCartToLocalStorage();
+    subT();
 }
 window.addToCart = addToCart;
 window.incItem = incItem;
@@ -231,12 +265,14 @@ function waitForElementAlways(selector, callback) {
     }, 200);
 }
 // Calculate subtotal every second
-setInterval(() => {
+// setInterval(() => {
+const subT = function () {
     const allPrices = document.querySelectorAll(".subtotal-price");
     const subtotal = document.querySelector(".PJ-subtotal");
     const total = Array.from(allPrices).reduce((acc, el) => acc + +(el.textContent ?? "0"), 0);
     subtotal.textContent = total.toFixed(3);
-}, 1000);
+};
+// }, 0);
 // Scroll helper function
 function smoothScrollTo(selector, duration = 1000) {
     const target = document.querySelector(selector);
