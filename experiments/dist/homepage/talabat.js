@@ -6,19 +6,10 @@ import * as dotenv from "dotenv";
 import { JSDOM } from "jsdom";
 import * as bcrypt from "bcrypt";
 import { fileURLToPath } from "url";
-// import path from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-// console.log("__dirname:", __dirname);
-// === ENV SETUP ===
 dotenv.config();
-// === READ HTML TEMPLATE ===
-// const html = fs.readFileSync("homepage/talabat.html", "utf8");
 const html = fs.readFileSync(path.join(__dirname, "..", "..", "homepage", "talabat.html"), "utf8");
-// const html = fs.readFileSync(
-//   "C:\\Users\\Jude\\Desktop\\new\\tal-clone\\experiments\\homepage\\talabat.html",
-//   "utf8"
-// );
 const dom = new JSDOM(html);
 const document2 = dom.window.document;
 // === EXPRESS APP SETUP ===
@@ -27,19 +18,12 @@ const port = 3000;
 // === MIDDLEWARE ===
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(express.static(path.join(__dirname)));
-// app.use(express.static(path.join(__dirname, "..")));
-// app.use(express.static(path.join(__dirname, "..", "..", "homepage")));
 app.use("/homepage", express.static(path.join(__dirname, "..", "..", "homepage")));
 app.use("/pjpage", express.static(path.join(__dirname, "..", "..", "pjpage")));
 app.use("/cartpage", express.static(path.join(__dirname, "..", "..", "cartpage")));
 // imgs stuff:
 app.use("/assets", express.static(path.join(__dirname, "..", "..", "assets")));
-// app.use(express.static(path.join(__dirname, "experiments")));
-// scripts:
-// app.use("/dist", express.static(path.join(__dirname, "..", "dist")));
-// app.use("/dist", express.static(path.join(__dirname, "dist")));
-app.use("/dist", express.static(path.join(__dirname, ".."))); // if code is completely messed up, change it back to this
+app.use("/dist", express.static(path.join(__dirname, "..")));
 // json:
 app.use("/", express.static(path.join(__dirname, "..", "..", "/"))); // REMOVE IF MSD EVERYTHING UP
 // === MYSQL CONNECTION ===
@@ -60,12 +44,10 @@ db.connect((err) => {
 // === ROUTES ===
 // Home Page
 app.get("/", (req, res) => {
-    // res.sendFile(path.join(__dirname, "..", "talabat.html"));
     res.sendFile(path.join(__dirname, "..", "..", "homepage", "talabat.html"));
 });
 // LSemail export :
 let LSemail;
-// export const getLSemail = () => LSemail;
 // Login Route
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
@@ -77,15 +59,12 @@ app.post("/login", async (req, res) => {
             return res.status(401).json({ message: "Invalid email or password." });
         }
         console.log("✅ Login success");
-        // console.log("Current LSemail:", LSemail);
         const sql = "INSERT IGNORE INTO users (email, password) VALUES (?, ?)";
         db.query(sql, [email, user.password], (err) => {
             if (err) {
                 console.error("❌ DB Error:", err);
                 return res.status(500).json({ message: "Database error." });
             }
-            // LSemail = email;
-            // console.log("Current LSemail:", LSemail);
             return res.json({ message: "Login successful!" });
         });
     }
@@ -104,11 +83,7 @@ app.post("/register", async (req, res) => {
         db.query(sql, [email, hashedPassword], (err) => {
             if (err) {
                 console.error("❌ Error inserting:", err);
-                // return res.status(500).json({ message: "DB error" });
-                // alert("Email already exists!");
             }
-            // return res.json({ message: "User registered!" });
-            // alert("User registered successfully!");
         });
     }
     catch (err) {
