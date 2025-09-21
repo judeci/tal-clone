@@ -8,6 +8,15 @@
     "price": 2.75,
     "tag": "PKS"
   },
+   {
+    "id": "pizza",
+    "category": "Pizza",
+    "item": "Cheddar Cheese Feast Pizza",
+    "description": "Cheddar cheese blend melted over fresh never frozen original dough and vine ripe tomato sauce.",
+    "img": "/assets/CCP.webp",
+    "price": 2.85,
+    "tag": "CCP"
+  },
   {
     "id": "LTO",
     "category": "Limited Time Offer",
@@ -16,15 +25,6 @@
     "img": "/assets/diw.webp",
     "price": 16.4,
     "tag": "LTO"
-  },
-  {
-    "id": "pizza",
-    "category": "Pizza",
-    "item": "Cheddar Cheese Feast Pizza",
-    "description": "Cheddar cheese blend melted over fresh never frozen original dough and vine ripe tomato sauce.",
-    "img": "/assets/CCP.webp",
-    "price": 2.85,
-    "tag": "CCP"
   },
   {
     "id": "pizza",
@@ -61,5 +61,14 @@
     "img": "/assets/wtr.webp",
     "price": 0.45,
     "tag": "WTR"
+  },
+  {
+    "id": "pizza",
+    "category": "Pizza",
+    "item": "Pepperoni Pizza",
+    "description": "Loaded with beef pepperoni and extra mozzarella cheese.",
+    "img": "/assets/pepperoni.webp",
+    "price": 2.45,
+    "tag": "PPR"
   }
 ]

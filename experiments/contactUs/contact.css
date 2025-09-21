@@ -1,5 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .list-group-item.custom-hover:hover {
-      background-color: #f5f5f5;
-      /* background-color: red; */
+html {
+  background-color: #fff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+
+.list-group-item {
+    font-size: 1.6rem;
+    padding: 1.4rem;
+}
+
+.li-img {
+  height: 2.4rem;
+
+  position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+
+.list-group-item.custom-hover:hover {
+   background-color: #f5f5f5;
+}
+
+.header {
+    font-size: 3rem;
+    margin-top: 3.6rem;
+    margin-left: 2rem;
+}
+
+.header2 {
+    font-size: 1.9rem;
+    margin-top: 2.6rem;
+    margin-left: 4rem;
+    margin-bottom: .9rem;
+}
+
+    .custom-color {
+        background-color: #f4ede3;
     }
+
+.my-container, .container-fluid {
+     max-width: 100rem;
+    padding: 0;
+    margin: -1.7rem auto;
+    /* margin-top: -1.7rem; */
+    /* margin-left: 45rem; */
+}
+
+.list-group {
+    margin-top: .2rem;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid {
+    height: 10.8rem;
+}
+
+.btnMe {
+    border-radius: 200rem;
+    border: none;
+    padding: .8rem;
+    background-color: white;
+}
+
+.btnMe2 {
+    padding: 1rem;
+}
+
+.btnMe:hover {
+background-color: white;
+border: none;
+}
+
+.btnKwt {
+    width: 2.5rem;
+}
+
+.btnLogin {
+    width: 1.8rem;
+}
+
+.div1 {
+    margin-top: 2.2rem;
+}
+
+.div1 h2 {
+  font-size: 2.5rem;
+}
+
+.div1 p {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+.btn-orange {
+  background-color: #f25c05;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  height: 4rem;
+  width: 7.1rem;
+  font-size: 1.2rem;
+}
+.btn-orange:hover {
+    background-color: #f25c05;
+    color: white;
+}
+
+.list-group li {
+    cursor: pointer;
+}
+
+.last-li {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.navbar-brand {
+  position: relative;
+}
+.ion-arrow {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    /* position: absolute;
+    top: 18%;
+    left: 2%; */
+}
+
+.gapMe {
+  margin-left: 5rem;
+}
+
+.ion-arrow1 {
+  font-size: 2rem !important;
+    font-weight: 700 !important;
+  position: absolute;
+    top: 10%;
+    left: 5%;
+}

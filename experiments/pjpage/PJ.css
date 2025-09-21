@@ -536,6 +536,7 @@ color: #262626;
   outline: none;
   transition: 0.4s;
   font-family: inherit;
+  margin-bottom: .7rem;
 }
 
 .panel {

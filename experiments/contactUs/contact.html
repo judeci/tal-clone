@@ -10,44 +10,325 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/experiments/contactUs/contact.css" />
+    <link rel="stylesheet" href="contact.css" />
   </head>
 
   <body>
-    <div class="list-group">
-      <a
-        href="#"
-        class="list-group-item custom-hover fw-semibold list-group-item-action text-dark"
-      >
-        The current link item
-      </a>
-      <a
-        href="#"
-        class="list-group-item custom-hover fw-semibold list-group-item-action text-dark"
-        >A second link item</a
-      >
-      <a
-        href="#"
-        class="list-group-item custom-hover fw-semibold list-group-item-action text-dark"
-        >A third link item</a
-      >
-      <a
-        href="#"
-        class="list-group-item custom-hover fw-semibold list-group-item-action text-dark"
-        >A fourth link item</a
-      >
-      <a
-        href="#"
-        class="list-group-item custom-hover fw-semibold list-group-item-action text-dark"
-      >
-        A disabled link item</a
-      >
+    <nav class="navbar custom-color">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/assets/remix-logo.svg"
+            alt="Bootstrap"
+            width="130"
+            height="100"
+          />
+        </a>
+        <div class="">
+          <button class="btn me-3" type="button">
+            <img src="/assets/arLogo.svg" />
+          </button>
+          <button class="btn btn-light me-4 btnMe" type="button">
+            <img src="/assets/sprit_country.jpg" class="btnKwt" />
+          </button>
+          <button class="btn btn-light btnMe btnMe2" type="button">
+            <img src="/assets/userLogo.svg" class="btnLogin" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="my-container">
+      <h2 class="header fw-normal">Contact Us</h2>
+
+      <div class="div1 text-center p-5" style="background-color: #ffeee5">
+        <h2 class="fw-normal">Need help?</h2>
+        <p>
+          Select an option below or log in to chat with one of our customer
+          support agents.
+        </p>
+        <a href="#" class="btn btn-orange">Login</a>
+      </div>
+
+      <h3 class="header2 fw-bold">How can we help?</h3>
+      <div class="list-group list-group-flush">
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center custom-hover fw-semibold list-group-item-action text-dark"
+        >
+          <a class="navbar-brand" href="#">
+            <ion-icon
+              class="ion-arrow1 d-inline-block align-text-center me-3"
+              name="fast-food-outline"
+            ></ion-icon>
+            <p class="gapMe">I can't place my order</p>
+          </a>
+          <span class="badge text-dark">
+            <ion-icon
+              class="ion-arrow"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </span>
+        </li>
+
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center custom-hover fw-semibold list-group-item-action text-dark"
+        >
+          <a class="navbar-brand" href="#">
+            <ion-icon
+              class="ion-arrow1 d-inline-block align-text-center me-3"
+              name="card-outline"
+            ></ion-icon>
+            <p class="gapMe">Payments</p>
+          </a>
+          <span class="badge text-dark">
+            <ion-icon
+              class="ion-arrow"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </span>
+        </li>
+
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center custom-hover fw-semibold list-group-item-action text-dark"
+        >
+          <a class="navbar-brand" href="#">
+            <img class="li-img" src="/assets/proTag.svg" />
+            <p class="gapMe">talabat pro subscription</p>
+          </a>
+          <span class="badge text-dark">
+            <ion-icon
+              class="ion-arrow"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </span>
+        </li>
+
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center custom-hover fw-semibold list-group-item-action text-dark"
+        >
+          <a class="navbar-brand" href="#">
+            <img class="li-img" src="/assets/proTag.svg" />
+            <p class="gapMe">talabat pro family subscription</p>
+          </a>
+          <span class="badge text-dark">
+            <ion-icon
+              class="ion-arrow"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </span>
+        </li>
+
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center custom-hover fw-semibold list-group-item-action text-dark"
+        >
+          <a class="navbar-brand" href="#">
+            <ion-icon
+              class="ion-arrow1 d-inline-block align-text-center me-3"
+              name="gift-outline"
+            ></ion-icon>
+            <p class="gapMe">Rewards</p>
+          </a>
+          <span class="badge text-dark">
+            <ion-icon
+              class="ion-arrow"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </span>
+        </li>
+
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center custom-hover fw-semibold list-group-item-action text-dark last-li"
+        >
+          <!-- <div class="d-flex flex-row align-items-center gapMe"> -->
+          <a class="navbar-brand" href="#">
+            <ion-icon
+              class="ion-arrow1 d-inline-block align-text-center me-3"
+              name="megaphone-outline"
+            ></ion-icon>
+            <p class="gapMe">Cancellation policy</p>
+          </a>
+          <!-- </div> -->
+          <span class="badge text-dark">
+            <ion-icon
+              class="ion-arrow"
+              name="chevron-forward-outline"
+            ></ion-icon>
+          </span>
+        </li>
+      </div>
     </div>
+
+    <!-- footer stuff: -->
+    <footer class="bg-dark text-light pt-6 mt-4">
+      <div class="container">
+        <!-- Top links -->
+        <div class="d-flex justify-content-between flex-wrap">
+          <a href="#" class="me-3 text-decoration-none text-light">Corporate</a>
+          <a href="#" class="me-3 text-decoration-none text-light">Careers</a>
+          <a href="#" class="me-3 text-decoration-none text-light"
+            >Terms and Conditions</a
+          >
+          <a href="#" class="me-3 text-decoration-none text-light">FAQ</a>
+          <a href="#" class="me-3 text-decoration-none text-light"
+            >Privacy Policy</a
+          >
+          <a href="#" class="me-3 text-decoration-none text-light"
+            >Contact Us</a
+          >
+          <a href="#" class="text-decoration-none text-light">Sitemap</a>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="row">
+          <!-- Restaurants -->
+          <div class="col-md-3">
+            <h6 class="fw-bold">Restaurants</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Pizza Hut</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Domino's Pizza</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Burger King</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Johnny Rockets</a
+                >
+              </li>
+              <li>
+                <a href="#" class="fst-italic text-light text-decoration-none"
+                  >More Restaurants...</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cuisines -->
+          <div class="col-md-3">
+            <h6 class="fw-bold">Popular Cuisines</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Japanese</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Chinese</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Lebanese</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Italian</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Indian</a>
+              </li>
+              <li>
+                <a href="#" class="fst-italic text-light text-decoration-none"
+                  >More Cuisines...</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Areas -->
+          <div class="col-md-3">
+            <h6 class="fw-bold">Popular Areas</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Abu Halifa</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Al-Ahmadi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Kuwait City</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Fahaheel</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Farwaniya</a
+                >
+              </li>
+              <li>
+                <a href="#" class="fst-italic text-light text-decoration-none"
+                  >More Areas...</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-3">
+            <h6 class="fw-bold">Follow us on</h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-light fs-5"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-light fs-5"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-light fs-5"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-light fs-5"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-light fs-5"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-secondary mt-4" />
+
+        <div class="text-muted small text-center">
+          For any support or help you can contact us via our
+          <a href="#" class="text-decoration-none text-light">Live Chat</a>
+        </div>
+
+        <div class="text-muted small text-center mt-2 mb-3">
+          ©2025 talabat.com
+        </div>
+      </div>
+
+      <!-- Contact Us Button -->
+      <button class="btn btn-warning position-fixed bottom-0 end-0 m-3 shadow">
+        <i class="fas fa-comments me-2"></i> Contact Us
+      </button>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </body>
 </html>

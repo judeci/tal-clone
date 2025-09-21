@@ -71,7 +71,8 @@ function initAccordions(selector, activeClass = "active") {
 // document.addEventListener("DOMContentLoaded", () => {
 const menuItemsDiv = document.querySelector(".menu-items");
 function addMenuItems(id, category, item, price, tag, imgSrc, desc) {
-    const categoryPanel = document.querySelector(`.${category}-panel`);
+    const idPanel = document.querySelector(`.${id}-panel`);
+    console.log(idPanel);
     const itemHTML = `
     <a href="javascript:void(0)" class="${id}-links grid-panel" onclick="addToCart('${item}', ${price}, '${tag}')">
       <img class="panel-img" src="${imgSrc}" />
@@ -83,18 +84,21 @@ function addMenuItems(id, category, item, price, tag, imgSrc, desc) {
       <p>+</p>
     </a>
   `;
-    if (categoryPanel) {
-        categoryPanel.insertAdjacentHTML("beforeend", itemHTML);
-    }
-    else {
-        menuItemsDiv.insertAdjacentHTML("beforeend", `
-      <button class="PJ-accordion-btn ${category}-btn" id="${id}-menu">
-        ${category}
-      </button>
-      <div class="panel ${category}-panel">
-        ${itemHTML}
-      </div>
-    `);
+    if (idPanel) {
+        idPanel.insertAdjacentHTML("beforeend", itemHTML);
+        // } else {
+        //   menuItemsDiv.insertAdjacentHTML(
+        //     "beforeend",
+        //     `
+        //     <button class="PJ-accordion-btn" id="${id}-menu">
+        //       ${category}
+        //     </button>
+        //     <div class="panel">
+        //       ${itemHTML}
+        //     </div>
+        //   `
+        //   );
+        // }
     }
 }
 fetch("./pjItems.json")
@@ -108,6 +112,7 @@ fetch("./pjItems.json")
     const PJaccBtns = document.querySelectorAll(".PJ-accordion-btn");
     PJaccBtns.forEach((btn) => toggleAccordion(btn));
     initAccordions("PJ-accordion-btn");
+    console.log("acc btns shud b working.");
 })
     .catch((err) => console.error("Failed to load JSON:", err));
 initAccordions("PJ-footer-accordion", "PJ-footer-active");
