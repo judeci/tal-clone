@@ -1,11 +1,5 @@
 "use strict";
 let emailFetchedTM;
-// fetch("/api/email")
-//   .then((res) => res.json())
-//   .then((data) => {
-//     console.log("Logged in as:", data.email);
-//     emailFetchedTM = data.email;
-//   });
 // ----- Utility functions -----
 const toggleClass = (el, className) => el.classList.toggle(className);
 const addClass = (el, className) => el.classList.add(className);
@@ -24,8 +18,8 @@ papaJohns?.addEventListener("click", (e) => {
     e.preventDefault();
     restaurantName = "Papa John's Pizza";
     // resNameFile = "search";
-    resNameFile = "pj2";
-    // Navigation is triggered outside the event listener (handled below)
+    // resNameFile = "pj2";
+    resNameFile = "faq";
 });
 // ----- Accordion Functionality -----
 const accordions = document.querySelectorAll(".accordion");
@@ -74,17 +68,10 @@ const createAccHdr = document.querySelector(".hdr2");
 const createAccMsg = document.querySelector(".msg2");
 // ----- Login and logout Icon Toggle -----
 const toggleLogin = () => {
-    // fetch("/api/email")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log("Logged in as:", data.email);
-    //     emailFetchedTM = data.email;
-    //   });
     loginDiv?.classList.toggle("hiddenx2");
     html.classList.toggle("opacity-dim");
     sectionNav?.classList.toggle("opacity-dim");
     headerSection?.classList.toggle("opacity-dim");
-    // resetForm("myForm");
 };
 const toggleLoginFetch = () => {
     // if (email&pw r correct) {
@@ -103,9 +90,6 @@ const toggleLoginFetch = () => {
     console.log(emailFetchedTM, "does this input the prev one? the same as logged in as?");
 };
 const toggleLogout = () => {
-    // emailFetchedTM = "";
-    // localStorage.clear();
-    // console.log('emailFetchedTM shud be "" here.');
     logoutDiv?.classList.toggle("hiddenx2");
     html.classList.toggle("opacity-dim");
     sectionNav?.classList.toggle("opacity-dim");
@@ -133,35 +117,7 @@ loginIcon?.addEventListener("click", (e) => {
 });
 closeBtn?.addEventListener("click", toggleLogin);
 loginBtn?.addEventListener("click", toggleLoginFetch);
-// fetch("/api/email")
-//   .then((res) => res.json())
-//   .then((data) => {
-//     console.log("Logged in as:", data.email);
-//     emailFetchedTM = data.email;
-//   });
 logoutBtn?.addEventListener("click", toggleLogoutFr);
-// logout :
-// const toggleLogout = () => {
-//   logoutDiv?.classList.toggle("hiddenx2");
-//   html.classList.toggle("opacity-dim");
-//   sectionNav?.classList.toggle("opacity-dim");
-//   headerSection?.classList.toggle("opacity-dim");
-// resetForm("myForm");
-// };
-// loginIcon?.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   resetForm("myForm");
-//   toggleLogin();
-// });
-// closeBtn?.addEventListener("click", toggleLogin);
-// loginBtn?.addEventListener("click", toggleLogin);
-// remove logout stuff, and fix login stuff to be like this:
-// if (LSemail exists) {
-//   then:
-//   when pressing loginIcon, open logout page,
-// } else {
-//   open login page
-// }
 // ----- Login Form Submission -----
 const loginForm = document.getElementById("myForm");
 loginForm?.addEventListener("submit", (e) => {
@@ -206,7 +162,6 @@ closeBtnCreateAcc?.addEventListener("click", () => {
     createAccMsg?.classList.toggle("hiddenx2");
     createAccDiv?.classList.toggle("hiddenx2");
     loginDiv?.classList.toggle("hiddenx2");
-    // resetForm("myForm");
 });
 // ----- Check Email on Account Creation -----
 async function checkEmail() {
@@ -287,7 +242,10 @@ const redirectInterval = setInterval(() => {
         // window.location.href = `/searchPpage/${resNameFile}.html?restaurantName=${encodeURIComponent(
         //   restaurantName
         // )}`;
-        window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
+        // window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(
+        //   restaurantName
+        // )}`;
+        window.location.href = `/faqPg/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
         clearInterval(redirectInterval);
     }
 }, 500);

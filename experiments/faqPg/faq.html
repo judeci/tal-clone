@@ -13,87 +13,569 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="contact.css" />
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="faq.css" />
+    <script async src="/dist/faqPg/faq.js" type="module"></script>
 
 </head>
 <body>
 
-    <nav class="navbar custom-nav align-middle" style="height: 7.2rem;">
-      <div class="container-fluid container px-5 mt-n3">
-        <a class="navbar-brand align-middle mt-n3" href="#">
-          <img
-            src="talabatLogo.svg"
-            alt="Bootstrap"
-            width="130"
-            height="100" class="align-middle"
-          />
-        </a>
-        <div class="">
-          <button class="btn me-3" type="button">
-            <img src="ar.svg" />
-          </button>
-          <button class="btn btn-light me-4 btnMe" type="button" style="width: 2rem; border-radius: 20px;">
-            <img src="gx29fmgs.png" class="btnKwt" style="width: 1.55rem;" />
-          </button>
-          <button class="btn btn-light btnMe btnMe2" type="button">
-            <img src="login.svg" class="btnLogin" />
-          </button>
+   <nav class="PJ-nav">
+      <!-- add nav main page stuff -->
+      <nav class="section-nav">
+
+        <div class="tal-logo">
+          <img class="talabat-title main" src="/assets/remix-logo.svg" />
         </div>
+
+      <div class="nav-btns">
+        <button class="nav-btn n1">
+          <img class="ar-logo" src="/assets/arLogo.svg" />
+        </button>
+        <button class="nav-btn">
+          <img class="flag-logo" src="/assets/kwtFlag.png" />
+        </button>
+        <button class="nav-btn login-icon">
+          <img class="login-logo" src="/assets/userLogo.svg" />
+        </button>
       </div>
+
+    </nav>
+    
+    <div class="login hiddenx2">
+      <button class="x">x</button>
+      <h3>Login</h3>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button class="login-facebook">Continue with Facebook</button>
+      <p>OR</p>
+
+      <form class="login-form" id="myForm">
+        <input type="email" name="email" class="email" placeholder="Email" id="email" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button class="login-btn" type="submit">Login</button>
+      </form>
+
+      <p class="create-acc">Don't have an account? <p class="create-acc-link">Create an account</p></p>
+    </div>
+
+    <!-- logout -->
+     <div class="logout hiddenx2">
+      <button class="x">x</button>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <div class="hiddenx2 create-acc-popup">
+      <button class="x2">x</button>
+      <h3 class="hdr2">Create an Account:</h3>
+
+      <form action="/register" method="POST" class="create-acc-form" id="myFormCreateAcc">
+        <input type="email" name="email" class="email" placeholder="Email" id="email2" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password2" required>
+        <button class="create-acc-btn" type="submit">Create</button>
+      </form>
+      <p id="message2" class="hiddenx2 msg2"></p>
+    </div>
+      
     </nav>
 
 
-    <div class="faq-container">
+    <div class="big-container">
 
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        Accordion Item #1
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="header-div">
+        <h2 class="header">Frequently Asked Questions (FAQ)</h2>
+      </div>
+      
+      <div class="border-div">
+        <p class="border-line"></p>
+      </div>
+      
+      <div class="accordion" id="faqAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        What is talabat?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse"
+         aria-labelledby="headingOne">
+      <div class="accordion-body">
+        talabat is a leading online food delivery service that operates in Kuwait, Saudi Arabia, UAE, Bahrain, Oman, Qatar, Jordan, Egypt and Iraq.
+<br>
+We seamlessly connect customers with their favorite restaurants. It takes just few taps from our platform to place an order through talabat from your favorite place.
+      </div>
     </div>
-        
-        <script
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        What does Talabat do?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse"
+         aria-labelledby="headingTwo">
+      <div class="accordion-body">
+        We simply take your submitted order and send it to the restaurant through a completely automated process, so you don’t have to deal with all the hassle of ordering and we make sure that you receive your order on time, every-time!
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Why should I use talabat on a phone?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse"
+         aria-labelledby="headingThree">
+      <div class="accordion-body">
+        talabat is the one huge food court for many restaurants, so you don’t need to go through the hassle of finding restaurants’ numbers, waiting on hold, or getting a busy signal while dialing a restaurant number, or getting the wrong order due to miscommunication over the phone! Besides, by using talabat, you can view menus with pictures of all your favorite restaurants on our easy-to-use website and app.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        How much will it cost me to use talabat services?
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse"
+         aria-labelledby="headingFour">
+      <div class="accordion-body">
+        The only extra charges that might be applied are the restaurant’s delivery fees.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Do you have Debit Card/Credit Card services?
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse"
+         aria-labelledby="headingFive">
+      <div class="accordion-body">
+        This is the fifth item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Accordion Item #6
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse"
+         aria-labelledby="headingSix">
+      <div class="accordion-body">
+        This is the sixth item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        Accordion Item #7
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse"
+         aria-labelledby="headingSeven">
+      <div class="accordion-body">
+        This is the seventh item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEight">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        Accordion Item #8
+      </button>
+    </h2>
+    <div id="collapseEight" class="accordion-collapse collapse"
+         aria-labelledby="headingEight">
+      <div class="accordion-body">
+        This is the eighth item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingNine">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        Accordion Item #9
+      </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse"
+         aria-labelledby="headingNine">
+      <div class="accordion-body">
+        This is the 9th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+        Accordion Item #10
+      </button>
+    </h2>
+    <div id="collapseTen" class="accordion-collapse collapse"
+         aria-labelledby="headingTen">
+      <div class="accordion-body">
+        This is the 10th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEleven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+        Accordion Item #11
+      </button>
+    </h2>
+    <div id="collapseEleven" class="accordion-collapse collapse"
+         aria-labelledby="headingEleven">
+      <div class="accordion-body">
+        This is the 11th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwelve">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+        Accordion Item #12
+      </button>
+    </h2>
+    <div id="collapseTwelve" class="accordion-collapse collapse"
+         aria-labelledby="headingTwelve">
+      <div class="accordion-body">
+        This is the 12th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThirteen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+        Accordion Item #13
+      </button>
+    </h2>
+    <div id="collapseThirteen" class="accordion-collapse collapse"
+         aria-labelledby="headingThirteen">
+      <div class="accordion-body">
+        This is the 13th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFourteen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+        Accordion Item #14
+      </button>
+    </h2>
+    <div id="collapseFourteen" class="accordion-collapse collapse"
+         aria-labelledby="headingFourteen">
+      <div class="accordion-body">
+        This is the 14th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFifteen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+        Accordion Item #15
+      </button>
+    </h2>
+    <div id="collapseFifteen" class="accordion-collapse collapse"
+         aria-labelledby="headingFifteen">
+      <div class="accordion-body">
+        This is the 15th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSixteen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+        Accordion Item #16
+      </button>
+    </h2>
+    <div id="collapseSixteen" class="accordion-collapse collapse"
+         aria-labelledby="headingSixteen">
+      <div class="accordion-body">
+        This is the 16th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeventeen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+        Accordion Item #17
+      </button>
+    </h2>
+    <div id="collapseSeventeen" class="accordion-collapse collapse"
+         aria-labelledby="headingSeventeen">
+      <div class="accordion-body">
+        This is the 17th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEighteen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+        Accordion Item #18
+      </button>
+    </h2>
+    <div id="collapseEighteen" class="accordion-collapse collapse"
+         aria-labelledby="headingEighteen">
+      <div class="accordion-body">
+        This is the 18th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingNineteen">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+        Accordion Item #19
+      </button>
+    </h2>
+    <div id="collapseNineteen" class="accordion-collapse collapse"
+         aria-labelledby="headingNineteen">
+      <div class="accordion-body">
+        This is the 19th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwenty">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+        Accordion Item #20
+      </button>
+    </h2>
+    <div id="collapseTwenty" class="accordion-collapse collapse"
+         aria-labelledby="headingTwenty">
+      <div class="accordion-body">
+        This is the 20th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwentyone">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwentyone" aria-expanded="false" aria-controls="collapseTwentyone">
+        Accordion Item #21
+      </button>
+    </h2>
+    <div id="collapseTwentyone" class="accordion-collapse collapse"
+         aria-labelledby="headingTwentyone">
+      <div class="accordion-body">
+        This is the 21th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwentytwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
+        Accordion Item #22
+      </button>
+    </h2>
+    <div id="collapseTwentytwo" class="accordion-collapse collapse"
+         aria-labelledby="headingTwentytwo">
+      <div class="accordion-body">
+        This is the 22th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwentythree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
+        Accordion Item #23
+      </button>
+    </h2>
+    <div id="collapseTwentythree" class="accordion-collapse collapse"
+         aria-labelledby="headingTwentythree">
+      <div class="accordion-body">
+        This is the 23th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwentyfour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwentyfour" aria-expanded="false" aria-controls="collapseTwentyfour">
+        Accordion Item #24
+      </button>
+    </h2>
+    <div id="collapseTwentyfour" class="accordion-collapse collapse"
+         aria-labelledby="headingTwentyfour">
+      <div class="accordion-body">
+        This is the 24th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwentyfive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwentyfive" aria-expanded="false" aria-controls="collapseTwentyfive">
+        Accordion Item #25
+      </button>
+    </h2>
+    <div id="collapseTwentyfive" class="accordion-collapse collapse"
+         aria-labelledby="headingTwentyfive">
+      <div class="accordion-body">
+        This is the 25th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwentysix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwentysix" aria-expanded="false" aria-controls="collapseTwentysix">
+        Accordion Item #26
+      </button>
+    </h2>
+    <div id="collapseTwentysix" class="accordion-collapse collapse"
+         aria-labelledby="headingTwentysix">
+      <div class="accordion-body">
+        This is the 26th item's accordion body.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+      
+</div>
+
+ <footer class="section-footer">
+<div class="footer-container">
+  <div class="footer-grid">
+    <div class="footer-grid-r1">
+      <p class="footer-r1-link" onclick="window.open('https://corporate.talabat.com/?_ga=2.67187729.1677677649.1756192575-459236319.1745738476', '_blank')">Corporate</p>
+      <p class="footer-r1-link" onclick="window.open('https://careers.deliveryhero.com/talabat', '_blank')">Careers</p>
+      <p class="footer-r1-link">Terms and Conditions</p>
+      <p class="footer-r1-link">FAQ</p>
+      <p class="footer-r1-link">Privacy Policy</p>
+      <p class="footer-r1-link">Contact Us</p>
+      <p class="footer-r1-link">Sitemap</p>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r2">
+      <div class="footer-r2-new-grid">
+        <div class="r2-col1">
+          <p class="r2-hdr">Restaurants</p>
+          <p>Pizza Hut</p>
+          <p>Domino's Pizza</p>
+          <p>Burger King</p>
+          <p>Johnny Rockets</p>
+          <p class="r2-more-italic">More Restaurants...</p>
+        </div>
+
+         <div class="r2-col2">
+          <p class="r2-hdr">Popular Cuisines</p>
+          <p>Japanese</p>
+          <p>Chinese</p>
+          <p>Lebanese</p>
+          <p>Italian</p>
+          <p>Indian</p>
+          <p class="r2-more-italic">More Cuisines...</p>
+        </div>
+
+         <div class="r2-col3">
+          <p class="r2-hdr">Popular Areas</p>
+          <p>Abu Halifa</p>
+          <p>Al-Ahmadi</p>
+          <p>Kuwait City</p>
+          <p>Fahaheel</p>
+          <p>Farwaniya</p>
+          <p class="r2-more-italic">More Areas...</p>
+        </div>
+
+        <div class="r2-col4">
+          <div class="r2-col4-r1">
+            <p class="r2-hdr">Follow us on</p>
+            <div class="r2-col4-r1-flex">
+              <button onclick="window.open('https://www.facebook.com/talabat/', '_blank')"><img src="/assets/facebook-7-512.png" /></button>
+              <button onclick="window.open('https://x.com/Talabat', '_blank')"><img src="/assets/twitter-512.png" /></button>
+              <button onclick="window.open('https://www.instagram.com/Talabat/', '_blank')"><img src="/assets/instagram-512.png" /></button>
+              <button onclick="window.open('https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F3604171', '_blank')"><img src="/assets/linkedin-512.png" /></button>
+              <button onclick="window.open('https://www.youtube.com/TalabatGTC', '_blank')"><img src="/assets/youtube-app-white-icon.png" /></button>
+            </div>
+          </div>
+          <div class="r2-col4-r2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r3">
+      <p>For any support or help you can contact us via our Live Chat</p>
+      <p>©2025 talabat.com</p>
+    </div>
+  </div>
+</div>
+    </footer>
+
+    <div class="contact-us">
+      <img src="/assets/message-bubble-white-icon.png" />
+      <p>
+        Contact Us
+      </p>
+    </div>
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+<!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
+  
 </body>
 </html>

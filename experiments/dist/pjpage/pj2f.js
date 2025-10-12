@@ -3,7 +3,6 @@ let emailFetchedPJ;
 fetch("/api/email")
     .then((res) => res.json())
     .then((data) => {
-    // console.log("Logged in as:", data.email);
     emailFetchedPJ = data.email;
 });
 const PJTab1 = document.querySelector(".t1");
@@ -86,19 +85,6 @@ function addMenuItems(id, category, item, price, tag, imgSrc, desc) {
   `;
     if (idPanel) {
         idPanel.insertAdjacentHTML("beforeend", itemHTML);
-        // } else {
-        //   menuItemsDiv.insertAdjacentHTML(
-        //     "beforeend",
-        //     `
-        //     <button class="PJ-accordion-btn" id="${id}-menu">
-        //       ${category}
-        //     </button>
-        //     <div class="panel">
-        //       ${itemHTML}
-        //     </div>
-        //   `
-        //   );
-        // }
     }
 }
 fetch("./pjItems.json")

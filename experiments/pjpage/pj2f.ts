@@ -2,7 +2,6 @@ let emailFetchedPJ: string;
 fetch("/api/email")
   .then((res) => res.json())
   .then((data) => {
-    // console.log("Logged in as:", data.email);
     emailFetchedPJ = data.email;
   });
 
@@ -105,19 +104,6 @@ function addMenuItems(
 
   if (idPanel) {
     idPanel.insertAdjacentHTML("beforeend", itemHTML);
-    // } else {
-    //   menuItemsDiv.insertAdjacentHTML(
-    //     "beforeend",
-    //     `
-    //     <button class="PJ-accordion-btn" id="${id}-menu">
-    //       ${category}
-    //     </button>
-    //     <div class="panel">
-    //       ${itemHTML}
-    //     </div>
-    //   `
-    //   );
-    // }
   }
 }
 
