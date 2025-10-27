@@ -10,39 +10,72 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="contact.css" /> -->
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <!-- <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="custom.css" /> -->
   </head>
 
   <body>
-    <nav class="navbar custom-nav align-middle" style="height: 7.2rem">
-      <div class="container-fluid container px-5 mt-n3">
-        <a class="navbar-brand align-middle mt-n3" href="#">
-          <img
-            src="talabatLogo.svg"
-            alt="Bootstrap"
-            width="130"
-            height="100"
-            class="align-middle"
-          />
-        </a>
-        <div class="">
-          <button class="btn me-3" type="button">
-            <img src="ar.svg" />
-          </button>
-          <button
-            class="btn btn-light me-4 btnMe"
-            type="button"
-            style="width: 2rem; border-radius: 20px"
-          >
-            <img src="gx29fmgs.png" class="btnKwt" style="width: 1.55rem" />
-          </button>
-          <button class="btn btn-light btnMe btnMe2" type="button">
-            <img src="login.svg" class="btnLogin" />
-          </button>
+    
+     <nav class="PJ-nav">
+      <!-- add nav main page stuff -->
+      <nav class="section-nav">
+
+        <div class="tal-logo">
+          <img class="talabat-title main" src="/assets/remix-logo.svg" />
         </div>
+
+      <div class="nav-btns">
+        <button class="nav-btn n1">
+          <img class="ar-logo" src="/assets/arLogo.svg" />
+        </button>
+        <button class="nav-btn">
+          <img class="flag-logo" src="/assets/kwtFlag.png" />
+        </button>
+        <button class="nav-btn login-icon">
+          <img class="login-logo" src="/assets/userLogo.svg" />
+        </button>
       </div>
+
+    </nav>
+    
+    <div class="login hiddenx2">
+      <button class="x">x</button>
+      <h3>Login</h3>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button class="login-facebook">Continue with Facebook</button>
+      <p>OR</p>
+
+      <form class="login-form" id="myForm">
+        <input type="email" name="email" class="email" placeholder="Email" id="email" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button class="login-btn" type="submit">Login</button>
+      </form>
+
+      <p class="create-acc">Don't have an account? <p class="create-acc-link">Create an account</p></p>
+    </div>
+
+    <!-- logout -->
+     <div class="logout hiddenx2">
+      <button class="x">x</button>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <div class="hiddenx2 create-acc-popup">
+      <button class="x2">x</button>
+      <h3 class="hdr2">Create an Account:</h3>
+
+      <form action="/register" method="POST" class="create-acc-form" id="myFormCreateAcc">
+        <input type="email" name="email" class="email" placeholder="Email" id="email2" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password2" required>
+        <button class="create-acc-btn" type="submit">Create</button>
+      </form>
+      <p id="message2" class="hiddenx2 msg2"></p>
+    </div>
+      
     </nav>
 
     <div class="my-container container">
@@ -131,7 +164,7 @@
         >
           <a class="navbar-brand" href="#">
             <ion-icon
-              class="ion-arrow1 d-inline-block align-text-center me-3"
+              class="ion-arrow1"
               name="gift-outline"
             ></ion-icon>
             <p class="gapMe">Rewards</p>
@@ -167,162 +200,82 @@
     </div>
 
     <!-- footer stuff: -->
-    <footer class="bg-dark text-light pt-6 mt-4">
-      <div class="container">
-        <!-- Top links -->
-        <div class="d-flex justify-content-between flex-wrap">
-          <a href="#" class="me-3 text-decoration-none text-light">Corporate</a>
-          <a href="#" class="me-3 text-decoration-none text-light">Careers</a>
-          <a href="#" class="me-3 text-decoration-none text-light"
-            >Terms and Conditions</a
-          >
-          <a href="#" class="me-3 text-decoration-none text-light">FAQ</a>
-          <a href="#" class="me-3 text-decoration-none text-light"
-            >Privacy Policy</a
-          >
-          <a href="#" class="me-3 text-decoration-none text-light"
-            >Contact Us</a
-          >
-          <a href="#" class="text-decoration-none text-light">Sitemap</a>
+    
+    <footer class="section-footer">
+<div class="footer-container">
+  <div class="footer-grid">
+    <div class="footer-grid-r1">
+      <p class="footer-r1-link" onclick="window.open('https://corporate.talabat.com/?_ga=2.67187729.1677677649.1756192575-459236319.1745738476', '_blank')">Corporate</p>
+      <p class="footer-r1-link" onclick="window.open('https://careers.deliveryhero.com/talabat', '_blank')">Careers</p>
+      <p class="footer-r1-link">Terms and Conditions</p>
+      <p class="footer-r1-link">FAQ</p>
+      <p class="footer-r1-link">Privacy Policy</p>
+      <p class="footer-r1-link">Contact Us</p>
+      <p class="footer-r1-link">Sitemap</p>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r2">
+      <div class="footer-r2-new-grid">
+        <div class="r2-col1">
+          <p class="r2-hdr">Restaurants</p>
+          <p>Pizza Hut</p>
+          <p>Domino's Pizza</p>
+          <p>Burger King</p>
+          <p>Johnny Rockets</p>
+          <p class="r2-more-italic">More Restaurants...</p>
         </div>
 
-        <hr class="border-secondary" />
+         <div class="r2-col2">
+          <p class="r2-hdr">Popular Cuisines</p>
+          <p>Japanese</p>
+          <p>Chinese</p>
+          <p>Lebanese</p>
+          <p>Italian</p>
+          <p>Indian</p>
+          <p class="r2-more-italic">More Cuisines...</p>
+        </div>
 
-        <div class="row">
-          <!-- Restaurants -->
-          <div class="col-md-3">
-            <h6 class="fw-bold">Restaurants</h6>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Pizza Hut</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Domino's Pizza</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Burger King</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Johnny Rockets</a
-                >
-              </li>
-              <li>
-                <a href="#" class="fst-italic text-light text-decoration-none"
-                  >More Restaurants...</a
-                >
-              </li>
-            </ul>
-          </div>
+         <div class="r2-col3">
+          <p class="r2-hdr">Popular Areas</p>
+          <p>Abu Halifa</p>
+          <p>Al-Ahmadi</p>
+          <p>Kuwait City</p>
+          <p>Fahaheel</p>
+          <p>Farwaniya</p>
+          <p class="r2-more-italic">More Areas...</p>
+        </div>
 
-          <!-- Cuisines -->
-          <div class="col-md-3">
-            <h6 class="fw-bold">Popular Cuisines</h6>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-light text-decoration-none">Japanese</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Chinese</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Lebanese</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Italian</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Indian</a>
-              </li>
-              <li>
-                <a href="#" class="fst-italic text-light text-decoration-none"
-                  >More Cuisines...</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Areas -->
-          <div class="col-md-3">
-            <h6 class="fw-bold">Popular Areas</h6>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Abu Halifa</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Al-Ahmadi</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Kuwait City</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Fahaheel</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Farwaniya</a
-                >
-              </li>
-              <li>
-                <a href="#" class="fst-italic text-light text-decoration-none"
-                  >More Areas...</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Social Media -->
-          <div class="col-md-3">
-            <h6 class="fw-bold">Follow us on</h6>
-            <div class="d-flex gap-3">
-              <a href="#" class="text-light fs-5"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="text-light fs-5"
-                ><i class="fab fa-youtube"></i
-              ></a>
+        <div class="r2-col4">
+          <div class="r2-col4-r1">
+            <p class="r2-hdr">Follow us on</p>
+            <div class="r2-col4-r1-flex">
+              <button onclick="window.open('https://www.facebook.com/talabat/', '_blank')"><img src="/assets/facebook-7-512.png" /></button>
+              <button onclick="window.open('https://x.com/Talabat', '_blank')"><img src="/assets/twitter-512.png" /></button>
+              <button onclick="window.open('https://www.instagram.com/Talabat/', '_blank')"><img src="/assets/instagram-512.png" /></button>
+              <button onclick="window.open('https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F3604171', '_blank')"><img src="/assets/linkedin-512.png" /></button>
+              <button onclick="window.open('https://www.youtube.com/TalabatGTC', '_blank')"><img src="/assets/youtube-app-white-icon.png" /></button>
             </div>
           </div>
-        </div>
-
-        <hr class="border-secondary mt-4" />
-
-        <div class="text-muted small text-center">
-          For any support or help you can contact us via our
-          <a href="#" class="text-decoration-none text-light">Live Chat</a>
-        </div>
-
-        <div class="text-muted small text-center mt-2 mb-3">
-          ©2025 talabat.com
+          <div class="r2-col4-r2"></div>
         </div>
       </div>
-
-      <!-- Contact Us Button -->
-      <button class="btn btn-warning position-fixed bottom-0 end-0 m-3 shadow">
-        <i class="fas fa-comments me-2"></i> Contact Us
-      </button>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r3">
+      <p>For any support or help you can contact us via our Live Chat</p>
+      <p>©2025 talabat.com</p>
+    </div>
+  </div>
+</div>
     </footer>
+
+    <div class="contact-us">
+      <img src="/assets/message-bubble-white-icon.png" />
+      <p>
+        Contact Us
+      </p>
+    </div>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

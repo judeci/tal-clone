@@ -19,7 +19,7 @@ papaJohns?.addEventListener("click", (e) => {
     restaurantName = "Papa John's Pizza";
     // resNameFile = "search";
     // resNameFile = "pj2";
-    resNameFile = "faq";
+    resNameFile = "partner";
 });
 // ----- Accordion Functionality -----
 const accordions = document.querySelectorAll(".accordion");
@@ -245,7 +245,7 @@ const redirectInterval = setInterval(() => {
         // window.location.href = `/pjpage/${resNameFile}.html?restaurantName=${encodeURIComponent(
         //   restaurantName
         // )}`;
-        window.location.href = `/faqPg/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
+        window.location.href = `/partnerPg/${resNameFile}.html?restaurantName=${encodeURIComponent(restaurantName)}`;
         clearInterval(redirectInterval);
     }
 }, 500);
