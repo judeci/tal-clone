@@ -81,6 +81,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: white;
 }
 
 .benefits-title {
@@ -90,4 +91,59 @@
     letter-spacing: .1rem;
     /* align-items: center;
     justify-content: center; */
+}
+
+.benefits-icon {
+    height: 8rem;
+}
+
+.container {
+    width: 72rem;
+}
+
+.delivery-benefits {
+    background-color: #f8f9fb66;
+    margin-top: 5.6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem auto;
+}
+
+.delivery-header {
+    font-size: 2.3rem;
+    font-weight: 700;
+    word-spacing: .2rem;
+    letter-spacing: .1rem;
+}
+
+.delivery-cards {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.7rem !important;
+}
+
+.cardDelBen {
+    padding: 0;
+    font-size: 1.4rem;
+    height: 35rem;
+    width: 22rem !important;
+    border-bottom: 10px solid blue;
+}
+
+.fleet {
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    /* width: 50rem; */
+}
+
+.fleet-header {
+    font-size: 3.2rem;
+    font-weight: 600;
+    width: 30rem;
 }

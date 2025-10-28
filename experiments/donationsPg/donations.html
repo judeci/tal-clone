@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="donations.css" />
+  </head>
+  <body>
+
+    <nav class="PJ-nav">
+      <!-- add nav main page stuff -->
+      <nav class="section-nav">
+
+        <div class="tal-logo">
+          <img class="talabat-title main" src="/experiments/assets/remix-logo.svg" />
+        </div>
+
+      <div class="nav-btns">
+        <button class="nav-btn n1">
+          <img class="ar-logo" src="/experiments/assets/arLogo.svg" />
+        </button>
+        <button class="nav-btn">
+          <img class="flag-logo" src="/experiments/assets/kwtFlag.png" />
+        </button>
+        <button class="nav-btn login-icon">
+          <img class="login-logo" src="/experiments/assets/userLogo.svg" />
+        </button>
+      </div>
+
+    </nav>
+    
+    <div class="login hiddenx2">
+      <button class="x">x</button>
+      <h3>Login</h3>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button class="login-facebook">Continue with Facebook</button>
+      <p>OR</p>
+
+      <form class="login-form" id="myForm">
+        <input type="email" name="email" class="email" placeholder="Email" id="email" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <button class="login-btn" type="submit">Login</button>
+      </form>
+
+      <p class="create-acc">Don't have an account? <p class="create-acc-link">Create an account</p></p>
+    </div>
+
+    <!-- logout -->
+     <div class="logout hiddenx2">
+      <button class="x">x</button>
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <div class="hiddenx2 create-acc-popup">
+      <button class="x2">x</button>
+      <h3 class="hdr2">Create an Account:</h3>
+
+      <form action="/register" method="POST" class="create-acc-form" id="myFormCreateAcc">
+        <input type="email" name="email" class="email" placeholder="Email" id="email2" required>
+        <input type="password" name="password" class="password" placeholder="Password" id="password2" required>
+        <button class="create-acc-btn" type="submit">Create</button>
+      </form>
+      <p id="message2" class="hiddenx2 msg2"></p>
+    </div>
+      
+    </nav>
+
+
+    <div class="container">
+      <section class="main">
+        <div class="main-left">
+          <h1 class="main-header">Make your order count</h1>
+          <p class="main-text">
+            Help those in need with a donation during Ramadan. Together, we can
+            make a difference by supporting those in need during this holy
+            month.
+          </p>
+        </div>
+        <div class="main-right">
+          <img
+            class="main-image"
+            src="/experiments/assets/charityillustration_pink2x.png"
+          />
+        </div>
+      </section>
+
+      <section class="secondary">
+        <img class="secondary-image" src="/experiments/assets/ssssss.png" />
+        <h3 class="secondary-header">
+          Sorry, there are no available charities at the moment!
+        </h3>
+        <p class="secondary-text">Please try again later</p>
+      </section>
+
+      <section class="last">
+        <div class="last-left">
+          <img class="last-image" src="/experiments/assets/CharityPic_V1.png" />
+        </div>
+        <div class="last-right">
+          <h2 class="last-header">How we're making a difference</h2>
+          <p class="last-text">
+            Donating food and helping out those in need can make a really big
+            difference to a community. By providing meals and support to people
+            who are going through a tough time, we can help fight hunger and
+            give a sense of security and stability during these uncertain times.
+            Not only does this act of kindness do good for those in need, but it
+            also feels fulfilling to those who choose to give back and make a
+            difference.
+          </p>
+          <div class="last-mini-div">
+            <div class="mini-1">
+              <img
+                class="mini-1-image"
+                src="/experiments/assets/meals_final.png"
+              />
+              <p class="mini-1-text">3.8M meals served since 2020</p>
+            </div>
+            <div class="mini-2">
+              <img class="mini-2-image" src="/experiments/assets/money.png" />
+              <p class="mini-2-text">€6.2m million worth donations</p>
+            </div>
+            <div class="mini-3">
+              <img class="mini-3-image" src="/experiments/assets/love.png" />
+              <p class="mini-3-text">267,288 total donations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+     <footer class="section-footer">
+<div class="footer-container">
+  <div class="footer-grid">
+    <div class="footer-grid-r1">
+      <p class="footer-r1-link" onclick="window.open('https://corporate.talabat.com/?_ga=2.67187729.1677677649.1756192575-459236319.1745738476', '_blank')">Corporate</p>
+      <p class="footer-r1-link" onclick="window.open('https://careers.deliveryhero.com/talabat', '_blank')">Careers</p>
+      <p class="footer-r1-link">Terms and Conditions</p>
+      <p class="footer-r1-link">FAQ</p>
+      <p class="footer-r1-link">Privacy Policy</p>
+      <p class="footer-r1-link">Contact Us</p>
+      <p class="footer-r1-link">Sitemap</p>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r2">
+      <div class="footer-r2-new-grid">
+        <div class="r2-col1">
+          <p class="r2-hdr">Restaurants</p>
+          <p>Pizza Hut</p>
+          <p>Domino's Pizza</p>
+          <p>Burger King</p>
+          <p>Johnny Rockets</p>
+          <p class="r2-more-italic">More Restaurants...</p>
+        </div>
+
+         <div class="r2-col2">
+          <p class="r2-hdr">Popular Cuisines</p>
+          <p>Japanese</p>
+          <p>Chinese</p>
+          <p>Lebanese</p>
+          <p>Italian</p>
+          <p>Indian</p>
+          <p class="r2-more-italic">More Cuisines...</p>
+        </div>
+
+         <div class="r2-col3">
+          <p class="r2-hdr">Popular Areas</p>
+          <p>Abu Halifa</p>
+          <p>Al-Ahmadi</p>
+          <p>Kuwait City</p>
+          <p>Fahaheel</p>
+          <p>Farwaniya</p>
+          <p class="r2-more-italic">More Areas...</p>
+        </div>
+
+        <div class="r2-col4">
+          <div class="r2-col4-r1">
+            <p class="r2-hdr">Follow us on</p>
+            <div class="r2-col4-r1-flex">
+              <button onclick="window.open('https://www.facebook.com/talabat/', '_blank')"><img src="/experiments/assets/facebook-7-512.png" /></button>
+              <button onclick="window.open('https://x.com/Talabat', '_blank')"><img src="/experiments/assets/twitter-512.png" /></button>
+              <button onclick="window.open('https://www.instagram.com/Talabat/', '_blank')"><img src="/experiments/assets/instagram-512.png" /></button>
+              <button onclick="window.open('https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F3604171', '_blank')"><img src="/experiments/assets/linkedin-512.png" /></button>
+              <button onclick="window.open('https://www.youtube.com/TalabatGTC', '_blank')"><img src="/experiments/assets/youtube-app-white-icon.png" /></button>
+            </div>
+          </div>
+          <div class="r2-col4-r2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-border"></div>
+    <div class="footer-grid-r3">
+      <p>For any support or help you can contact us via our Live Chat</p>
+      <p>©2025 talabat.com</p>
+    </div>
+  </div>
+</div>
+    </footer>
+
+    <div class="contact-us">
+      <img src="/experiments/assets/message-bubble-white-icon.png" />
+      <p>
+        Contact Us
+      </p>
+    </div>
+
+  </body>
+</html>
