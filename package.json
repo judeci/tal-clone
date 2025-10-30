@@ -2,12 +2,14 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "body-parser": "^2.2.0",
+    "bootstrap": "^5.3.8",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
     "jsdom": "^26.1.0",
     "mongoose": "^8.15.0",
-    "mysql2": "^3.14.3"
+    "mysql2": "^3.14.3",
+    "sass": "^1.93.0"
   },
   "name": "experiments",
   "version": "1.0.0",
@@ -22,6 +24,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
+    "@types/bootstrap": "^5.2.10",
     "@types/express": "^5.0.3",
     "@types/jquery": "^3.5.32",
     "@types/jsdom": "^21.1.7",
