@@ -10,12 +10,21 @@ body {
 
 .long {
     width: 100% !important;
-    margin: 0 0 !important;
+    margin: 0 0;
+    margin-top: 8.9rem;
 }
 
 .gif {
     width: 100% !important;
     height: 15.6rem;
+}
+
+#navbarSticky {
+    background-color: white;
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 .nav {
@@ -67,8 +76,17 @@ body {
 }
 .btn-search2 {
     background-color: transparent;
-    right: 8%;
-    top: 25%;
+    position: absolute;
+    right: -22%;
+    top: -143%;
+    height: 15.3rem;
+    width: 15.3rem;
+    font-weight: 700;
+    border-radius: 5000rem;
+    /* padding: 1rem 1rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-icon {
@@ -435,7 +453,7 @@ ion-icon {
 }
 
 .footer-tabs {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     color: white;
     cursor: pointer;
@@ -453,8 +471,11 @@ ion-icon {
 
 .search-icon2-ion {
     color: #000;
-    font-size: 5.4rem !important;
-   --search-icon2-stroke-width: 44px;
+    /* height: 5.4rem !important; */
+    font-size: 2.4rem;
+    /* font-size: 5.4rem !important; */
+   /* --search-icon-stroke-width: 44px; */
+   /* --search-icon2-stroke-width: 44px; */
 }
 
 .tab2 {
