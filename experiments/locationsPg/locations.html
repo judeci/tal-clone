@@ -32,39 +32,41 @@
     <link rel="stylesheet" href="locations.css" />
   </head>
   <body>
-    <nav class="nav">
-      <img class="nav-title" src="/experiments/assets/talabat.png" />
-      <div class="nav-search">
-        <nav class="navbar">
-          <div class="container-fluid">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control"
-                type="search"
-                placeholder="Start your job search here"
-                aria-label="Search"
-              />
-              <button class="btn btn-search" type="submit">
-                <img
-                  class="search-icon"
-                  src="/experiments/assets/icons8-search-50.png"
+    <div id="navbarSticky">
+      <nav class="nav">
+        <img class="nav-title" src="/experiments/assets/talabat.png" />
+        <div class="nav-search">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Start your job search here"
+                  aria-label="Search"
                 />
-              </button>
-            </form>
-          </div>
-        </nav>
-      </div>
-      <div class="nav-saved">
-        <p class="saved-p">Saved jobs</p>
-        <div class="saved-img"></div>
-      </div>
-    </nav>
+                <button class="btn btn-search" type="submit">
+                  <img
+                    class="search-icon"
+                    src="/experiments/assets/icons8-search-50.png"
+                  />
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-saved">
+          <p class="saved-p">Saved jobs</p>
+          <div class="saved-img"></div>
+        </div>
+      </nav>
 
-    <div class="nav-tabs">
-      <div class="tab1">How we hire</div>
-      <div class="tab1">Life at talabat</div>
-      <div class="tab1 loTab">Locations</div>
-      <div class="tab1">Our Jobs</div>
+      <div class="nav-tabs">
+        <div class="tab1">How we hire</div>
+        <div class="tab1">Life at talabat</div>
+        <div class="tab1 loTab">Locations</div>
+        <div class="tab1">Our Jobs</div>
+      </div>
     </div>
 
     <div class="long">
@@ -72,30 +74,132 @@
       <h2 class="gif-hdr">Locations</h2>
     </div>
 
-    <div class="video-section">
-      <div class="video">
-        <div class="video-img"></div>
-        <div class="play-btn">
-          <ion-icon class="play-icon" name="play"></ion-icon>
+    <div class="section0">
+      <div class="video-section">
+        <div class="video">
+          <div class="video-img"></div>
+          <div class="play-btn">
+            <ion-icon class="play-icon" name="play"></ion-icon>
+          </div>
+          <h3 class="play-hdr">Make your career dreams real.</h3>
+          <video class="video-main hiddenx2" width="462" height="380" controls>
+            <source src="/experiments/assets/videoo.mp4" type="video/mp4" />
+          </video>
         </div>
-        <h3 class="play-hdr">Make your career dreams real.</h3>
-        <video class="video-main hiddenx2" width="462" height="380" controls>
-          <source src="/experiments/assets/videoo.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="video-txt">
-        <h2 class="video-hdr">
-          Cooking up the coolest online delivery platforms that'll be the talk
-          of the town worldwide!
-        </h2>
+        <div class="video-txt">
+          <h2 class="video-hdr">
+            Cooking up the coolest online delivery platforms that'll be the talk
+            of the town worldwide!
+          </h2>
+        </div>
       </div>
     </div>
 
-    <div class="countries-section">
-      <h2 class="countries-hdr">Officially a Great Place to Work®</h2>
-      <div class="countries-grid">
-        <div class="countries-card"></div>
-        <div class="countries-text"></div>
+    <div class="section1">
+      <h2 class="section1-hdr">
+        Officially a Great Place to Work<sup>&reg;</sup>
+      </h2>
+      <div class="flex">
+        <div class="card">
+          <h3 class="card-hdr">UAE</h3>
+          <p class="uae focused">UAE</p>
+          <p class="kwt">Kuwait</p>
+          <p class="qtr">Qatar</p>
+          <p class="omn">Oman</p>
+          <p class="bhn">Bahrain</p>
+        </div>
+        <div class="text">
+          <h3 class="text-hdr">
+            <span class="country">UAE</span>. Recognized as a Great Place to
+            Work<sup>&reg;</sup>
+          </h3>
+          <div class="text-flex">
+            <img
+              class="text-img"
+              src="/experiments/assets/ea7882d8-662b-4b9c-8476-08dc390d0e29.png"
+            />
+            <p class="text-p">
+              We're thrilled to announce that talabat UAE is officially a Great
+              Place to Work<sup>&reg;</sup> certified company for the third time
+              in a row! <br /><br />
+              Additionally, talabat UAE has also proudly earned a spot in the
+              Best Workplaces for Parents™ in the UAE category.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="section2-grid">
+        <div class="section2-grid-left">
+          <div class="section2-txt">
+            <h2 class="section2-hdr">talabat</h2>
+            <p class="section2-p">
+              From Local Roots to Global Impact: Our Network of Offices Around
+              the World.
+            </p>
+          </div>
+          <div class="section2-card hiddenx2"></div>
+        </div>
+        <div class="section2-grid-right">
+          <img class="map" src="/experiments/assets/talabat-map.svg" />
+          <span class="dot dot1"></span>
+          <span class="dot dot2"></span>
+          <span class="dot dot3"></span>
+          <span class="dot dot4"></span>
+          <span class="dot dot5"></span>
+          <span class="dot dot6"></span>
+          <span class="dot dot7"></span>
+          <span class="dot dot8"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-tabs">
+        <p class="tab2">About Us</p>
+        <p class="tab2">How We Hire</p>
+        <p class="tab2">Life At talabat</p>
+        <p class="tab2">Locations</p>
+        <p class="tab2">Privacy Policy</p>
+        <p class="tab2">Cookies</p>
+        <div class="footer-search">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control fm2"
+                  type="search"
+                  placeholder="Start your job search here"
+                  aria-label="Search"
+                />
+                <button class="btn btn-search2" type="submit">
+                  <ion-icon
+                    class="search-icon2-ion"
+                    name="search-outline"
+                  ></ion-icon>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-border"></div>
+      <div class="connect">
+        <p class="connect-p">Connect with us:</p>
+        <img
+          class="connect-img"
+          src="/experiments/assets/icons8-linkedin-24.png"
+        />
+        <img
+          class="connect-img"
+          src="/experiments/assets/icons8-twitter-24.png"
+        />
+        <img
+          class="connect-img"
+          src="/experiments/assets/icons8-facebook-24.png"
+        />
       </div>
     </div>
 
