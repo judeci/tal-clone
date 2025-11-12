@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <script defer src="comps.js"></script> -->
     <title>Locations | Delivery Hero</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,42 +34,7 @@
     <link rel="stylesheet" href="locations.css" />
   </head>
   <body>
-    <div id="navbarSticky">
-      <nav class="nav">
-        <img class="nav-title" src="/experiments/assets/talabat.png" />
-        <div class="nav-search">
-          <nav class="navbar">
-            <div class="container-fluid">
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control"
-                  type="search"
-                  placeholder="Start your job search here"
-                  aria-label="Search"
-                />
-                <button class="btn btn-search" type="submit">
-                  <img
-                    class="search-icon"
-                    src="/experiments/assets/icons8-search-50.png"
-                  />
-                </button>
-              </form>
-            </div>
-          </nav>
-        </div>
-        <div class="nav-saved">
-          <p class="saved-p">Saved jobs</p>
-          <div class="saved-img"></div>
-        </div>
-      </nav>
-
-      <div class="nav-tabs">
-        <div class="tab1">How we hire</div>
-        <div class="tab1">Life at talabat</div>
-        <div class="tab1 loTab">Locations</div>
-        <div class="tab1">Our Jobs</div>
-      </div>
-    </div>
+    <div data-include="/experiments/components/navBarSticky.html"></div>
 
     <div class="long">
       <img class="gif" src="/experiments/assets/dwnld.gif" />
@@ -130,12 +97,15 @@
       </div>
     </div>
 
+    <!-- lang button -->
+    <button class="lng-btn" id="lng--btn" data-i18n="lang">AR</button>
+
     <div class="section2">
       <div class="section2-grid">
         <div class="section2-grid-left">
           <div class="section2-txt">
             <h2 class="section2-hdr">talabat</h2>
-            <p class="section2-p">
+            <p class="section2-p" data-i18n="map">
               From Local Roots to Global Impact: Our Network of Offices Around
               the World.
             </p>
@@ -156,52 +126,7 @@
       </div>
     </div>
 
-    <div class="footer">
-      <div class="footer-tabs">
-        <p class="tab2">About Us</p>
-        <p class="tab2">How We Hire</p>
-        <p class="tab2">Life At talabat</p>
-        <p class="tab2">Locations</p>
-        <p class="tab2">Privacy Policy</p>
-        <p class="tab2">Cookies</p>
-        <div class="footer-search">
-          <nav class="navbar">
-            <div class="container-fluid">
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control fm2"
-                  type="search"
-                  placeholder="Start your job search here"
-                  aria-label="Search"
-                />
-                <button class="btn btn-search2" type="submit">
-                  <ion-icon
-                    class="search-icon2-ion"
-                    name="search-outline"
-                  ></ion-icon>
-                </button>
-              </form>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div class="footer-border"></div>
-      <div class="connect">
-        <p class="connect-p">Connect with us:</p>
-        <img
-          class="connect-img"
-          src="/experiments/assets/icons8-linkedin-24.png"
-        />
-        <img
-          class="connect-img"
-          src="/experiments/assets/icons8-twitter-24.png"
-        />
-        <img
-          class="connect-img"
-          src="/experiments/assets/icons8-facebook-24.png"
-        />
-      </div>
-    </div>
+    <div data-include="/experiments/components/footer.html"></div>
 
     <script
       type="module"
@@ -212,6 +137,8 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="locations.js"></script>
+    <!-- <script src="resourcesLo.js"></script> -->
+    <script type="module" src="locations.js"></script>
+    <script src="/experiments/components/components.js"></script>
   </body>
 </html>

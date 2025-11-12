@@ -1,3 +1,5 @@
+import { resources } from "../components/translation.js";
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
@@ -133,90 +135,162 @@ bhn.addEventListener("click", function () {
   uae.classList.remove("focused");
 });
 
-dot1.addEventListener("mouseover", function () {
+const dotFn = function (x) {
   s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "15rem";
+  if ((x === "egy" || x === "jdn" || x === "bhn") && currentLang === "en") {
+    s2Card.style.height = "17rem";
+  } else {
+    s2Card.style.height = "15rem";
+  }
 
   s2Card.innerHTML = `
-    <h3 class="s2-card-h">Iraq</h3>
+    <h3 class="s2-card-h" data-i18n=${x}>${resources[currentLang][x]}</h3>
     <div class="s2-card-b"></div>
-    <p class="s2-card-p">Empire Business Centre, C1, Erbil</p>
+    <p class="s2-card-p" data-i18n=${x + "T"}>${
+    resources[currentLang][x + "T"]
+  }</p>
     `;
+};
+
+let xGL = "";
+
+const dotElements = document.querySelectorAll(".dot");
+dotElements.forEach((el) => {
+  el.addEventListener("mouseover", function () {
+    if (el.classList.contains("dot1")) {
+      dotFn("irq");
+    } else if (el.classList.contains("dot2")) {
+      dotFn("egy");
+      xGL = "egy";
+    } else if (el.classList.contains("dot3")) {
+      dotFn("jdn");
+      xGL = "jdn";
+    } else if (el.classList.contains("dot4")) {
+      dotFn("kwt");
+    } else if (el.classList.contains("dot5")) {
+      dotFn("bhn");
+      xGL = "bhn";
+    } else if (el.classList.contains("dot6")) {
+      dotFn("qtr");
+    } else if (el.classList.contains("dot7")) {
+      dotFn("uae");
+    } else {
+      dotFn("omn");
+    }
+  });
 });
 
-dot2.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "17rem";
+const langBtn = document.querySelector(".lng-btn");
+const body = document.body;
+let currentLang = "en";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">Eqypt</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">7 Zahraa Al Maadi, Maadi as Sarayat Al Gharbeyah, Maadi, Cairo</p>
-    `;
+langBtn.addEventListener("click", function () {
+  if (currentLang === "ar") {
+    body.style.textAlign = "left";
+    body.style.direction = "ltr";
+    if (xGL === "egy" || xGL === "jdn" || xGL === "bhn") {
+      s2Card.style.height = "17rem";
+    }
+    currentLang = "en";
+  } else if (currentLang === "en") {
+    body.style.textAlign = "right";
+    body.style.direction = "rtl";
+    s2Card.style.height = "15rem";
+    currentLang = "ar";
+  }
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (resources[currentLang][key]) {
+      el.textContent = resources[currentLang][key];
+    }
+  });
 });
 
-dot3.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "17rem";
+// dot1.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "15rem";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">Jordan</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">Qatari Jordanian Investment & Real Estate Development Co.,Amman</p>
-    `;
-});
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="irq">${resources[currentLang].irq}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="irqT">${resources[currentLang].irqT}</p>
+//     `;
+// });
 
-dot4.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "15rem";
+// dot2.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "17rem";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">Kuwait</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">Terrace Mall, Salmiya, Salem Al Mubarak St.</p>
-    `;
-});
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="egy">${resources[currentLang].egy}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="egyT">${resources[currentLang].egyT}</p>
+//     `;
+// });
 
-dot5.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "17rem";
+// dot3.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "17rem";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">Bahrain</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">Fakhro Tower, Building 470, Road 1010, Block 410, Manama</p>
-    `;
-});
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="jdn">${resources[currentLang].jdn}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="jdnT">${resources[currentLang].jdnT}</p>
+//     `;
+// });
 
-dot6.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "15rem";
+// dot4.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "15rem";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">Qatar</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">Borooq Tower, Doha</p>
-    `;
-});
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="kwt">${resources[currentLang].kwt}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="kwtT">${resources[currentLang].kwtT}</p>
+//     `;
+// });
 
-dot7.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "15rem";
+// dot5.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "17rem";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">UAE</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">talabat HQ, Al Safa Street, Al Wasl, Dubai</p>
-    `;
-});
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="bhn">${resources[currentLang].bhn}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="bhnT">${resources[currentLang].bhnT}</p>
+//     `;
+// });
 
-dot8.addEventListener("mouseover", function () {
-  s2Card.classList.remove("hiddenx2");
-  s2Card.style.height = "15rem";
+// dot6.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "15rem";
 
-  s2Card.innerHTML = `
-    <h3 class="s2-card-h">Oman</h3>
-    <div class="s2-card-b"></div>
-    <p class="s2-card-p">Muscat, Oman</p>
-    `;
-});
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="qtr">${resources[currentLang].qtr}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="qtrT">${resources[currentLang].qtrT}</p>
+//     `;
+// });
+
+// dot7.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "15rem";
+
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="uae">${resources[currentLang].uae}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="uaeT">${resources[currentLang].uaeT}</p>
+//     `;
+// });
+
+// dot8.addEventListener("mouseover", function () {
+//   s2Card.classList.remove("hiddenx2");
+//   s2Card.style.height = "15rem";
+
+//   s2Card.innerHTML = `
+//     <h3 class="s2-card-h" data-i18n="omn">${resources[currentLang].omn}</h3>
+//     <div class="s2-card-b"></div>
+//     <p class="s2-card-p" data-i18n="omnT">${resources[currentLang].omnT}</p>
+//     `;
+// });
