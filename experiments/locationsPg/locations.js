@@ -159,6 +159,7 @@ dotElements.forEach((el) => {
   el.addEventListener("mouseover", function () {
     if (el.classList.contains("dot1")) {
       dotFn("irq");
+      xGL = "irq";
     } else if (el.classList.contains("dot2")) {
       dotFn("egy");
       xGL = "egy";
@@ -167,15 +168,19 @@ dotElements.forEach((el) => {
       xGL = "jdn";
     } else if (el.classList.contains("dot4")) {
       dotFn("kwt");
+      xGL = "kwt";
     } else if (el.classList.contains("dot5")) {
       dotFn("bhn");
       xGL = "bhn";
     } else if (el.classList.contains("dot6")) {
       dotFn("qtr");
+      xGL = "qtr";
     } else if (el.classList.contains("dot7")) {
       dotFn("uae");
+      xGL = "uae";
     } else {
       dotFn("omn");
+      xGL = "omn";
     }
   });
 });
